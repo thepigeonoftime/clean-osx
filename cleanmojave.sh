@@ -674,9 +674,9 @@ load() {
 		echo sudo launchctl load -w ${@}
 		echo -e "\n \n"
 	else
-		rename 's/\.bak$//' ${@}
-		launchctl load -w ${@}
-		sudo launchctl load -w ${@}
+		(set -x; rename 's/\.bak$//' ${@};
+		launchctl load -w ${@};
+		sudo launchctl load -w ${@};)
 		# grep launchctl list output to check if service is really enabled
 		sudo launchctl list | grep $(echo {@} | /usr/bin/sed -E 's/.*\/(.*).plist/\1/') &> /dev/null
 		if [[ "$?" -ne 0 ]]; then
