@@ -352,22 +352,6 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.xpc.otherbsd.plist
 )
 
-
-# com.apple.bluetoothaudiod.plist.bak
-# com.apple.bluetoothd.plist.bak
-# com.apple.CommCenterRootHelper.plist.bak
-# com.apple.diagnosticextensions.osx.bluetooth.helper.plist.bak
-# com.apple.diagnosticextensions.osx.getmobilityinfo.helper.plist.bak
-# com.apple.diagnosticextensions.osx.spotlight.helper.plist.bak
-# com.apple.diagnosticextensions.osx.timemachine.helper.plist.bak
-# com.apple.diagnosticextensions.osx.wifi.helper.plist.bak
-# com.apple.mediaremoted.plist.bak
-# com.apple.racoon.plist.bak
-# com.apple.rapportd.plist.bak
-# com.apple.smb.preferences.plist.bak
-# com.apple.smbd.plist.bak
-# com.apple.UserNotificationCenter.plist.bak
-
 LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.openssh.ssh-agent.plist
 #/System/Library/LaunchDaemons/bootps.plist
