@@ -3,12 +3,6 @@
 ## CleanMojave.sh ##
 ## A script to unload unnecessary LaunchAgents and LaunchDaemons from MacOS 10.14 ##
 
-## run with 'testrun' argument to do a testrun that only echoes commands (bash cleanmojave.sh testrun) ##
-## run with 'dontmove' argument to not mv .plist files to .bak (bash cleanmojave.sh dontmove) ##
-## run with 'restore' argument to reload daemons (bash cleanmojave.sh restore) ##
-## run with 'disable' argument to only disable daemons and not restore unlisted ones (bash cleanmojave.sh disable) ##
-
-
 ################################################"
 ##        DO NOT RUN THIS SCRIPT BLINDLY       #"
 ##         YOU'LL PROBABLY REGRET IT...        #"
@@ -16,6 +10,20 @@
 ##              READ IT THOROUGHLY             #"
 ##         AND EDIT TO SUIT YOUR NEEDS         #"
 ################################################"
+
+## run with 'testrun' argument to do a testrun that only echoes commands (bash cleanmojave.sh testrun) ##
+## run with 'dontmove' argument to not mv .plist files to .bak (bash cleanmojave.sh dontmove) ##
+## run with 'restore' argument to reload daemons (bash cleanmojave.sh restore) ##
+## run with 'disable' argument to only disable daemons and not restore unlisted ones (bash cleanmojave.sh disable) ##
+
+## Resources: ##
+# https://gist.github.com/pwnsdx/d87b034c4c0210b988040ad2f85a68d3#gistcomment-2701248
+# https://github.com/meson10/mac_tej/blob/master/nos.sh
+# https://cirrusj.github.io/Yosemite-Stop-Launch/
+# https://www.heise.de/mac-and-i/artikel/Die-Systemprozesse-von-macOS-Sierra-3715619.html?seite=all
+# http://www.macinside.info/browse.php
+# https://www.manpagez.com/man/
+
 
 ## command line flags ##
 
