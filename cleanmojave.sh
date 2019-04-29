@@ -13,17 +13,104 @@
 ################################################"
 
 mv_plist=true # comment / set to false if you don't want to mv .plist files to .bak for persistent disable
-testrun=true # uncomment for testrun (prints commands instead of running them)
+#testrun=true # uncomment for testrun (prints commands instead of running them)
 
 ## set command to load if 'restore' argument is passed ##
 if [[ $1 == "restore" ]]; then
-	command=load
-else
-	command=unload
+	restore=true
 fi
 
 
 ## Uncomment LaunchAgents/LaunchDaemons to unload: ##
+
+# https://gist.github.com/pwnsdx/d87b034c4c0210b988040ad2f85a68d3#gistcomment-2701248
+# https://github.com/meson10/mac_tej/blob/master/nos.sh
+# https://cirrusj.github.io/Yosemite-Stop-Launch/
+# https://www.heise.de/mac-and-i/artikel/Die-Systemprozesse-von-macOS-Sierra-3715619.html?seite=all
+# http://www.macinside.info/browse.php
+# https://www.manpagez.com/man/
+
+
+
+
+# .rw-r--r-- 1.5k root  5 Mar  6:30 com.apple.AirPlayUIAgent.plist.bak
+# .rw-r--r-- 1.2k root 23 Feb  5:08 com.apple.AirPortBaseStationAgent.plist.bak
+# .rw-r--r-- 1.1k root 23 Feb  7:41 com.apple.AOSHeartbeat.plist.bak
+# .rw-r--r--  839 root 23 Feb  7:41 com.apple.AOSPushRelay.plist.bak
+# .rw-r--r-- 1.5k root 23 Feb  8:40 com.apple.ap.adprivacyd.plist.bak
+# .rw-r--r--  428 root 23 Feb  8:42 com.apple.ap.adservicesd.plist.bak
+# .rw-r--r--  552 root 14 Mar  4:02 com.apple.appleseed.seedusaged.plist.bak
+# .rw-r--r--  577 root 14 Mar  4:02 com.apple.appleseed.seedusaged.postinstall.plist.bak
+# .rw-r--r--  879 root  9 Mar  6:46 com.apple.assistant_service.plist.bak
+# .rw-r--r-- 6.5k root  9 Mar  6:46 com.apple.assistantd.plist.bak
+# .rw-r--r-- 1.1k root 23 Feb  8:11 com.apple.AssistiveControl.plist.bak
+# .rw-r--r-- 2.0k root 23 Feb  8:23 com.apple.bird.plist.bak
+# .rw-r--r--  563 root 14 Mar  9:28 com.apple.bluetooth.PacketLogger.plist.bak
+# .rw-r--r--  457 root 25 Feb  2:55 com.apple.CallHistoryPluginHelper.plist.bak
+# .rw-r--r--  493 root 25 Feb  2:55 com.apple.CallHistorySyncHelper.plist.bak
+# .rw-r--r--  501 root 23 Feb  9:10 com.apple.cloudd.plist.bak
+# .rw-r--r-- 1.1k root 14 Mar  8:19 com.apple.cloudpaird.plist.bak
+# .rw-r--r-- 2.1k root  7 Mar  6:14 com.apple.cloudphotosd.plist.bak
+# .rw-r--r-- 2.7k root 28 Feb 11:37 com.apple.CommCenter-osx.plist.bak
+# .rw-r--r--  708 root 23 Feb  8:22 com.apple.commerce.plist.bak
+# .rw-r--r--  423 root 14 Mar  4:04 com.apple.contacts.donation-agent.plist.bak
+# .rw-r--r-- 1.2k root 23 Feb  7:27 com.apple.ContactsAgent.plist.bak
+# .rw-r--r--  551 root 23 Feb  7:58 com.apple.coreparsec.silhouette.plist.bak
+# .rw-r--r--  881 root 23 Feb  7:41 com.apple.familycircled.plist.bak
+# .rw-r--r--  557 root 23 Feb  7:29 com.apple.familycontrols.useragent.plist.bak
+# .rw-r--r-- 1.8k root 23 Feb  7:42 com.apple.familynotificationd.plist.bak
+# .rw-r--r--  666 root 23 Feb  6:38 com.apple.findmymacmessenger.plist.bak
+# .rw-r--r-- 1.4k root 23 Feb  7:33 com.apple.followupd.plist.bak
+# .rw-r--r--  908 root 23 Feb  7:33 com.apple.FollowUpUI.plist.bak
+# .rw-r--r--  702 root 26 Feb  7:25 com.apple.gamed.plist.bak
+# .rw-r--r--  908 root 23 Feb  5:30 com.apple.helpd.plist.bak
+# .rw-r--r--  479 root 23 Feb  8:23 com.apple.icloud.findmydeviced.findmydevice-user-agent.plist.bak
+# .rw-r--r-- 1.2k root 23 Feb  7:39 com.apple.icloud.fmfd.plist.bak
+# .rw-r--r-- 1.4k root 23 Feb  7:37 com.apple.iCloudUserNotifications.plist.bak
+# .rw-r--r--  569 root 23 Feb  6:12 com.apple.identityservicesd.plist.bak
+# .rw-r--r--  581 root 23 Feb  6:11 com.apple.idsremoteurlconnectionagent.plist.bak
+# .rw-r--r--  751 root  2 Mar  5:59 com.apple.imagent.plist.bak
+# .rw-r--r--  546 root 23 Feb  8:19 com.apple.java.InstallOnDemand.plist.bak
+# .rw-r--r--  629 root 23 Feb  8:23 com.apple.lateragent.plist.bak
+# .rw-r--r-- 1.2k root 28 Feb 12:40 com.apple.macos.studentd.plist.bak
+# .rw-r--r-- 1.5k root 23 Feb  8:10 com.apple.ManagedClientAgent.agent.plist.bak
+# .rw-r--r--  549 root 23 Feb  8:10 com.apple.ManagedClientAgent.enrollagent.plist.bak
+# .rw-r--r-- 1.1k root 23 Feb  7:56 com.apple.Maps.pushdaemon.plist.bak
+# .rw-r--r--  601 root  1 Mar  8:42 com.apple.MobileAccessoryUpdater.fudHelperAgent.plist.bak
+# .rw-r--r--  663 root 23 Feb  7:56 com.apple.navd.plist.bak
+# .rw-r--r-- 1.7k root 23 Feb  8:31 com.apple.noticeboard.agent.plist.bak
+# .rw-r--r-- 1.5k root 14 Mar  4:14 com.apple.notificationcenterui.plist.bak
+# .rw-r--r--  404 root 23 Feb  7:29 com.apple.parentalcontrols.check.plist.bak
+# .rw-r--r--  485 root 14 Mar  4:04 com.apple.parsec-fbf.plist.bak
+# .rw-r--r--  487 root 14 Mar  4:05 com.apple.parsecd.plist.bak
+# .rw-r--r--  341 root 23 Feb  5:31 com.apple.personad.plist.bak
+# .rw-r--r-- 1.0k root 23 Feb  7:56 com.apple.photoanalysisd.plist.bak
+# .rw-r--r-- 1.2k root  7 Mar  5:43 com.apple.protectedcloudstorage.protectedcloudkeysyncing.plist.bak
+# .rw-r--r--  514 root 23 Feb  7:39 com.apple.recentsd.plist.bak
+# .rw-r--r--  811 root 23 Feb  9:11 com.apple.RemoteDesktop.plist.bak
+# .rw-r--r--  787 root 12 Mar  4:48 com.apple.ReportCrash.plist.bak
+# .rw-r--r--  636 root 13 Mar  2:33 com.apple.Safari.SafeBrowsing.Service.plist.bak
+# lrwxr-xr-x  109 root 12 Apr  8:42 com.apple.SafariBookmarksSyncAgent.plist.bak -> /System/Library/CoreServices/SafariSupport.bundle/Contents/Resources/com.apple.SafariBookmarksSyncAgent.plist
+# lrwxr-xr-x  112 root 12 Apr  8:42 com.apple.SafariCloudHistoryPushAgent.plist.bak -> /System/Library/CoreServices/SafariSupport.bundle/Contents/Resources/com.apple.SafariCloudHistoryPushAgent.plist
+# .rw-r--r--  594 root 23 Feb  8:53 com.apple.safaridavclient.plist.bak
+# lrwxr-xr-x  110 root 12 Apr  8:42 com.apple.SafariHistoryServiceAgent.plist.bak -> /System/Library/CoreServices/SafariSupport.bundle/Contents/Resources/com.apple.SafariHistoryServiceAgent.plist
+# lrwxr-xr-x  102 root 12 Apr  8:42 com.apple.SafariLaunchAgent.plist.bak -> /System/Library/CoreServices/SafariSupport.bundle/Contents/Resources/com.apple.SafariLaunchAgent.plist
+# lrwxr-xr-x  108 root 12 Apr  8:42 com.apple.SafariNotificationAgent.plist.bak -> /System/Library/CoreServices/SafariSupport.bundle/Contents/Resources/com.apple.SafariNotificationAgent.plist
+# lrwxr-xr-x  111 root 12 Apr  8:42 com.apple.SafariPlugInUpdateNotifier.plist.bak -> /System/Library/CoreServices/SafariSupport.bundle/Contents/Resources/com.apple.SafariPlugInUpdateNotifier.plist
+# .rw-r--r-- 1.3k root 14 Mar  4:16 com.apple.sharingd.plist.bak
+# .rw-r--r--  815 root 14 Mar  4:09 com.apple.sidecar-relay.plist.bak
+# .rw-r--r--  931 root 26 Feb  6:06 com.apple.Siri.agent.plist.bak
+# .rw-r--r--  548 root 23 Feb  5:18 com.apple.siriknowledged.plist.bak
+# .rw-r--r--  691 root  2 Mar  6:35 com.apple.soagent.plist.bak
+# .rw-r--r-- 2.1k root 23 Feb  4:16 com.apple.SocialPushAgent.plist.bak
+# .rw-r--r-- 1.4k root 25 Feb  4:22 com.apple.softwareupdate_notify_agent.plist.bak
+# .rw-r--r--  822 root 25 Feb  4:25 com.apple.SoftwareUpdateNotificationManager.plist.bak
+# .rw-r--r--  935 root 23 Feb  9:17 com.apple.SSInvitationAgent.plist.bak
+# .rw-r--r-- 3.5k root 23 Feb  8:02 com.apple.suggestd.plist.bak
+# .rw-r--r-- 3.3k root 14 Mar  4:05 com.apple.telephonyutilities.callservicesd.plist.bak
+# .rw-r--r--  932 root 23 Feb  5:27 com.apple.touristd.plist.bak
+# .rw-r--r--  785 root 23 Feb  5:26 com.apple.UserNotificationCenterAgent-LoginWindow.plist.bak
+# .rw-r--r--  523 root 23 Feb  5:26 com.apple.UserNotificationCenterAgent.plist.bak
 
 LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.accessibility.dfrhud.plist
@@ -35,17 +122,17 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.AddressBook.SourceSync.plist
 /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist
 /System/Library/LaunchAgents/com.apple.AirPortBaseStationAgent.plist
-#/System/Library/LaunchAgents/com.apple.akd.plist
+#/System/Library/LaunchAgents/com.apple.akd.plist # Auth Kit Framework (iCloud / AppleID related)
 #/System/Library/LaunchAgents/com.apple.alf.useragent.plist #application firewall
 /System/Library/LaunchAgents/com.apple.AOSHeartbeat.plist
 /System/Library/LaunchAgents/com.apple.AOSPushRelay.plist
 /System/Library/LaunchAgents/com.apple.ap.adprivacyd.plist # ???
-#/System/Library/LaunchAgents/com.apple.ap.adservicesd.plist
+/System/Library/LaunchAgents/com.apple.ap.adservicesd.plist
 #/System/Library/LaunchAgents/com.apple.apfsuseragent.plist
 #/System/Library/LaunchAgents/com.apple.AppleGraphicsWarning.plist
-#/System/Library/LaunchAgents/com.apple.appleseed.seedusaged.plist
-#/System/Library/LaunchAgents/com.apple.appleseed.seedusaged.postinstall.plist
-#/System/Library/LaunchAgents/com.apple.applespell.plist
+/System/Library/LaunchAgents/com.apple.appleseed.seedusaged.plist
+/System/Library/LaunchAgents/com.apple.appleseed.seedusaged.postinstall.plist
+#/System/Library/LaunchAgents/com.apple.applespell.plist #Spelling correction
 #/System/Library/LaunchAgents/com.apple.appsleepd.plist
 #/System/Library/LaunchAgents/com.apple.appstoreagent.plist
 #/System/Library/LaunchAgents/com.apple.appstoreupdateagent.plist
@@ -59,33 +146,33 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.AssistiveControl.plist
 #/System/Library/LaunchAgents/com.apple.atsd.useragent.plist
 #/System/Library/LaunchAgents/com.apple.audio.AudioComponentRegistrar.plist
-#/System/Library/LaunchAgents/com.apple.avconferenced.plist
+# /System/Library/LaunchAgents/com.apple.avconferenced.plist #Manages communication for FaceTime Calls
 #/System/Library/LaunchAgents/com.apple.backgroundtaskmanagementuiagent.plist
-#/System/Library/LaunchAgents/com.apple.bird.plist
-#/System/Library/LaunchAgents/com.apple.bluetooth.PacketLogger.plist
+/System/Library/LaunchAgents/com.apple.bird.plist # iCloud Drive
+/System/Library/LaunchAgents/com.apple.bluetooth.PacketLogger.plist
 #/System/Library/LaunchAgents/com.apple.bluetoothUIServer.plist
-#/System/Library/LaunchAgents/com.apple.btsa.plist
+#/System/Library/LaunchAgents/com.apple.btsa.plist # Bluetooth Setup Assistant
 #/System/Library/LaunchAgents/com.apple.cache_delete.plist
 #/System/Library/LaunchAgents/com.apple.CalendarAgent.plist
-#/System/Library/LaunchAgents/com.apple.CallHistoryPluginHelper.plist
-#/System/Library/LaunchAgents/com.apple.CallHistorySyncHelper.plist
+/System/Library/LaunchAgents/com.apple.CallHistoryPluginHelper.plist
+/System/Library/LaunchAgents/com.apple.CallHistorySyncHelper.plist
 #/System/Library/LaunchAgents/com.apple.cdpd.plist
 #/System/Library/LaunchAgents/com.apple.cfnetwork.AuthBrokerAgent.plist
 #/System/Library/LaunchAgents/com.apple.cfprefsd.xpc.agent.plist
-#/System/Library/LaunchAgents/com.apple.cloudd.plist
-#/System/Library/LaunchAgents/com.apple.cloudpaird.plist
-#/System/Library/LaunchAgents/com.apple.cloudphotosd.plist
+/System/Library/LaunchAgents/com.apple.cloudd.plist
+/System/Library/LaunchAgents/com.apple.cloudpaird.plist
+/System/Library/LaunchAgents/com.apple.cloudphotosd.plist
 #/System/Library/LaunchAgents/com.apple.cmfsyncagent.plist
 #/System/Library/LaunchAgents/com.apple.colorsync.useragent.plist
-/System/Library/LaunchAgents/com.apple.CommCenter-osx.plist
+# /System/Library/LaunchAgents/com.apple.CommCenter-osx.plist
 /System/Library/LaunchAgents/com.apple.commerce.plist
-#/System/Library/LaunchAgents/com.apple.contacts.donation-agent.plist
-#/System/Library/LaunchAgents/com.apple.ContactsAgent.plist
+/System/Library/LaunchAgents/com.apple.contacts.donation-agent.plist
+/System/Library/LaunchAgents/com.apple.ContactsAgent.plist
 #/System/Library/LaunchAgents/com.apple.ContainerRepairAgent.plist
 #/System/Library/LaunchAgents/com.apple.controlstrip.plist
 #/System/Library/LaunchAgents/com.apple.CoreAuthentication.agent.plist
 #/System/Library/LaunchAgents/com.apple.CoreLocationAgent.plist
-/System/Library/LaunchAgents/com.apple.coreparsec.silhouette.plist
+# /System/Library/LaunchAgents/com.apple.coreparsec.silhouette.plist
 #/System/Library/LaunchAgents/com.apple.CoreRAIDAgent.plist
 #/System/Library/LaunchAgents/com.apple.coreservices.lsactivity.plist
 #/System/Library/LaunchAgents/com.apple.coreservices.sharedfilelistd.plist
@@ -114,13 +201,13 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.DiagnosticReportCleanup.plist
 #/System/Library/LaunchAgents/com.apple.diagnostics_agent.plist
 #/System/Library/LaunchAgents/com.apple.DictationIM.plist
-#/System/Library/LaunchAgents/com.apple.DiskArbitrationAgent.plist
+#/System/Library/LaunchAgents/com.apple.DiskArbitrationAgent.plist #https://www.manpagez.com/man/8/diskarbitrationd/
 #/System/Library/LaunchAgents/com.apple.diskspaced.plist
 #/System/Library/LaunchAgents/com.apple.distnoted.xpc.agent.plist
 #/System/Library/LaunchAgents/com.apple.dmd.agent.plist
 #/System/Library/LaunchAgents/com.apple.Dock.plist
 #/System/Library/LaunchAgents/com.apple.dt.CommandLineTools.installondemand.plist
-#/System/Library/LaunchAgents/com.apple.DwellControl.plist
+#/System/Library/LaunchAgents/com.apple.DwellControl.plist #Universal Access related
 #/System/Library/LaunchAgents/com.apple.eospreflightagent.plist
 #/System/Library/LaunchAgents/com.apple.EscrowSecurityAlert.plist
 /System/Library/LaunchAgents/com.apple.familycircled.plist
@@ -131,23 +218,23 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.Finder.plist
 /System/Library/LaunchAgents/com.apple.findmymacmessenger.plist
 #/System/Library/LaunchAgents/com.apple.FolderActionsDispatcher.plist
-#/System/Library/LaunchAgents/com.apple.followupd.plist
-#/System/Library/LaunchAgents/com.apple.FollowUpUI.plist
+/System/Library/LaunchAgents/com.apple.followupd.plist
+/System/Library/LaunchAgents/com.apple.FollowUpUI.plist
 #/System/Library/LaunchAgents/com.apple.fontd.useragent.plist
 #/System/Library/LaunchAgents/com.apple.FontRegistryUIAgent.plist
 #/System/Library/LaunchAgents/com.apple.FontValidator.plist
 #/System/Library/LaunchAgents/com.apple.FontValidatorConduit.plist
 #/System/Library/LaunchAgents/com.apple.FontWorker.plist
 /System/Library/LaunchAgents/com.apple.gamed.plist
-#/System/Library/LaunchAgents/com.apple.helpd.plist
-#/System/Library/LaunchAgents/com.apple.homed.plist
-#/System/Library/LaunchAgents/com.apple.icdd.plist
+/System/Library/LaunchAgents/com.apple.helpd.plist
+# /System/Library/LaunchAgents/com.apple.homed.plist
+#/System/Library/LaunchAgents/com.apple.icdd.plist #Image Capture Discovery Daemon (For scanners and cameras)
 /System/Library/LaunchAgents/com.apple.icloud.findmydeviced.findmydevice-user-agent.plist
 /System/Library/LaunchAgents/com.apple.icloud.fmfd.plist
 /System/Library/LaunchAgents/com.apple.iCloudUserNotifications.plist
 #/System/Library/LaunchAgents/com.apple.iconservices.iconservicesagent.plist
 /System/Library/LaunchAgents/com.apple.identityservicesd.plist #
-#/System/Library/LaunchAgents/com.apple.idsremoteurlconnectionagent.plist
+/System/Library/LaunchAgents/com.apple.idsremoteurlconnectionagent.plist # ios remote connection related
 /System/Library/LaunchAgents/com.apple.imagent.plist # Face Time Invitation Listener
 #/System/Library/LaunchAgents/com.apple.imautomatichistorydeletionagent.plist
 #/System/Library/LaunchAgents/com.apple.imklaunchagent.plist
@@ -155,19 +242,19 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.installandsetup.migrationhelper.user.plist
 #/System/Library/LaunchAgents/com.apple.installd.user.plist
 #/System/Library/LaunchAgents/com.apple.installerauthagent.plist
-#/System/Library/LaunchAgents/com.apple.isst.plist
+#/System/Library/LaunchAgents/com.apple.isst.plist # -> /System/Library/CoreServices/Menu Extras/TextInput.menu/Contents/SharedSupport/isst
 #/System/Library/LaunchAgents/com.apple.iTunesHelper.launcher.plist
-#/System/Library/LaunchAgents/com.apple.java.InstallOnDemand.plist
+/System/Library/LaunchAgents/com.apple.java.InstallOnDemand.plist
 #/System/Library/LaunchAgents/com.apple.keyboardservicesd.plist
 #/System/Library/LaunchAgents/com.apple.knowledge-agent.plist
 #/System/Library/LaunchAgents/com.apple.languageassetd.plist
-#/System/Library/LaunchAgents/com.apple.lateragent.plist
+/System/Library/LaunchAgents/com.apple.lateragent.plist # System Update Reminder
 #/System/Library/LaunchAgents/com.apple.LocalAuthentication.UIAgent.plist
 #/System/Library/LaunchAgents/com.apple.locationmenu.plist
 #/System/Library/LaunchAgents/com.apple.loginwindow.LWWeeklyMessageTracer.plist
 #/System/Library/LaunchAgents/com.apple.lsd.plist
 /System/Library/LaunchAgents/com.apple.macos.studentd.plist
-/System/Library/LaunchAgents/com.apple.ManagedClientAgent.agent.plist
+# /System/Library/LaunchAgents/com.apple.ManagedClientAgent.agent.plist
 /System/Library/LaunchAgents/com.apple.ManagedClientAgent.enrollagent.plist
 /System/Library/LaunchAgents/com.apple.Maps.pushdaemon.plist
 #/System/Library/LaunchAgents/com.apple.mbbackgrounduseragent.plist
@@ -181,20 +268,20 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.mdworker.single.plist
 #/System/Library/LaunchAgents/com.apple.mdworker.sizing.plist
 #/System/Library/LaunchAgents/com.apple.mediaanalysisd.plist
-#/System/Library/LaunchAgents/com.apple.mediaremoteagent.plist
+#/System/Library/LaunchAgents/com.apple.mediaremoteagent.plist #iTunes related
 #/System/Library/LaunchAgents/com.apple.metadata.mdbulkimport.plist
 #/System/Library/LaunchAgents/com.apple.metadata.mdflagwriter.plist
 #/System/Library/LaunchAgents/com.apple.metadata.mdwrite.plist
 #/System/Library/LaunchAgents/com.apple.midiserver.plist
-#/System/Library/LaunchAgents/com.apple.MobileAccessoryUpdater.fudHelperAgent.plist
+/System/Library/LaunchAgents/com.apple.MobileAccessoryUpdater.fudHelperAgent.plist
 #/System/Library/LaunchAgents/com.apple.mobiledeviceupdater.plist
-#/System/Library/LaunchAgents/com.apple.MRTa.plist
-#/System/Library/LaunchAgents/com.apple.navd.plist
+# /System/Library/LaunchAgents/com.apple.MRTa.plist # Apple Malware Removal Tool / YaraScanService
+/System/Library/LaunchAgents/com.apple.navd.plist
 #/System/Library/LaunchAgents/com.apple.neagent.plist
 #/System/Library/LaunchAgents/com.apple.netauth.user.auth.plist
 #/System/Library/LaunchAgents/com.apple.netauth.user.gui.plist
 #/System/Library/LaunchAgents/com.apple.networkserviceproxy-osx.plist
-#/System/Library/LaunchAgents/com.apple.noticeboard.agent.plist
+/System/Library/LaunchAgents/com.apple.noticeboard.agent.plist
 /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 #/System/Library/LaunchAgents/com.apple.NowPlayingTouchUI.plist
 #/System/Library/LaunchAgents/com.apple.nsurlsessiond.plist
@@ -202,15 +289,15 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.NVMeAgent.plist
 #/System/Library/LaunchAgents/com.apple.OSDUIHelper.plist
 #/System/Library/LaunchAgents/com.apple.PackageKit.InstallStatus.plist
-#/System/Library/LaunchAgents/com.apple.parentalcontrols.check.plist
-/System/Library/LaunchAgents/com.apple.parsec-fbf.plist
-/System/Library/LaunchAgents/com.apple.parsecd.plist
+/System/Library/LaunchAgents/com.apple.parentalcontrols.check.plist
+# /System/Library/LaunchAgents/com.apple.parsec-fbf.plist
+# /System/Library/LaunchAgents/com.apple.parsecd.plist
 #/System/Library/LaunchAgents/com.apple.passd.plist
 #/System/Library/LaunchAgents/com.apple.pboard.plist
 #/System/Library/LaunchAgents/com.apple.pbs.plist
 #/System/Library/LaunchAgents/com.apple.PCIESlotCheck.plist
-#/System/Library/LaunchAgents/com.apple.personad.plist
-#/System/Library/LaunchAgents/com.apple.photoanalysisd.plist
+/System/Library/LaunchAgents/com.apple.personad.plist
+/System/Library/LaunchAgents/com.apple.photoanalysisd.plist
 #/System/Library/LaunchAgents/com.apple.photolibraryd.plist
 #/System/Library/LaunchAgents/com.apple.PhotoLibraryMigrationUtility.XPC.plist
 #/System/Library/LaunchAgents/com.apple.pictd.plist
@@ -222,7 +309,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.printtool.agent.plist
 #/System/Library/LaunchAgents/com.apple.printuitool.agent.plist
 #/System/Library/LaunchAgents/com.apple.progressd.plist
-#/System/Library/LaunchAgents/com.apple.protectedcloudstorage.protectedcloudkeysyncing.plist
+/System/Library/LaunchAgents/com.apple.protectedcloudstorage.protectedcloudkeysyncing.plist
 #/System/Library/LaunchAgents/com.apple.PubSub.Agent.plist
 #/System/Library/LaunchAgents/com.apple.quicklook.32bit.plist
 #/System/Library/LaunchAgents/com.apple.quicklook.plist
@@ -231,7 +318,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.rapportd-user.plist
 #/System/Library/LaunchAgents/com.apple.RapportUIAgent.plist
 #/System/Library/LaunchAgents/com.apple.rcd.plist
-#/System/Library/LaunchAgents/com.apple.recentsd.plist
+/System/Library/LaunchAgents/com.apple.recentsd.plist # https://www.manpagez.com/man/8/recentsd/
 /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist
 /System/Library/LaunchAgents/com.apple.ReportCrash.plist
 #/System/Library/LaunchAgents/com.apple.ReportCrash.Self.plist
@@ -264,20 +351,20 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.security.keychain-circle-notification.plist
 #/System/Library/LaunchAgents/com.apple.securityuploadd.plist
 #/System/Library/LaunchAgents/com.apple.ServicesUIAgent.plist
-/System/Library/LaunchAgents/com.apple.sharingd.plist
-/System/Library/LaunchAgents/com.apple.sidecar-relay.plist
+# /System/Library/LaunchAgents/com.apple.sharingd.plist
+# /System/Library/LaunchAgents/com.apple.sidecar-relay.plist
 /System/Library/LaunchAgents/com.apple.Siri.agent.plist
 /System/Library/LaunchAgents/com.apple.siriknowledged.plist
 /System/Library/LaunchAgents/com.apple.soagent.plist
-#/System/Library/LaunchAgents/com.apple.SocialPushAgent.plist
-#/System/Library/LaunchAgents/com.apple.softwareupdate_notify_agent.plist
-#/System/Library/LaunchAgents/com.apple.SoftwareUpdateNotificationManager.plist
+/System/Library/LaunchAgents/com.apple.SocialPushAgent.plist
+/System/Library/LaunchAgents/com.apple.softwareupdate_notify_agent.plist
+/System/Library/LaunchAgents/com.apple.SoftwareUpdateNotificationManager.plist
 #/System/Library/LaunchAgents/com.apple.speech.speechdatainstallerd.plist
 #/System/Library/LaunchAgents/com.apple.speech.speechsynthesisd.plist
 #/System/Library/LaunchAgents/com.apple.speech.synthesisserver.plist
 #/System/Library/LaunchAgents/com.apple.spindump_agent.plist
 #/System/Library/LaunchAgents/com.apple.Spotlight.plist
-#/System/Library/LaunchAgents/com.apple.SSInvitationAgent.plist
+/System/Library/LaunchAgents/com.apple.SSInvitationAgent.plist #ScreenSharing Invitation Agent
 #/System/Library/LaunchAgents/com.apple.StorageManagementUIHelper.plist
 #/System/Library/LaunchAgents/com.apple.storeaccountd.plist
 #/System/Library/LaunchAgents/com.apple.storeassetd.plist
@@ -285,8 +372,8 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.storeinstallagent.plist
 #/System/Library/LaunchAgents/com.apple.storelegacy.plist
 #/System/Library/LaunchAgents/com.apple.storeuid.plist
-#/System/Library/LaunchAgents/com.apple.suggestd.plist
-#/System/Library/LaunchAgents/com.apple.swcd.plist
+/System/Library/LaunchAgents/com.apple.suggestd.plist #Seems related to finding contacts in emails
+# /System/Library/LaunchAgents/com.apple.swcd.plist #Shared Web Credentials (Safari related)
 #/System/Library/LaunchAgents/com.apple.syncdefaultsd.plist
 #/System/Library/LaunchAgents/com.apple.syncservices.SyncServer.plist
 #/System/Library/LaunchAgents/com.apple.syncservices.uihandler.plist
@@ -295,7 +382,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.SystemUIServer.plist
 #/System/Library/LaunchAgents/com.apple.talagent.plist
 #/System/Library/LaunchAgents/com.apple.tccd.plist
-/System/Library/LaunchAgents/com.apple.telephonyutilities.callservicesd.plist
+# /System/Library/LaunchAgents/com.apple.telephonyutilities.callservicesd.plist
 #/System/Library/LaunchAgents/com.apple.thermaltrap.plist
 #/System/Library/LaunchAgents/com.apple.tiswitcher.plist
 #/System/Library/LaunchAgents/com.apple.TMHelperAgent.plist
@@ -316,7 +403,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.usernoted.plist
 /System/Library/LaunchAgents/com.apple.UserNotificationCenterAgent-LoginWindow.plist
 /System/Library/LaunchAgents/com.apple.UserNotificationCenterAgent.plist
-/System/Library/LaunchAgents/com.apple.videosubscriptionsd.plist
+# /System/Library/LaunchAgents/com.apple.videosubscriptionsd.plist
 #/System/Library/LaunchAgents/com.apple.voicememod.plist
 #/System/Library/LaunchAgents/com.apple.VoiceOver.plist
 #/System/Library/LaunchAgents/com.apple.warmd_agent.plist
@@ -327,6 +414,23 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.xpc.loginitemregisterd.plist
 #/System/Library/LaunchAgents/com.apple.xpc.otherbsd.plist
 )
+
+
+# com.apple.bluetoothaudiod.plist.bak
+# com.apple.bluetoothd.plist.bak
+# com.apple.CommCenterRootHelper.plist.bak
+# com.apple.diagnosticextensions.osx.bluetooth.helper.plist.bak
+# com.apple.diagnosticextensions.osx.getmobilityinfo.helper.plist.bak
+# com.apple.diagnosticextensions.osx.spotlight.helper.plist.bak
+# com.apple.diagnosticextensions.osx.timemachine.helper.plist.bak
+# com.apple.diagnosticextensions.osx.wifi.helper.plist.bak
+# com.apple.mediaremoted.plist.bak
+# com.apple.racoon.plist.bak
+# com.apple.rapportd.plist.bak
+# com.apple.smb.preferences.plist.bak
+# com.apple.smbd.plist.bak
+# com.apple.UserNotificationCenter.plist.bak
+
 LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.openssh.ssh-agent.plist
 #/System/Library/LaunchDaemons/bootps.plist
@@ -334,7 +438,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.adid.plist
 #/System/Library/LaunchDaemons/com.apple.afpfs_afpLoad.plist
 #/System/Library/LaunchDaemons/com.apple.afpfs_checkafp.plist
-/System/Library/LaunchDaemons/com.apple.AirPlayXPCHelper.plist
+# /System/Library/LaunchDaemons/com.apple.AirPlayXPCHelper.plist
 #/System/Library/LaunchDaemons/com.apple.airport.wps.plist
 #/System/Library/LaunchDaemons/com.apple.airportd.plist
 #/System/Library/LaunchDaemons/com.apple.akd.plist
@@ -346,7 +450,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.AppleQEMUGuestAgent.plist
 #/System/Library/LaunchDaemons/com.apple.appleseed.fbahelperd.plist
 #/System/Library/LaunchDaemons/com.apple.applessdstatistics.plist
-/System/Library/LaunchDaemons/com.apple.apsd.plist
+/System/Library/LaunchDaemons/com.apple.apsd.plist #Apple Push Notification Service
 #/System/Library/LaunchDaemons/com.apple.aslmanager.plist
 #/System/Library/LaunchDaemons/com.apple.AssetCache.builtin.plist
 #/System/Library/LaunchDaemons/com.apple.AssetCacheLocatorService.plist
@@ -360,14 +464,14 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.autofsd.plist
 #/System/Library/LaunchDaemons/com.apple.automountd.plist
 #/System/Library/LaunchDaemons/com.apple.avbdeviced.plist
-#/System/Library/LaunchDaemons/com.apple.awacsd.plist
-#/System/Library/LaunchDaemons/com.apple.awdd.plist
+/System/Library/LaunchDaemons/com.apple.awacsd.plist #Apple Wide Area Connectivity Service daemon - Back to My Mac Feature
+# /System/Library/LaunchDaemons/com.apple.awdd.plist
 #/System/Library/LaunchDaemons/com.apple.backupd-helper.plist
 #/System/Library/LaunchDaemons/com.apple.backupd.plist
 /System/Library/LaunchDaemons/com.apple.biokitaggdd.plist
 /System/Library/LaunchDaemons/com.apple.biometrickitd.plist
 /System/Library/LaunchDaemons/com.apple.bluetoothaudiod.plist
-/System/Library/LaunchDaemons/com.apple.bluetoothd.plist
+# /System/Library/LaunchDaemons/com.apple.bluetoothd.plist
 /System/Library/LaunchDaemons/com.apple.bluetoothReporter.plist
 #/System/Library/LaunchDaemons/com.apple.bnepd.plist
 #/System/Library/LaunchDaemons/com.apple.bootinstalld.plist
@@ -381,13 +485,13 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.cmio.AppleCameraAssistant.plist
 #/System/Library/LaunchDaemons/com.apple.cmio.AVCAssistant.plist
 #/System/Library/LaunchDaemons/com.apple.cmio.IIDCVideoAssistant.plist
-#/System/Library/LaunchDaemons/com.apple.cmio.iOSScreenCaptureAssistant.plist
+# /System/Library/LaunchDaemons/com.apple.cmio.iOSScreenCaptureAssistant.plist
 #/System/Library/LaunchDaemons/com.apple.cmio.VDCAssistant.plist
 #/System/Library/LaunchDaemons/com.apple.colorsync.displayservices.plist
 #/System/Library/LaunchDaemons/com.apple.colorsyncd.plist
-/System/Library/LaunchDaemons/com.apple.CommCenterRootHelper.plist
+# /System/Library/LaunchDaemons/com.apple.CommCenterRootHelper.plist
 /System/Library/LaunchDaemons/com.apple.commerced.plist
-#/System/Library/LaunchDaemons/com.apple.comsat.plist
+# /System/Library/LaunchDaemons/com.apple.comsat.plist #server process which receives reports of incoming mail and notifies users if they have requested this service.
 #/System/Library/LaunchDaemons/com.apple.configd.plist
 #/System/Library/LaunchDaemons/com.apple.configureLocalKDC.plist
 #/System/Library/LaunchDaemons/com.apple.contextstored.plist
@@ -413,12 +517,12 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.DataDetectorsSourceAccess.plist
 #/System/Library/LaunchDaemons/com.apple.defragx.plist
 #/System/Library/LaunchDaemons/com.apple.DesktopServicesHelper.plist
-#/System/Library/LaunchDaemons/com.apple.diagnosticd.plist
-/System/Library/LaunchDaemons/com.apple.diagnosticextensions.osx.bluetooth.helper.plist
-/System/Library/LaunchDaemons/com.apple.diagnosticextensions.osx.getmobilityinfo.helper.plist
-/System/Library/LaunchDaemons/com.apple.diagnosticextensions.osx.spotlight.helper.plist
-/System/Library/LaunchDaemons/com.apple.diagnosticextensions.osx.timemachine.helper.plist
-/System/Library/LaunchDaemons/com.apple.diagnosticextensions.osx.wifi.helper.plist
+/System/Library/LaunchDaemons/com.apple.diagnosticd.plist #!
+# /System/Library/LaunchDaemons/com.apple.diagnosticextensions.osx.bluetooth.helper.plist
+# /System/Library/LaunchDaemons/com.apple.diagnosticextensions.osx.getmobilityinfo.helper.plist
+# /System/Library/LaunchDaemons/com.apple.diagnosticextensions.osx.spotlight.helper.plist
+# /System/Library/LaunchDaemons/com.apple.diagnosticextensions.osx.timemachine.helper.plist
+# /System/Library/LaunchDaemons/com.apple.diagnosticextensions.osx.wifi.helper.plist
 #/System/Library/LaunchDaemons/com.apple.diskarbitrationd.plist
 #/System/Library/LaunchDaemons/com.apple.diskmanagementd.plist
 #/System/Library/LaunchDaemons/com.apple.diskmanagementstartup.plist
@@ -443,10 +547,10 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.emond.plist
 #/System/Library/LaunchDaemons/com.apple.eoshostd.plist
 #/System/Library/LaunchDaemons/com.apple.eppc.plist
-#/System/Library/LaunchDaemons/com.apple.familycontrols.plist
+/System/Library/LaunchDaemons/com.apple.familycontrols.plist
 #/System/Library/LaunchDaemons/com.apple.FileCoordination.plist
-#/System/Library/LaunchDaemons/com.apple.findmymac.plist
-#/System/Library/LaunchDaemons/com.apple.findmymacmessenger.plist
+/System/Library/LaunchDaemons/com.apple.findmymac.plist
+/System/Library/LaunchDaemons/com.apple.findmymacmessenger.plist
 #/System/Library/LaunchDaemons/com.apple.firmwaresyncd.plist
 #/System/Library/LaunchDaemons/com.apple.fontd.plist
 #/System/Library/LaunchDaemons/com.apple.fontmover.plist
@@ -486,24 +590,24 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.kextd.plist
 #/System/Library/LaunchDaemons/com.apple.kuncd.plist
 #/System/Library/LaunchDaemons/com.apple.locate.plist
-#/System/Library/LaunchDaemons/com.apple.locationd.plist
+# /System/Library/LaunchDaemons/com.apple.locationd.plist
 #/System/Library/LaunchDaemons/com.apple.lockd.plist
 #/System/Library/LaunchDaemons/com.apple.logd.plist
 #/System/Library/LaunchDaemons/com.apple.logind.plist
 #/System/Library/LaunchDaemons/com.apple.loginwindow.plist
 #/System/Library/LaunchDaemons/com.apple.logkextloadsd.plist
 #/System/Library/LaunchDaemons/com.apple.lsd.plist
-#/System/Library/LaunchDaemons/com.apple.ManagedClient.cloudconfigurationd.plist
-#/System/Library/LaunchDaemons/com.apple.ManagedClient.enroll.plist
-#/System/Library/LaunchDaemons/com.apple.ManagedClient.plist
-#/System/Library/LaunchDaemons/com.apple.ManagedClient.startup.plist
+/System/Library/LaunchDaemons/com.apple.ManagedClient.cloudconfigurationd.plist
+/System/Library/LaunchDaemons/com.apple.ManagedClient.enroll.plist
+# /System/Library/LaunchDaemons/com.apple.ManagedClient.plist
+# /System/Library/LaunchDaemons/com.apple.ManagedClient.startup.plist
 #/System/Library/LaunchDaemons/com.apple.mbsystemadministration.plist
 #/System/Library/LaunchDaemons/com.apple.mbusertrampoline.plist
 #/System/Library/LaunchDaemons/com.apple.mdmclient.daemon.plist
 #/System/Library/LaunchDaemons/com.apple.mdmclient.daemon.runatboot.plist
 #/System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
 #/System/Library/LaunchDaemons/com.apple.mDNSResponderHelper.plist
-/System/Library/LaunchDaemons/com.apple.mediaremoted.plist
+#/System/Library/LaunchDaemons/com.apple.mediaremoted.plist #hangs itunes if disabled
 #/System/Library/LaunchDaemons/com.apple.metadata.mds.index.plist
 #/System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 #/System/Library/LaunchDaemons/com.apple.metadata.mds.scan.plist
@@ -513,7 +617,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.mobileactivationd.plist
 #/System/Library/LaunchDaemons/com.apple.mobileassetd.plist
 #/System/Library/LaunchDaemons/com.apple.MobileFileIntegrity.plist
-#/System/Library/LaunchDaemons/com.apple.MRTd.plist
+# /System/Library/LaunchDaemons/com.apple.MRTd.plist # Apple Malware Removal Tool / YaraScanService
 #/System/Library/LaunchDaemons/com.apple.msrpc.echosvc.plist
 #/System/Library/LaunchDaemons/com.apple.msrpc.lsarpc.plist
 #/System/Library/LaunchDaemons/com.apple.msrpc.mdssvc.plist
@@ -521,7 +625,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.msrpc.srvsvc.plist
 #/System/Library/LaunchDaemons/com.apple.msrpc.wkssvc.plist
 #/System/Library/LaunchDaemons/com.apple.multiversed.plist
-#/System/Library/LaunchDaemons/com.apple.nehelper.plist
+#/System/Library/LaunchDaemons/com.apple.nehelper.plist https://www.manpagez.com/man/8/nehelper/
 #/System/Library/LaunchDaemons/com.apple.nesessionmanager.plist
 #/System/Library/LaunchDaemons/com.apple.netauth.sys.auth.plist
 #/System/Library/LaunchDaemons/com.apple.netauth.sys.gui.plist
@@ -534,15 +638,15 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.nfrestore.plist
 #/System/Library/LaunchDaemons/com.apple.nfsconf.plist
 #/System/Library/LaunchDaemons/com.apple.nfsd.plist
-#/System/Library/LaunchDaemons/com.apple.noticeboard.state.plist
-#/System/Library/LaunchDaemons/com.apple.notifyd.plist
+/System/Library/LaunchDaemons/com.apple.noticeboard.state.plist
+/System/Library/LaunchDaemons/com.apple.notifyd.plist #springboard related
 #/System/Library/LaunchDaemons/com.apple.nsurlsessiond.plist
 #/System/Library/LaunchDaemons/com.apple.nsurlstoraged.plist
 #/System/Library/LaunchDaemons/com.apple.ocspd.plist
-#/System/Library/LaunchDaemons/com.apple.odproxyd.plist
-#/System/Library/LaunchDaemons/com.apple.ODSAgent.plist
+#/System/Library/LaunchDaemons/com.apple.odproxyd.plist # https://www.manpagez.com/man/8/odproxyd/
+# /System/Library/LaunchDaemons/com.apple.ODSAgent.plist # Remote Disc Sharing
 #/System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
-/System/Library/LaunchDaemons/com.apple.osanalytics.osanalyticshelper.plist
+# /System/Library/LaunchDaemons/com.apple.osanalytics.osanalyticshelper.plist
 #/System/Library/LaunchDaemons/com.apple.PasswordService.plist
 #/System/Library/LaunchDaemons/com.apple.PCIELaneConfigTool.plist
 #/System/Library/LaunchDaemons/com.apple.PerfPowerServices.plist
@@ -559,13 +663,13 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.preferences.timezone.admintool.plist
 #/System/Library/LaunchDaemons/com.apple.printtool.daemon.plist
 #/System/Library/LaunchDaemons/com.apple.ProcessPanicReport.plist
-/System/Library/LaunchDaemons/com.apple.racoon.plist
-/System/Library/LaunchDaemons/com.apple.rapportd.plist
-/System/Library/LaunchDaemons/com.apple.RemoteDesktop.PrivilegeProxy.plist
-/System/Library/LaunchDaemons/com.apple.remotemanagementd.plist
-/System/Library/LaunchDaemons/com.apple.remotepairtool.plist
-/System/Library/LaunchDaemons/com.apple.ReportCrash.Root.plist
-/System/Library/LaunchDaemons/com.apple.ReportCrash.Root.Self.plist
+# /System/Library/LaunchDaemons/com.apple.racoon.plist
+# /System/Library/LaunchDaemons/com.apple.rapportd.plist
+# /System/Library/LaunchDaemons/com.apple.RemoteDesktop.PrivilegeProxy.plist
+# /System/Library/LaunchDaemons/com.apple.remotemanagementd.plist
+# /System/Library/LaunchDaemons/com.apple.remotepairtool.plist
+# /System/Library/LaunchDaemons/com.apple.ReportCrash.Root.plist
+# /System/Library/LaunchDaemons/com.apple.ReportCrash.Root.Self.plist
 #/System/Library/LaunchDaemons/com.apple.ReportMemoryException.plist
 #/System/Library/LaunchDaemons/com.apple.ReportPanicService.plist
 #/System/Library/LaunchDaemons/com.apple.revisiond.plist
@@ -587,16 +691,16 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.securityd_service.plist
 #/System/Library/LaunchDaemons/com.apple.seld.plist
 #/System/Library/LaunchDaemons/com.apple.sessionlogoutd.plist
-#/System/Library/LaunchDaemons/com.apple.signpost.signpost_reporter.plist
-/System/Library/LaunchDaemons/com.apple.smb.preferences.plist
-/System/Library/LaunchDaemons/com.apple.smbd.plist
+/System/Library/LaunchDaemons/com.apple.signpost.signpost_reporter.plist # perfomance analysis
+# /System/Library/LaunchDaemons/com.apple.smb.preferences.plist
+# /System/Library/LaunchDaemons/com.apple.smbd.plist
 #/System/Library/LaunchDaemons/com.apple.softwareupdate_download_service.plist
 #/System/Library/LaunchDaemons/com.apple.softwareupdate_firstrun_tasks.plist
 #/System/Library/LaunchDaemons/com.apple.softwareupdated.plist
 #/System/Library/LaunchDaemons/com.apple.speech.speechsynthesisd.plist
 #/System/Library/LaunchDaemons/com.apple.spindump.plist
 #/System/Library/LaunchDaemons/com.apple.startupdiskhelper.plist
-#/System/Library/LaunchDaemons/com.apple.statd.notify.plist
+# /System/Library/LaunchDaemons/com.apple.statd.notify.plist # NFS stat daemon
 #/System/Library/LaunchDaemons/com.apple.storagekitd.plist
 #/System/Library/LaunchDaemons/com.apple.storeaccountd.daemon.plist
 #/System/Library/LaunchDaemons/com.apple.storeagent.daemon.plist
@@ -604,7 +708,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.storedownloadd.daemon.plist
 #/System/Library/LaunchDaemons/com.apple.storeinstalld.plist
 #/System/Library/LaunchDaemons/com.apple.storereceiptinstaller.plist
-/System/Library/LaunchDaemons/com.apple.SubmitDiagInfo.plist
+# /System/Library/LaunchDaemons/com.apple.SubmitDiagInfo.plist
 #/System/Library/LaunchDaemons/com.apple.suhelperd.plist
 #/System/Library/LaunchDaemons/com.apple.symptomsd.plist
 #/System/Library/LaunchDaemons/com.apple.sysdiagnose.plist
@@ -620,10 +724,10 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.taskgated.plist
 #/System/Library/LaunchDaemons/com.apple.tccd.system.plist
 #/System/Library/LaunchDaemons/com.apple.testmanagerd.plist
-#/System/Library/LaunchDaemons/com.apple.thermald.plist
+#/System/Library/LaunchDaemons/com.apple.thermald.plist # Thermal management daemon.
 #/System/Library/LaunchDaemons/com.apple.timed.plist
 #/System/Library/LaunchDaemons/com.apple.timezoneupdates.tzd.plist
-#/System/Library/LaunchDaemons/com.apple.touchbarserver.plist
+/System/Library/LaunchDaemons/com.apple.touchbarserver.plist
 #/System/Library/LaunchDaemons/com.apple.trustd.plist
 #/System/Library/LaunchDaemons/com.apple.TrustEvaluationAgent.system.plist
 #/System/Library/LaunchDaemons/com.apple.tzlinkd.plist
@@ -633,11 +737,11 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.usbd.plist
 #/System/Library/LaunchDaemons/com.apple.usbmuxd.plist
 #/System/Library/LaunchDaemons/com.apple.UserEventAgent-System.plist
-/System/Library/LaunchDaemons/com.apple.UserNotificationCenter.plist
+#/System/Library/LaunchDaemons/com.apple.UserNotificationCenter.plist
 #/System/Library/LaunchDaemons/com.apple.uucp.plist
 #/System/Library/LaunchDaemons/com.apple.var-db-dslocal-backup.plist
 #/System/Library/LaunchDaemons/com.apple.vsdbutil.plist
-#/System/Library/LaunchDaemons/com.apple.warmd.plist
+#/System/Library/LaunchDaemons/com.apple.warmd.plist # Controls caches used during startup and login
 #/System/Library/LaunchDaemons/com.apple.watchdogd.plist
 #/System/Library/LaunchDaemons/com.apple.wifid.plist
 #/System/Library/LaunchDaemons/com.apple.wifiFirmwareLoader.plist
@@ -668,18 +772,20 @@ LaunchDaemons=(
 )
 
 load() {
-	if [[ $testrun == "true" ]]; then
-		echo rename 's/\.bak$//' ${@}
+	if [[ $testrun -eq "true" ]]; then
+		# echo rename 's/\.bak$//' ${@}
 		echo launchctl load -w ${@}
 		echo sudo launchctl load -w ${@}
 		echo -e "\n \n"
 	else
-		(set -x; rename 's/\.bak$//' ${@};
-		launchctl load -w ${@};
-		sudo launchctl load -w ${@};)
+		# (set -x; sudo rename 's/\.bak$//' "${@}.bak";
+		(set -x;
+			launchctl load -w ${@};
+			sudo launchctl load -w ${@};
+			)
 		# grep launchctl list output to check if service is really enabled
-		sudo launchctl list | grep $(echo {@} | /usr/bin/sed -E 's/.*\/(.*).plist/\1/') &> /dev/null
-		if [[ "$?" -ne 0 ]]; then
+		sudo launchctl list | grep $(echo "${@}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/')
+		if [[ "$?" -eq 0 ]]; then
 			echo "[OK] Agent ${@} enabled"
 		fi
 		echo -e "\n \n"
@@ -687,9 +793,9 @@ load() {
 }
 
 unload() {
-	if [[ $testrun == "true" ]]; then
-		echo launchctl load -w ${@}
-		echo sudo launchctl load -w ${@}
+	if [[ $testrun -eq "true" ]]; then
+		echo launchctl unload -w ${@}
+		echo sudo launchctl unload -w ${@}
 		if [[ $mv_plist == "true"  ]]; then
 			echo sudo mv ${@} ${@}.bak
 		fi
@@ -697,26 +803,45 @@ unload() {
 	else
 		(set -x;
 			launchctl unload -w ${@};
-			sudo launchctl unload -w ${@};)
+			sudo launchctl unload -w ${@};
+			)
 		if [[ $mv_plist == "true"  ]]; then
-			(set -x; sudo mv ${@} ${@}.bak);
+			(set -x;
+				sudo mv ${@} ${@}.bak;
+			)
 		fi
 		# grep launchctl list output to check if service is really disabled
-		sudo launchctl list | grep $(echo {@} | /usr/bin/sed -E 's/.*\/(.*).plist/\1/') &> /dev/null
-		if [[ "$?" -ne 1 ]]; then
+		sudo launchctl list | grep $(echo "${@}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/') &> /dev/null
+		if [[ "$?" -eq 1 ]]; then
 			echo "[OK] ${@} disabled"
 		fi
 		echo -e "\n \n"
 	fi
 }
 
+clean() {
+	dir=${@}
+	eval files='"${'${dir}'[*]}"'
+	sudo rename 's/\.bak$//' /System/Library/$dir/*;
+	for f in /System/Library/$dir/*; do
+		if [[ " ${files} " == *" $f "* && -z $restore ]]; then
+			echo unload $f
+		else
+			echo load $f
+		fi
+	done
+}
 
-for service in "${LaunchAgents[@]}"
-do
-	$(echo $command ${service})
-done
+clean LaunchAgents
+clean LaunchDaemons
 
-for service in "${LaunchDaemons[@]}"
-do
-	$(echo $command ${service})
-done
+
+# for service in "${LaunchAgents[@]}"
+# do
+# 	$(echo $command ${service})
+# done
+
+# for service in "${LaunchDaemons[@]}"
+# do
+# 	$(echo $command ${service})
+# done
