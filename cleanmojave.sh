@@ -739,20 +739,21 @@ unload() {
 }
 
 clean() {
-	# working directory #
+	# working directory function argument #
 	dir=${@}
-	# array of all Agents/Daemons to disable based on lists above #
-	eval files='"${'${dir}'[*]}"'
+	# list of all Agents/Daemons to disable based on lists above #
+	eval blacklist='"${'${dir}'[*]}"'
 	# rename all .bak files back to .plist first #
 	sudo rename 's/\.bak$//' /System/Library/$dir/*;
-	for f in /System/Library/$dir/*; do
+	for service in /System/Library/$dir/*; do
 		# grep launchctl if the service is already enabled to determine wether to load it if it's not being unloaded
-		enabled=$(sudo launchctl list | grep $(echo "${f}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
-		if [[ " ${files} " == *" $f "* && " ${Protected[*]} " != *" $f "* && -z $restore ]]; then
-			unload $f
+		enabled=$(sudo launchctl list | grep $(echo "${service}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
+		# unload service if matched in $blacklist, not found in $Protected, and with $restore unset
+		if [[ " ${blacklist} " == *" $service "* && " ${Protected[*]} " != *" $service "* && -z $restore ]]; then
+			unload $service
 		# load service if: $disableonly is unset, it's not listed in $Protected and it's not listed by launchctl in $enabled #
-		elif [[ -z $disableonly && " ${Protected[*]} " != *" $f " && ! $enabled ]]; then
-			load $f
+		elif [[ -z $disableonly && " ${Protected[*]} " != *" $service " && ! $enabled ]]; then
+			load $service
 		fi
 	done
 }
