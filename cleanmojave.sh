@@ -83,7 +83,7 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.AssistiveControl.plist
 #/System/Library/LaunchAgents/com.apple.atsd.useragent.plist # fontd related
 #/System/Library/LaunchAgents/com.apple.audio.AudioComponentRegistrar.plist
-# /System/Library/LaunchAgents/com.apple.avconferenced.plist #Manages communication for FaceTime Calls
+/System/Library/LaunchAgents/com.apple.avconferenced.plist #Manages communication for FaceTime Calls
 #/System/Library/LaunchAgents/com.apple.backgroundtaskmanagementuiagent.plist
 /System/Library/LaunchAgents/com.apple.bird.plist # iCloud Drive
 /System/Library/LaunchAgents/com.apple.bluetooth.PacketLogger.plist
@@ -109,7 +109,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.controlstrip.plist
 #/System/Library/LaunchAgents/com.apple.CoreAuthentication.agent.plist
 #/System/Library/LaunchAgents/com.apple.CoreLocationAgent.plist
-# /System/Library/LaunchAgents/com.apple.coreparsec.silhouette.plist
+/System/Library/LaunchAgents/com.apple.coreparsec.silhouette.plist
 #/System/Library/LaunchAgents/com.apple.CoreRAIDAgent.plist
 #/System/Library/LaunchAgents/com.apple.coreservices.lsactivity.plist
 #/System/Library/LaunchAgents/com.apple.coreservices.sharedfilelistd.plist
@@ -171,8 +171,8 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.iCloudUserNotifications.plist
 #/System/Library/LaunchAgents/com.apple.iconservices.iconservicesagent.plist
 /System/Library/LaunchAgents/com.apple.identityservicesd.plist #
-# /System/Library/LaunchAgents/com.apple.idsremoteurlconnectionagent.plist # ios remote connection related
-# /System/Library/LaunchAgents/com.apple.imagent.plist # Face Time Invitation Listener
+/System/Library/LaunchAgents/com.apple.idsremoteurlconnectionagent.plist # ios remote connection related
+/System/Library/LaunchAgents/com.apple.imagent.plist # Face Time Invitation Listener
 #/System/Library/LaunchAgents/com.apple.imautomatichistorydeletionagent.plist
 #/System/Library/LaunchAgents/com.apple.imklaunchagent.plist
 #/System/Library/LaunchAgents/com.apple.imtransferagent.plist
@@ -227,16 +227,16 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.OSDUIHelper.plist
 #/System/Library/LaunchAgents/com.apple.PackageKit.InstallStatus.plist
 /System/Library/LaunchAgents/com.apple.parentalcontrols.check.plist
-# /System/Library/LaunchAgents/com.apple.parsec-fbf.plist
-# /System/Library/LaunchAgents/com.apple.parsecd.plist
+/System/Library/LaunchAgents/com.apple.parsec-fbf.plist
+/System/Library/LaunchAgents/com.apple.parsecd.plist # man parsecd: manages access and data for Siri Suggestions.
 #/System/Library/LaunchAgents/com.apple.passd.plist
 #/System/Library/LaunchAgents/com.apple.pboard.plist
 #/System/Library/LaunchAgents/com.apple.pbs.plist
 #/System/Library/LaunchAgents/com.apple.PCIESlotCheck.plist
 /System/Library/LaunchAgents/com.apple.personad.plist
 /System/Library/LaunchAgents/com.apple.photoanalysisd.plist
-#/System/Library/LaunchAgents/com.apple.photolibraryd.plist
-#/System/Library/LaunchAgents/com.apple.PhotoLibraryMigrationUtility.XPC.plist
+/System/Library/LaunchAgents/com.apple.photolibraryd.plist
+/System/Library/LaunchAgents/com.apple.PhotoLibraryMigrationUtility.XPC.plist
 #/System/Library/LaunchAgents/com.apple.pictd.plist
 #/System/Library/LaunchAgents/com.apple.PIPAgent.plist
 #/System/Library/LaunchAgents/com.apple.pluginkit.pkd.plist
@@ -247,14 +247,14 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.printuitool.agent.plist
 #/System/Library/LaunchAgents/com.apple.progressd.plist
 /System/Library/LaunchAgents/com.apple.protectedcloudstorage.protectedcloudkeysyncing.plist
-#/System/Library/LaunchAgents/com.apple.PubSub.Agent.plist
+#/System/Library/LaunchAgents/com.apple.PubSub.Agent.plist # RSS related
 #/System/Library/LaunchAgents/com.apple.quicklook.32bit.plist
 #/System/Library/LaunchAgents/com.apple.quicklook.plist
 #/System/Library/LaunchAgents/com.apple.quicklook.ThumbnailsAgent.plist
 #/System/Library/LaunchAgents/com.apple.quicklook.ui.helper.plist
 #/System/Library/LaunchAgents/com.apple.rapportd-user.plist
 #/System/Library/LaunchAgents/com.apple.RapportUIAgent.plist
-#/System/Library/LaunchAgents/com.apple.rcd.plist
+/System/Library/LaunchAgents/com.apple.rcd.plist # Remote Control Daemon
 /System/Library/LaunchAgents/com.apple.recentsd.plist # https://www.manpagez.com/man/8/recentsd/
 /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist
 /System/Library/LaunchAgents/com.apple.ReportCrash.plist
@@ -272,14 +272,14 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.SafariNotificationAgent.plist
 /System/Library/LaunchAgents/com.apple.SafariPlugInUpdateNotifier.plist
 #/System/Library/LaunchAgents/com.apple.SafeEjectGPUAgent.plist
-#/System/Library/LaunchAgents/com.apple.scopedbookmarkagent.xpc.plist
+/System/Library/LaunchAgents/com.apple.scopedbookmarkagent.xpc.plist
 #/System/Library/LaunchAgents/com.apple.screencaptureui.plist
 #/System/Library/LaunchAgents/com.apple.ScreenReaderUIServer.plist
 #/System/Library/LaunchAgents/com.apple.screensharing.agent.plist
 #/System/Library/LaunchAgents/com.apple.screensharing.menuextra.plist
 #/System/Library/LaunchAgents/com.apple.screensharing.MessagesAgent.plist
 #/System/Library/LaunchAgents/com.apple.ScriptMenuApp.plist
-#/System/Library/LaunchAgents/com.apple.scrod.plist
+#/System/Library/LaunchAgents/com.apple.scrod.plist # Screen Reader
 #/System/Library/LaunchAgents/com.apple.secd.plist
 #/System/Library/LaunchAgents/com.apple.secinitd.plist
 #/System/Library/LaunchAgents/com.apple.security.agent.plist
@@ -289,7 +289,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.securityuploadd.plist
 #/System/Library/LaunchAgents/com.apple.ServicesUIAgent.plist
 /System/Library/LaunchAgents/com.apple.sharingd.plist # https://www.manpagez.com/man/8/sharingd/
-# /System/Library/LaunchAgents/com.apple.sidecar-relay.plist
+/System/Library/LaunchAgents/com.apple.sidecar-relay.plist # Remote Device / Display
 /System/Library/LaunchAgents/com.apple.Siri.agent.plist
 /System/Library/LaunchAgents/com.apple.siriknowledged.plist
 /System/Library/LaunchAgents/com.apple.soagent.plist
@@ -311,7 +311,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.storeuid.plist
 /System/Library/LaunchAgents/com.apple.suggestd.plist #Seems related to finding contacts in emails
 # /System/Library/LaunchAgents/com.apple.swcd.plist #Shared Web Credentials (Safari related)
-#/System/Library/LaunchAgents/com.apple.syncdefaultsd.plist
+#/System/Library/LaunchAgents/com.apple.syncdefaultsd.plist # man syncdefaultsd
 #/System/Library/LaunchAgents/com.apple.syncservices.SyncServer.plist
 #/System/Library/LaunchAgents/com.apple.syncservices.uihandler.plist
 #/System/Library/LaunchAgents/com.apple.sysdiagnose_agent.plist
@@ -339,8 +339,8 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.UserEventAgent-LoginWindow.plist
 #/System/Library/LaunchAgents/com.apple.usernoted.plist
 #/System/Library/LaunchAgents/com.apple.UserNotificationCenterAgent-LoginWindow.plist
-#/System/Library/LaunchAgents/com.apple.UserNotificationCenterAgent.plist # Handle User Interactions
-# /System/Library/LaunchAgents/com.apple.videosubscriptionsd.plist
+#/System/Library/LaunchAgents/com.apple.UserNotificationCenterAgent.plist # Handles User Interactions incl. Permission Dialogs
+/System/Library/LaunchAgents/com.apple.videosubscriptionsd.plist
 #/System/Library/LaunchAgents/com.apple.voicememod.plist
 #/System/Library/LaunchAgents/com.apple.VoiceOver.plist
 #/System/Library/LaunchAgents/com.apple.warmd_agent.plist
@@ -359,11 +359,11 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.adid.plist
 #/System/Library/LaunchDaemons/com.apple.afpfs_afpLoad.plist
 #/System/Library/LaunchDaemons/com.apple.afpfs_checkafp.plist
-# /System/Library/LaunchDaemons/com.apple.AirPlayXPCHelper.plist
+/System/Library/LaunchDaemons/com.apple.AirPlayXPCHelper.plist
 #/System/Library/LaunchDaemons/com.apple.airport.wps.plist
 #/System/Library/LaunchDaemons/com.apple.airportd.plist
-#/System/Library/LaunchDaemons/com.apple.akd.plist
-#/System/Library/LaunchDaemons/com.apple.alf.agent.plist
+#/System/Library/LaunchDaemons/com.apple.akd.plist # Auth Kit Framework
+#/System/Library/LaunchDaemons/com.apple.alf.agent.plist # Firewall
 /System/Library/LaunchDaemons/com.apple.analyticsd.plist
 #/System/Library/LaunchDaemons/com.apple.apfsd.plist
 #/System/Library/LaunchDaemons/com.apple.AppleFileServer.plist
