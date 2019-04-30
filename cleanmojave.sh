@@ -59,7 +59,7 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.AddressBook.SourceSync.plist
 /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist
 /System/Library/LaunchAgents/com.apple.AirPortBaseStationAgent.plist
-/System/Library/LaunchAgents/com.apple.akd.plist # Auth Kit Framework (iCloud / AppleID related)
+#/System/Library/LaunchAgents/com.apple.akd.plist # Auth Kit Framework (iCloud / AppleID related)
 #/System/Library/LaunchAgents/com.apple.alf.useragent.plist #application firewall
 /System/Library/LaunchAgents/com.apple.AOSHeartbeat.plist
 /System/Library/LaunchAgents/com.apple.AOSPushRelay.plist
@@ -164,15 +164,15 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.FontWorker.plist
 /System/Library/LaunchAgents/com.apple.gamed.plist
 /System/Library/LaunchAgents/com.apple.helpd.plist
-/System/Library/LaunchAgents/com.apple.homed.plist # man homed: is a daemon that manages home state and controls HomeKit accessories.
+# /System/Library/LaunchAgents/com.apple.homed.plist # man homed: is a daemon that manages home state and controls HomeKit accessories.
 #/System/Library/LaunchAgents/com.apple.icdd.plist #Image Capture Discovery Daemon (For scanners and cameras)
 /System/Library/LaunchAgents/com.apple.icloud.findmydeviced.findmydevice-user-agent.plist
 /System/Library/LaunchAgents/com.apple.icloud.fmfd.plist
 /System/Library/LaunchAgents/com.apple.iCloudUserNotifications.plist
 #/System/Library/LaunchAgents/com.apple.iconservices.iconservicesagent.plist
-/System/Library/LaunchAgents/com.apple.identityservicesd.plist #
+# /System/Library/LaunchAgents/com.apple.identityservicesd.plist #
 /System/Library/LaunchAgents/com.apple.idsremoteurlconnectionagent.plist # ios remote connection related
-/System/Library/LaunchAgents/com.apple.imagent.plist # Face Time Invitation Listener
+# /System/Library/LaunchAgents/com.apple.imagent.plist # Face Time Invitation Listener
 #/System/Library/LaunchAgents/com.apple.imautomatichistorydeletionagent.plist
 #/System/Library/LaunchAgents/com.apple.imklaunchagent.plist
 #/System/Library/LaunchAgents/com.apple.imtransferagent.plist
@@ -246,7 +246,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.printtool.agent.plist
 #/System/Library/LaunchAgents/com.apple.printuitool.agent.plist
 #/System/Library/LaunchAgents/com.apple.progressd.plist
-/System/Library/LaunchAgents/com.apple.protectedcloudstorage.protectedcloudkeysyncing.plist
+# /System/Library/LaunchAgents/com.apple.protectedcloudstorage.protectedcloudkeysyncing.plist
 #/System/Library/LaunchAgents/com.apple.PubSub.Agent.plist # RSS related
 #/System/Library/LaunchAgents/com.apple.quicklook.32bit.plist
 #/System/Library/LaunchAgents/com.apple.quicklook.plist
@@ -288,7 +288,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.security.keychain-circle-notification.plist
 #/System/Library/LaunchAgents/com.apple.securityuploadd.plist
 #/System/Library/LaunchAgents/com.apple.ServicesUIAgent.plist
-/System/Library/LaunchAgents/com.apple.sharingd.plist # https://www.manpagez.com/man/8/sharingd/
+# /System/Library/LaunchAgents/com.apple.sharingd.plist # https://www.manpagez.com/man/8/sharingd/
 /System/Library/LaunchAgents/com.apple.sidecar-relay.plist # Remote Device / Display
 /System/Library/LaunchAgents/com.apple.Siri.agent.plist
 /System/Library/LaunchAgents/com.apple.siriknowledged.plist
@@ -319,7 +319,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.SystemUIServer.plist
 #/System/Library/LaunchAgents/com.apple.talagent.plist
 #/System/Library/LaunchAgents/com.apple.tccd.plist
-# /System/Library/LaunchAgents/com.apple.telephonyutilities.callservicesd.plist
+/System/Library/LaunchAgents/com.apple.telephonyutilities.callservicesd.plist
 #/System/Library/LaunchAgents/com.apple.thermaltrap.plist
 #/System/Library/LaunchAgents/com.apple.tiswitcher.plist
 #/System/Library/LaunchAgents/com.apple.TMHelperAgent.plist
@@ -371,7 +371,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.AppleQEMUGuestAgent.plist
 #/System/Library/LaunchDaemons/com.apple.appleseed.fbahelperd.plist
 #/System/Library/LaunchDaemons/com.apple.applessdstatistics.plist
-/System/Library/LaunchDaemons/com.apple.apsd.plist #Apple Push Notification Service
+# /System/Library/LaunchDaemons/com.apple.apsd.plist #Apple Push Notification Service
 #/System/Library/LaunchDaemons/com.apple.aslmanager.plist
 #/System/Library/LaunchDaemons/com.apple.AssetCache.builtin.plist
 #/System/Library/LaunchDaemons/com.apple.AssetCacheLocatorService.plist
