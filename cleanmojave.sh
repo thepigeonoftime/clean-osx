@@ -50,8 +50,8 @@ Protected=(
 
 ## LaunchAgents/LaunchDaemons to unload (uncomment): ##
 LaunchAgents=(
-/System/Library/LaunchAgents/com.apple.accessibility.dfrhud.plist
-/System/Library/LaunchAgents/com.apple.AccessibilityVisualsAgent.plist
+# /System/Library/LaunchAgents/com.apple.accessibility.dfrhud.plist
+# /System/Library/LaunchAgents/com.apple.AccessibilityVisualsAgent.plist
 #/System/Library/LaunchAgents/com.apple.accountsd.plist
 /System/Library/LaunchAgents/com.apple.AddressBook.abd.plist #AddressBook Manager
 /System/Library/LaunchAgents/com.apple.AddressBook.AssistantService.plist
@@ -79,13 +79,13 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.AssetCache.agent.plist
 #/System/Library/LaunchAgents/com.apple.AssetCacheLocatorService.plist
 /System/Library/LaunchAgents/com.apple.assistant_service.plist
-/System/Library/LaunchAgents/com.apple.assistantd.plist
+/System/Library/LaunchAgents/com.apple.assistantd.plist # Siri
 /System/Library/LaunchAgents/com.apple.AssistiveControl.plist
 #/System/Library/LaunchAgents/com.apple.atsd.useragent.plist # fontd related
 #/System/Library/LaunchAgents/com.apple.audio.AudioComponentRegistrar.plist
 /System/Library/LaunchAgents/com.apple.avconferenced.plist #Manages communication for FaceTime Calls
 #/System/Library/LaunchAgents/com.apple.backgroundtaskmanagementuiagent.plist
-/System/Library/LaunchAgents/com.apple.bird.plist # iCloud Drive
+# /System/Library/LaunchAgents/com.apple.bird.plist # iCloud Drive
 /System/Library/LaunchAgents/com.apple.bluetooth.PacketLogger.plist
 #/System/Library/LaunchAgents/com.apple.bluetoothUIServer.plist
 #/System/Library/LaunchAgents/com.apple.btsa.plist # Bluetooth Setup Assistant
@@ -96,12 +96,12 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.cdpd.plist # Keychain related
 #/System/Library/LaunchAgents/com.apple.cfnetwork.AuthBrokerAgent.plist
 #/System/Library/LaunchAgents/com.apple.cfprefsd.xpc.agent.plist
-/System/Library/LaunchAgents/com.apple.cloudd.plist
+# /System/Library/LaunchAgents/com.apple.cloudd.plist
 /System/Library/LaunchAgents/com.apple.cloudpaird.plist
 /System/Library/LaunchAgents/com.apple.cloudphotosd.plist
 #/System/Library/LaunchAgents/com.apple.cmfsyncagent.plist
 #/System/Library/LaunchAgents/com.apple.colorsync.useragent.plist
-# /System/Library/LaunchAgents/com.apple.CommCenter-osx.plist # IP Telephony
+/System/Library/LaunchAgents/com.apple.CommCenter-osx.plist # IP Telephony
 /System/Library/LaunchAgents/com.apple.commerce.plist
 /System/Library/LaunchAgents/com.apple.contacts.donation-agent.plist
 /System/Library/LaunchAgents/com.apple.ContactsAgent.plist
@@ -120,7 +120,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.corespotlightservice.plist
 #/System/Library/LaunchAgents/com.apple.CryptoTokenKit.ahp.agent.plist
 #/System/Library/LaunchAgents/com.apple.csuseragent.plist
-#/System/Library/LaunchAgents/com.apple.ctkbind.plist
+#/System/Library/LaunchAgents/com.apple.ctkbind.plist # man ctkbind: is a SmartCard paring tool that associates a user with a SmartCard public key.
 #/System/Library/LaunchAgents/com.apple.ctkd.plist # Crypto Token Kit
 #/System/Library/LaunchAgents/com.apple.cvmsCompAgent3425AMD_i386.plist
 #/System/Library/LaunchAgents/com.apple.cvmsCompAgent3425AMD_i386_1.plist
@@ -141,11 +141,11 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.DiskArbitrationAgent.plist #https://www.manpagez.com/man/8/diskarbitrationd/
 #/System/Library/LaunchAgents/com.apple.diskspaced.plist
 #/System/Library/LaunchAgents/com.apple.distnoted.xpc.agent.plist
-#/System/Library/LaunchAgents/com.apple.dmd.agent.plist
+#/System/Library/LaunchAgents/com.apple.dmd.agent.plist # DMD Compiler
 #/System/Library/LaunchAgents/com.apple.Dock.plist
 #/System/Library/LaunchAgents/com.apple.dt.CommandLineTools.installondemand.plist
 #/System/Library/LaunchAgents/com.apple.DwellControl.plist #Universal Access related
-#/System/Library/LaunchAgents/com.apple.eospreflightagent.plist
+/System/Library/LaunchAgents/com.apple.eospreflightagent.plist # man eospreflightagent: is a system agent that opportunistically preflights iBridge software in the background to ensure a preflighted bundle exists for boot-time healing.
 #/System/Library/LaunchAgents/com.apple.EscrowSecurityAlert.plist
 /System/Library/LaunchAgents/com.apple.familycircled.plist
 /System/Library/LaunchAgents/com.apple.familycontrols.useragent.plist
@@ -168,7 +168,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.icdd.plist #Image Capture Discovery Daemon (For scanners and cameras)
 /System/Library/LaunchAgents/com.apple.icloud.findmydeviced.findmydevice-user-agent.plist
 /System/Library/LaunchAgents/com.apple.icloud.fmfd.plist
-/System/Library/LaunchAgents/com.apple.iCloudUserNotifications.plist
+# /System/Library/LaunchAgents/com.apple.iCloudUserNotifications.plist
 #/System/Library/LaunchAgents/com.apple.iconservices.iconservicesagent.plist
 # /System/Library/LaunchAgents/com.apple.identityservicesd.plist #
 /System/Library/LaunchAgents/com.apple.idsremoteurlconnectionagent.plist # ios remote connection related
@@ -246,7 +246,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.printtool.agent.plist
 #/System/Library/LaunchAgents/com.apple.printuitool.agent.plist
 #/System/Library/LaunchAgents/com.apple.progressd.plist
-# /System/Library/LaunchAgents/com.apple.protectedcloudstorage.protectedcloudkeysyncing.plist
+/System/Library/LaunchAgents/com.apple.protectedcloudstorage.protectedcloudkeysyncing.plist
 #/System/Library/LaunchAgents/com.apple.PubSub.Agent.plist # RSS related
 #/System/Library/LaunchAgents/com.apple.quicklook.32bit.plist
 #/System/Library/LaunchAgents/com.apple.quicklook.plist
@@ -272,7 +272,7 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.SafariNotificationAgent.plist
 /System/Library/LaunchAgents/com.apple.SafariPlugInUpdateNotifier.plist
 #/System/Library/LaunchAgents/com.apple.SafeEjectGPUAgent.plist
-/System/Library/LaunchAgents/com.apple.scopedbookmarkagent.xpc.plist
+# /System/Library/LaunchAgents/com.apple.scopedbookmarkagent.xpc.plist # man ScopedBookmarkAgent: provides agent services for creating and resolving security scoped bookmarks. It is not meant to be invoked directly.
 #/System/Library/LaunchAgents/com.apple.screencaptureui.plist
 #/System/Library/LaunchAgents/com.apple.ScreenReaderUIServer.plist
 #/System/Library/LaunchAgents/com.apple.screensharing.agent.plist
@@ -289,7 +289,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.securityuploadd.plist
 #/System/Library/LaunchAgents/com.apple.ServicesUIAgent.plist
 # /System/Library/LaunchAgents/com.apple.sharingd.plist # https://www.manpagez.com/man/8/sharingd/
-/System/Library/LaunchAgents/com.apple.sidecar-relay.plist # Remote Device / Display
+# /System/Library/LaunchAgents/com.apple.sidecar-relay.plist # Remote Device / Display
 /System/Library/LaunchAgents/com.apple.Siri.agent.plist
 /System/Library/LaunchAgents/com.apple.siriknowledged.plist
 /System/Library/LaunchAgents/com.apple.soagent.plist
@@ -612,7 +612,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.securityd_service.plist
 #/System/Library/LaunchDaemons/com.apple.seld.plist
 #/System/Library/LaunchDaemons/com.apple.sessionlogoutd.plist
-/System/Library/LaunchDaemons/com.apple.signpost.signpost_reporter.plist # perfomance analysis
+# /System/Library/LaunchDaemons/com.apple.signpost.signpost_reporter.plist # perfomance analysis
 # /System/Library/LaunchDaemons/com.apple.smb.preferences.plist
 /System/Library/LaunchDaemons/com.apple.smbd.plist
 #/System/Library/LaunchDaemons/com.apple.softwareupdate_download_service.plist
