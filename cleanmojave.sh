@@ -23,6 +23,7 @@
 # https://www.heise.de/mac-and-i/artikel/Die-Systemprozesse-von-macOS-Sierra-3715619.html?seite=all
 # http://www.macinside.info/browse.php
 # https://www.manpagez.com/man/
+# https://sethc23.github.io/wiki/OSX/Mac_OS_X_and_iOS_Internals_To_the_Apple%27s_Core.pdf
 
 
 ## command line flags ##
@@ -355,8 +356,8 @@ LaunchAgents=(
 LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.openssh.ssh-agent.plist
 #/System/Library/LaunchDaemons/bootps.plist
-#/System/Library/LaunchDaemons/com.apple.accessoryd.plist
-#/System/Library/LaunchDaemons/com.apple.adid.plist
+/System/Library/LaunchDaemons/com.apple.accessoryd.plist
+/System/Library/LaunchDaemons/com.apple.adid.plist # iTunes related
 #/System/Library/LaunchDaemons/com.apple.afpfs_afpLoad.plist
 #/System/Library/LaunchDaemons/com.apple.afpfs_checkafp.plist
 /System/Library/LaunchDaemons/com.apple.AirPlayXPCHelper.plist
@@ -371,30 +372,30 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.AppleQEMUGuestAgent.plist
 #/System/Library/LaunchDaemons/com.apple.appleseed.fbahelperd.plist
 #/System/Library/LaunchDaemons/com.apple.applessdstatistics.plist
-# /System/Library/LaunchDaemons/com.apple.apsd.plist #Apple Push Notification Service
-#/System/Library/LaunchDaemons/com.apple.aslmanager.plist
+/System/Library/LaunchDaemons/com.apple.apsd.plist #Apple Push Notification Service
+#/System/Library/LaunchDaemons/com.apple.aslmanager.plist #man aslmanager: manages rotated files and ASL data written by the syslogd server
 #/System/Library/LaunchDaemons/com.apple.AssetCache.builtin.plist
 #/System/Library/LaunchDaemons/com.apple.AssetCacheLocatorService.plist
 #/System/Library/LaunchDaemons/com.apple.AssetCacheManagerService.plist
 #/System/Library/LaunchDaemons/com.apple.AssetCacheTetheratorService.plist
-#/System/Library/LaunchDaemons/com.apple.atrun.plist
+#/System/Library/LaunchDaemons/com.apple.atrun.plist # man atrun: runs commands queued by at(1).  It is invoked periodically by launchd(8) as specified in the com.apple.atrun.plist property list.  By default the property list contains the Disabled key set to true, so atrun is never invoked.
 #/System/Library/LaunchDaemons/com.apple.audio.AudioComponentRegistrar.daemon.plist
 #/System/Library/LaunchDaemons/com.apple.audio.coreaudiod.plist
 #/System/Library/LaunchDaemons/com.apple.audio.systemsoundserverd.plist
 #/System/Library/LaunchDaemons/com.apple.auditd.plist
 #/System/Library/LaunchDaemons/com.apple.autofsd.plist
 #/System/Library/LaunchDaemons/com.apple.automountd.plist
-#/System/Library/LaunchDaemons/com.apple.avbdeviced.plist
+#/System/Library/LaunchDaemons/com.apple.avbdeviced.plist # Audio / Video Bridging
 /System/Library/LaunchDaemons/com.apple.awacsd.plist #Apple Wide Area Connectivity Service daemon - Back to My Mac Feature
 /System/Library/LaunchDaemons/com.apple.awdd.plist # system daemon that collects diagnostics and usage data locally for users that have opted in.
 #/System/Library/LaunchDaemons/com.apple.backupd-helper.plist
 #/System/Library/LaunchDaemons/com.apple.backupd.plist
 /System/Library/LaunchDaemons/com.apple.biokitaggdd.plist
 /System/Library/LaunchDaemons/com.apple.biometrickitd.plist
-# /System/Library/LaunchDaemons/com.apple.bluetoothaudiod.plist
-# /System/Library/LaunchDaemons/com.apple.bluetoothd.plist
-# /System/Library/LaunchDaemons/com.apple.bluetoothReporter.plist
-#/System/Library/LaunchDaemons/com.apple.bnepd.plist
+/System/Library/LaunchDaemons/com.apple.bluetoothaudiod.plist
+/System/Library/LaunchDaemons/com.apple.bluetoothd.plist
+/System/Library/LaunchDaemons/com.apple.bluetoothReporter.plist
+/System/Library/LaunchDaemons/com.apple.bnepd.plist # man bnepd: The Bluetooth network daemon handles all BNEP connections on the system.
 #/System/Library/LaunchDaemons/com.apple.bootinstalld.plist
 #/System/Library/LaunchDaemons/com.apple.bosreporter.plist
 #/System/Library/LaunchDaemons/com.apple.boswatcher.plist
@@ -406,11 +407,11 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.cmio.AppleCameraAssistant.plist
 #/System/Library/LaunchDaemons/com.apple.cmio.AVCAssistant.plist
 #/System/Library/LaunchDaemons/com.apple.cmio.IIDCVideoAssistant.plist
-# /System/Library/LaunchDaemons/com.apple.cmio.iOSScreenCaptureAssistant.plist
+/System/Library/LaunchDaemons/com.apple.cmio.iOSScreenCaptureAssistant.plist
 #/System/Library/LaunchDaemons/com.apple.cmio.VDCAssistant.plist
 #/System/Library/LaunchDaemons/com.apple.colorsync.displayservices.plist
 #/System/Library/LaunchDaemons/com.apple.colorsyncd.plist
-# /System/Library/LaunchDaemons/com.apple.CommCenterRootHelper.plist
+/System/Library/LaunchDaemons/com.apple.CommCenterRootHelper.plist
 /System/Library/LaunchDaemons/com.apple.commerced.plist
 /System/Library/LaunchDaemons/com.apple.comsat.plist #server process which receives reports of incoming mail and notifies users if they have requested this service.
 #/System/Library/LaunchDaemons/com.apple.configd.plist
@@ -476,7 +477,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.fontd.plist
 #/System/Library/LaunchDaemons/com.apple.fontmover.plist
 #/System/Library/LaunchDaemons/com.apple.FontWorker.plist
-#/System/Library/LaunchDaemons/com.apple.fpsd.plist
+/System/Library/LaunchDaemons/com.apple.fpsd.plist # iTunes related
 #/System/Library/LaunchDaemons/com.apple.fseventsd.plist
 #/System/Library/LaunchDaemons/com.apple.ftp-proxy.plist
 #/System/Library/LaunchDaemons/com.apple.GameController.gamecontrollerd.plist
@@ -681,8 +682,8 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.xscertd-helper.plist
 #/System/Library/LaunchDaemons/com.apple.xscertd.plist
 #/System/Library/LaunchDaemons/com.vix.cron.plist
-#/System/Library/LaunchDaemons/ntalk.plist
-#/System/Library/LaunchDaemons/org.apache.httpd.plist
+/System/Library/LaunchDaemons/ntalk.plist
+/System/Library/LaunchDaemons/org.apache.httpd.plist
 #/System/Library/LaunchDaemons/org.cups.cups-lpd.plist
 #/System/Library/LaunchDaemons/org.cups.cupsd.plist
 #/System/Library/LaunchDaemons/org.net-snmp.snmpd.plist
