@@ -73,7 +73,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.applespell.plist #Spelling correction
 #/System/Library/LaunchAgents/com.apple.appsleepd.plist
 #/System/Library/LaunchAgents/com.apple.appstoreagent.plist
-#/System/Library/LaunchAgents/com.apple.appstoreupdateagent.plist
+/System/Library/LaunchAgents/com.apple.appstoreupdateagent.plist
 #/System/Library/LaunchAgents/com.apple.askpermissiond.plist
 #/System/Library/LaunchAgents/com.apple.AskPermissionUI.plist
 #/System/Library/LaunchAgents/com.apple.assertiond.plist
@@ -86,7 +86,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.audio.AudioComponentRegistrar.plist
 /System/Library/LaunchAgents/com.apple.avconferenced.plist #Manages communication for FaceTime Calls
 #/System/Library/LaunchAgents/com.apple.backgroundtaskmanagementuiagent.plist
-# /System/Library/LaunchAgents/com.apple.bird.plist # iCloud Drive
+/System/Library/LaunchAgents/com.apple.bird.plist # iCloud Drive
 /System/Library/LaunchAgents/com.apple.bluetooth.PacketLogger.plist
 #/System/Library/LaunchAgents/com.apple.bluetoothUIServer.plist
 #/System/Library/LaunchAgents/com.apple.btsa.plist # Bluetooth Setup Assistant
@@ -97,7 +97,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.cdpd.plist # Keychain related
 #/System/Library/LaunchAgents/com.apple.cfnetwork.AuthBrokerAgent.plist
 #/System/Library/LaunchAgents/com.apple.cfprefsd.xpc.agent.plist
-# /System/Library/LaunchAgents/com.apple.cloudd.plist
+/System/Library/LaunchAgents/com.apple.cloudd.plist
 /System/Library/LaunchAgents/com.apple.cloudpaird.plist
 /System/Library/LaunchAgents/com.apple.cloudphotosd.plist
 #/System/Library/LaunchAgents/com.apple.cmfsyncagent.plist
@@ -138,11 +138,11 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.DataDetectorsLocalSources.plist
 #/System/Library/LaunchAgents/com.apple.DiagnosticReportCleanup.plist
 #/System/Library/LaunchAgents/com.apple.diagnostics_agent.plist
-#/System/Library/LaunchAgents/com.apple.DictationIM.plist
+/System/Library/LaunchAgents/com.apple.DictationIM.plist # man DictationIM: Implements system-wide Dictation and command & control
 #/System/Library/LaunchAgents/com.apple.DiskArbitrationAgent.plist #https://www.manpagez.com/man/8/diskarbitrationd/
 #/System/Library/LaunchAgents/com.apple.diskspaced.plist
 #/System/Library/LaunchAgents/com.apple.distnoted.xpc.agent.plist
-#/System/Library/LaunchAgents/com.apple.dmd.agent.plist # DMD Compiler
+/System/Library/LaunchAgents/com.apple.dmd.agent.plist # Mobile related
 #/System/Library/LaunchAgents/com.apple.Dock.plist
 #/System/Library/LaunchAgents/com.apple.dt.CommandLineTools.installondemand.plist
 #/System/Library/LaunchAgents/com.apple.DwellControl.plist #Universal Access related
@@ -169,11 +169,11 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.icdd.plist #Image Capture Discovery Daemon (For scanners and cameras)
 /System/Library/LaunchAgents/com.apple.icloud.findmydeviced.findmydevice-user-agent.plist
 /System/Library/LaunchAgents/com.apple.icloud.fmfd.plist
-# /System/Library/LaunchAgents/com.apple.iCloudUserNotifications.plist
+/System/Library/LaunchAgents/com.apple.iCloudUserNotifications.plist
 #/System/Library/LaunchAgents/com.apple.iconservices.iconservicesagent.plist
-# /System/Library/LaunchAgents/com.apple.identityservicesd.plist #
+/System/Library/LaunchAgents/com.apple.identityservicesd.plist # Handles logins for iCloud / iMessage
 /System/Library/LaunchAgents/com.apple.idsremoteurlconnectionagent.plist # ios remote connection related
-# /System/Library/LaunchAgents/com.apple.imagent.plist # Face Time Invitation Listener
+/System/Library/LaunchAgents/com.apple.imagent.plist # Face Time Invitation Listener
 #/System/Library/LaunchAgents/com.apple.imautomatichistorydeletionagent.plist
 #/System/Library/LaunchAgents/com.apple.imklaunchagent.plist
 #/System/Library/LaunchAgents/com.apple.imtransferagent.plist
@@ -206,7 +206,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.mdworker.single.plist
 #/System/Library/LaunchAgents/com.apple.mdworker.sizing.plist
 #/System/Library/LaunchAgents/com.apple.mediaanalysisd.plist
-#/System/Library/LaunchAgents/com.apple.mediaremoteagent.plist #iTunes related
+#/System/Library/LaunchAgents/com.apple.mediaremoteagent.plist #iTunes related (hangs if unloaded)
 #/System/Library/LaunchAgents/com.apple.metadata.mdbulkimport.plist
 #/System/Library/LaunchAgents/com.apple.metadata.mdflagwriter.plist
 #/System/Library/LaunchAgents/com.apple.metadata.mdwrite.plist
@@ -215,13 +215,13 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.mobiledeviceupdater.plist
 /System/Library/LaunchAgents/com.apple.MRTa.plist # Apple Malware Removal Tool / YaraScanService
 /System/Library/LaunchAgents/com.apple.navd.plist
-#/System/Library/LaunchAgents/com.apple.neagent.plist
+#/System/Library/LaunchAgents/com.apple.neagent.plist # man neagent: is part of the Network Extension framework
 #/System/Library/LaunchAgents/com.apple.netauth.user.auth.plist
 #/System/Library/LaunchAgents/com.apple.netauth.user.gui.plist
 #/System/Library/LaunchAgents/com.apple.networkserviceproxy-osx.plist
 /System/Library/LaunchAgents/com.apple.noticeboard.agent.plist
 /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
-#/System/Library/LaunchAgents/com.apple.NowPlayingTouchUI.plist
+/System/Library/LaunchAgents/com.apple.NowPlayingTouchUI.plist
 #/System/Library/LaunchAgents/com.apple.nsurlsessiond.plist
 #/System/Library/LaunchAgents/com.apple.nsurlstoraged.plist
 #/System/Library/LaunchAgents/com.apple.NVMeAgent.plist
@@ -231,14 +231,14 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.parsec-fbf.plist
 /System/Library/LaunchAgents/com.apple.parsecd.plist # man parsecd: manages access and data for Siri Suggestions.
 #/System/Library/LaunchAgents/com.apple.passd.plist
-#/System/Library/LaunchAgents/com.apple.pboard.plist
+#/System/Library/LaunchAgents/com.apple.pboard.plist # Pasteboard Server
 #/System/Library/LaunchAgents/com.apple.pbs.plist
 #/System/Library/LaunchAgents/com.apple.PCIESlotCheck.plist
 /System/Library/LaunchAgents/com.apple.personad.plist
 /System/Library/LaunchAgents/com.apple.photoanalysisd.plist
 /System/Library/LaunchAgents/com.apple.photolibraryd.plist
 /System/Library/LaunchAgents/com.apple.PhotoLibraryMigrationUtility.XPC.plist
-#/System/Library/LaunchAgents/com.apple.pictd.plist
+#/System/Library/LaunchAgents/com.apple.pictd.plist # Cocoa Helper Tool
 #/System/Library/LaunchAgents/com.apple.PIPAgent.plist
 #/System/Library/LaunchAgents/com.apple.pluginkit.pkd.plist
 #/System/Library/LaunchAgents/com.apple.pluginkit.pkreporter.plist
@@ -253,8 +253,8 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.quicklook.plist
 #/System/Library/LaunchAgents/com.apple.quicklook.ThumbnailsAgent.plist
 #/System/Library/LaunchAgents/com.apple.quicklook.ui.helper.plist
-#/System/Library/LaunchAgents/com.apple.rapportd-user.plist
-#/System/Library/LaunchAgents/com.apple.RapportUIAgent.plist
+/System/Library/LaunchAgents/com.apple.rapportd-user.plist
+/System/Library/LaunchAgents/com.apple.RapportUIAgent.plist
 /System/Library/LaunchAgents/com.apple.rcd.plist # Remote Control Daemon
 /System/Library/LaunchAgents/com.apple.recentsd.plist # https://www.manpagez.com/man/8/recentsd/
 /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist
@@ -289,8 +289,8 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.security.keychain-circle-notification.plist
 #/System/Library/LaunchAgents/com.apple.securityuploadd.plist
 #/System/Library/LaunchAgents/com.apple.ServicesUIAgent.plist
-# /System/Library/LaunchAgents/com.apple.sharingd.plist # https://www.manpagez.com/man/8/sharingd/
-# /System/Library/LaunchAgents/com.apple.sidecar-relay.plist # Remote Device / Display
+/System/Library/LaunchAgents/com.apple.sharingd.plist # https://www.manpagez.com/man/8/sharingd/
+/System/Library/LaunchAgents/com.apple.sidecar-relay.plist # Remote Device / Display
 /System/Library/LaunchAgents/com.apple.Siri.agent.plist
 /System/Library/LaunchAgents/com.apple.siriknowledged.plist
 /System/Library/LaunchAgents/com.apple.soagent.plist
@@ -322,7 +322,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.tccd.plist
 /System/Library/LaunchAgents/com.apple.telephonyutilities.callservicesd.plist
 #/System/Library/LaunchAgents/com.apple.thermaltrap.plist
-#/System/Library/LaunchAgents/com.apple.tiswitcher.plist
+#/System/Library/LaunchAgents/com.apple.tiswitcher.plist # Text Input Switcher
 #/System/Library/LaunchAgents/com.apple.TMHelperAgent.plist
 #/System/Library/LaunchAgents/com.apple.TMHelperAgent.SetupOffer.plist
 /System/Library/LaunchAgents/com.apple.touristd.plist
@@ -370,8 +370,8 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.AppleFileServer.plist
 #/System/Library/LaunchDaemons/com.apple.applefileutil.plist
 #/System/Library/LaunchDaemons/com.apple.AppleQEMUGuestAgent.plist
-#/System/Library/LaunchDaemons/com.apple.appleseed.fbahelperd.plist
-#/System/Library/LaunchDaemons/com.apple.applessdstatistics.plist
+/System/Library/LaunchDaemons/com.apple.appleseed.fbahelperd.plist # Feedback Assistant
+/System/Library/LaunchDaemons/com.apple.applessdstatistics.plist # man applessdstatistics: is a daemon which gathers statistics related to the internal storage device.
 /System/Library/LaunchDaemons/com.apple.apsd.plist #Apple Push Notification Service
 #/System/Library/LaunchDaemons/com.apple.aslmanager.plist #man aslmanager: manages rotated files and ASL data written by the syslogd server
 #/System/Library/LaunchDaemons/com.apple.AssetCache.builtin.plist
@@ -401,14 +401,14 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.boswatcher.plist
 #/System/Library/LaunchDaemons/com.apple.bridgeOSUpdateProxy.plist
 #/System/Library/LaunchDaemons/com.apple.bsd.dirhelper.plist
-#/System/Library/LaunchDaemons/com.apple.captiveagent.plist
+#/System/Library/LaunchDaemons/com.apple.captiveagent.plist # Captive Wifi Portal Agent
 #/System/Library/LaunchDaemons/com.apple.cfnetwork.cfnetworkagent.plist
 #/System/Library/LaunchDaemons/com.apple.cfprefsd.xpc.daemon.plist
 #/System/Library/LaunchDaemons/com.apple.cmio.AppleCameraAssistant.plist
 #/System/Library/LaunchDaemons/com.apple.cmio.AVCAssistant.plist
 #/System/Library/LaunchDaemons/com.apple.cmio.IIDCVideoAssistant.plist
 /System/Library/LaunchDaemons/com.apple.cmio.iOSScreenCaptureAssistant.plist
-#/System/Library/LaunchDaemons/com.apple.cmio.VDCAssistant.plist
+#/System/Library/LaunchDaemons/com.apple.cmio.VDCAssistant.plist # man: The process allows multiple applications to simultaneously capture from the same camera.
 #/System/Library/LaunchDaemons/com.apple.colorsync.displayservices.plist
 #/System/Library/LaunchDaemons/com.apple.colorsyncd.plist
 /System/Library/LaunchDaemons/com.apple.CommCenterRootHelper.plist
@@ -428,14 +428,14 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.coreservicesd.plist
 #/System/Library/LaunchDaemons/com.apple.corestorage.corestoraged.plist
 #/System/Library/LaunchDaemons/com.apple.corestorage.corestoragehelperd.plist
-#/System/Library/LaunchDaemons/com.apple.coresymbolicationd.plist
-#/System/Library/LaunchDaemons/com.apple.CrashReporterSupportHelper.plist
+#/System/Library/LaunchDaemons/com.apple.coresymbolicationd.plist # man coresymbolicationd: manages the system cache of symbol information for OS libraries
+/System/Library/LaunchDaemons/com.apple.CrashReporterSupportHelper.plist
 #/System/Library/LaunchDaemons/com.apple.CryptoTokenKit.ahp.plist
 #/System/Library/LaunchDaemons/com.apple.CSCSupportd.plist
 #/System/Library/LaunchDaemons/com.apple.csrutil.report.plist
-#/System/Library/LaunchDaemons/com.apple.ctkd.plist
-#/System/Library/LaunchDaemons/com.apple.cvmsServ.plist
-#/System/Library/LaunchDaemons/com.apple.dasd-OSX.plist
+/System/Library/LaunchDaemons/com.apple.ctkd.plist # man ctkd: ensures loading of SmartCard token driver, maintains SmartCard token sessions, provides SmartCard integration into the system.
+#/System/Library/LaunchDaemons/com.apple.cvmsServ.plist # man CVMServer: is a system daemon that handles generic task execution in a slave process.
+#/System/Library/LaunchDaemons/com.apple.dasd-OSX.plist # man dasd: Daemon for background activity scheduling.
 #/System/Library/LaunchDaemons/com.apple.DataDetectorsSourceAccess.plist
 #/System/Library/LaunchDaemons/com.apple.defragx.plist
 #/System/Library/LaunchDaemons/com.apple.DesktopServicesHelper.plist
@@ -450,10 +450,10 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.diskmanagementstartup.plist
 #/System/Library/LaunchDaemons/com.apple.displaypolicyd.plist
 #/System/Library/LaunchDaemons/com.apple.distnoted.xpc.daemon.plist
-#/System/Library/LaunchDaemons/com.apple.dmd.daemon.plist
+/System/Library/LaunchDaemons/com.apple.dmd.daemon.plist # iCloud related
 #/System/Library/LaunchDaemons/com.apple.dnsextd.plist
 #/System/Library/LaunchDaemons/com.apple.dpaudiothru.plist
-#/System/Library/LaunchDaemons/com.apple.dpd.plist
+#/System/Library/LaunchDaemons/com.apple.dpd.plist # man dpd: is a daemon intended to listen for Command + F2 on the iMac to switch to external display input mode upon display port hot-plug
 #/System/Library/LaunchDaemons/com.apple.dprivacyd.plist
 #/System/Library/LaunchDaemons/com.apple.driver.eficheck.plist
 #/System/Library/LaunchDaemons/com.apple.driver.ethcheck.plist
@@ -468,7 +468,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.emond.aslmanager.plist
 #/System/Library/LaunchDaemons/com.apple.emond.plist
 #/System/Library/LaunchDaemons/com.apple.eoshostd.plist
-#/System/Library/LaunchDaemons/com.apple.eppc.plist
+/System/Library/LaunchDaemons/com.apple.eppc.plist # man AEServer: System-wide daemon which recevies incoming (remote) AppleEvents
 /System/Library/LaunchDaemons/com.apple.familycontrols.plist
 #/System/Library/LaunchDaemons/com.apple.FileCoordination.plist
 /System/Library/LaunchDaemons/com.apple.findmymac.plist
@@ -477,7 +477,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.fontd.plist
 #/System/Library/LaunchDaemons/com.apple.fontmover.plist
 #/System/Library/LaunchDaemons/com.apple.FontWorker.plist
-/System/Library/LaunchDaemons/com.apple.fpsd.plist # iTunes related
+# /System/Library/LaunchDaemons/com.apple.fpsd.plist # iTunes related
 #/System/Library/LaunchDaemons/com.apple.fseventsd.plist
 #/System/Library/LaunchDaemons/com.apple.ftp-proxy.plist
 #/System/Library/LaunchDaemons/com.apple.GameController.gamecontrollerd.plist
@@ -586,7 +586,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.printtool.daemon.plist
 #/System/Library/LaunchDaemons/com.apple.ProcessPanicReport.plist
 #/System/Library/LaunchDaemons/com.apple.racoon.plist #VPN related
-# /System/Library/LaunchDaemons/com.apple.rapportd.plist
+/System/Library/LaunchDaemons/com.apple.rapportd.plist # man rapportd: Daemon that enables Phone Call Handoff and other communication features between Apple devices.
 /System/Library/LaunchDaemons/com.apple.RemoteDesktop.PrivilegeProxy.plist
 /System/Library/LaunchDaemons/com.apple.remotemanagementd.plist
 /System/Library/LaunchDaemons/com.apple.remotepairtool.plist
@@ -659,12 +659,12 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.usbd.plist
 #/System/Library/LaunchDaemons/com.apple.usbmuxd.plist
 #/System/Library/LaunchDaemons/com.apple.UserEventAgent-System.plist
-#/System/Library/LaunchDaemons/com.apple.UserNotificationCenter.plist
+/System/Library/LaunchDaemons/com.apple.UserNotificationCenter.plist
 #/System/Library/LaunchDaemons/com.apple.uucp.plist
 #/System/Library/LaunchDaemons/com.apple.var-db-dslocal-backup.plist
 #/System/Library/LaunchDaemons/com.apple.vsdbutil.plist
 #/System/Library/LaunchDaemons/com.apple.warmd.plist # Controls caches used during startup and login
-#/System/Library/LaunchDaemons/com.apple.watchdogd.plist
+#/System/Library/LaunchDaemons/com.apple.watchdogd.plist # man watchdogd: If the kernel or user space is stuck, a reboot will be triggered by the watchdog infrastructure.
 #/System/Library/LaunchDaemons/com.apple.wifid.plist
 #/System/Library/LaunchDaemons/com.apple.wifiFirmwareLoader.plist
 #/System/Library/LaunchDaemons/com.apple.wifivelocityd.plist
@@ -694,25 +694,25 @@ LaunchDaemons=(
 )
 
 load() {
+	echo "loading ${@}"
 	if [[ ! -z $testrun ]]; then
 		# echo rename 's/\.bak$//' ${@}
 		echo launchctl load -w ${@}
 		echo sudo launchctl load -w ${@}
 	else
-		(set -x;
-			launchctl load -w ${@};
-			sudo launchctl load -w ${@};
-			)
+		launchctl load -w ${@} &> /dev/null;
+		sudo launchctl load -w ${@} &> /dev/null;
 		# grep launchctl list output to check if service is really enabled
-		enabled=$(launchctl list | grep $(echo "${service}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
-		enabled=$enabled$(sudo launchctl list | grep $(echo "${service}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
-		if [[ ! -z $enabled ]]; then
+		enabled=$(launchctl list | grep $(echo "${@}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
+		enabled=$enabled$(sudo launchctl list | grep $(echo "${@}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
+		if [[ -z $enabled ]]; then
 			echo "[OK] Service ${@} enabled"
 		fi
 	fi
 }
 
 unload() {
+	echo "unloading ${@}"
 	if [[ ! -z $testrun ]]; then
 		echo launchctl unload -w ${@}
 		echo sudo launchctl unload -w ${@}
@@ -720,14 +720,10 @@ unload() {
 			echo sudo mv ${@} ${@}.bak
 		fi
 	else
-		(set -x;
-			launchctl unload -w ${@};
-			sudo launchctl unload -w ${@};
-		)
+		launchctl unload -w ${@} &> /dev/null;
+		sudo launchctl unload -w ${@} &> /dev/null;
 		if [[ -z $dontmove ]]; then
-			(set -x;
-				sudo mv ${@} ${@}.bak;
-			)
+			sudo mv $service $service.bak;
 		fi
 		# grep launchctl list output to check if service is really disabled
 		disabled=$(launchctl list | grep -q $(echo "${@}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
@@ -749,10 +745,10 @@ clean() {
 		# grep launchctl if the service is already enabled
 		enabled=$(launchctl list | grep $(echo "${service}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
 		enabled=$enabled$(sudo launchctl list | grep $(echo "${service}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
-		# print status
-		if [[ ! -z $enabled ]]; then
-			echo enabled: $service
-		elif [[ -z $enabled ]]; then
+		#print status
+		if [[ ! -z "$enabled" ]]; then
+			echo loaded: $service
+		elif [[ -z "$enabled" ]]; then
 			echo disabled: $service
 		fi
 		# unload service if found in $blacklist, not found in $Protected and $restore is unset
