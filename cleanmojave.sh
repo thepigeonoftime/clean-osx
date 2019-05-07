@@ -25,6 +25,10 @@
 # https://www.manpagez.com/man/
 # https://sethc23.github.io/wiki/OSX/Mac_OS_X_and_iOS_Internals_To_the_Apple%27s_Core.pdf
 
+## colors ##
+
+inv='\033[0;30m\033[47m'
+clr=$(tput sgr0)
 
 ## command line flags ##
 
@@ -86,7 +90,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.audio.AudioComponentRegistrar.plist
 /System/Library/LaunchAgents/com.apple.avconferenced.plist #Manages communication for FaceTime Calls
 #/System/Library/LaunchAgents/com.apple.backgroundtaskmanagementuiagent.plist
-/System/Library/LaunchAgents/com.apple.bird.plist # iCloud Drive
+# /System/Library/LaunchAgents/com.apple.bird.plist # iCloud Drive | causes continuous error messages when unloaded
 /System/Library/LaunchAgents/com.apple.bluetooth.PacketLogger.plist
 #/System/Library/LaunchAgents/com.apple.bluetoothUIServer.plist
 #/System/Library/LaunchAgents/com.apple.btsa.plist # Bluetooth Setup Assistant
@@ -195,24 +199,24 @@ LaunchAgents=(
 # /System/Library/LaunchAgents/com.apple.ManagedClientAgent.agent.plist
 /System/Library/LaunchAgents/com.apple.ManagedClientAgent.enrollagent.plist
 /System/Library/LaunchAgents/com.apple.Maps.pushdaemon.plist
-#/System/Library/LaunchAgents/com.apple.mbbackgrounduseragent.plist
-#/System/Library/LaunchAgents/com.apple.mbfloagent.plist
-#/System/Library/LaunchAgents/com.apple.mbuseragent.plist
-#/System/Library/LaunchAgents/com.apple.mdmclient.agent.plist
-#/System/Library/LaunchAgents/com.apple.mdworker.32bit.plist
-#/System/Library/LaunchAgents/com.apple.mdworker.bundles.plist
-#/System/Library/LaunchAgents/com.apple.mdworker.mail.plist
-#/System/Library/LaunchAgents/com.apple.mdworker.shared.plist
-#/System/Library/LaunchAgents/com.apple.mdworker.single.plist
-#/System/Library/LaunchAgents/com.apple.mdworker.sizing.plist
-#/System/Library/LaunchAgents/com.apple.mediaanalysisd.plist
+#/System/Library/LaunchAgents/com.apple.mbbackgrounduseragent.plist # man mbbackgrounduseragent:used by the Setup Assistant application and runs as the target user in order to configure that user from a background agents or non-Aqua session agents.
+#/System/Library/LaunchAgents/com.apple.mbfloagent.plist # man mbfloagent: is used by the Setup Assistant application and run First Login Optimization plug-ins as the target user.
+#/System/Library/LaunchAgents/com.apple.mbuseragent.plist #  man mbuseragent: is used by the Setup Assistant application and runs as the target user in order to configure that user.
+/System/Library/LaunchAgents/com.apple.mdmclient.agent.plist # man mdmclient: Used internally for communication with Mobile Device Management (Profile Manager) server. Receives configuration profiles and commands from the server after a user binds to the server by installing a binding profile. Part of Managed Client (MCX).
+#/System/Library/LaunchAgents/com.apple.mdworker.32bit.plist # Spotlight
+#/System/Library/LaunchAgents/com.apple.mdworker.bundles.plist # Spotlight
+#/System/Library/LaunchAgents/com.apple.mdworker.mail.plist # Spotlight
+#/System/Library/LaunchAgents/com.apple.mdworker.shared.plist # Spotlight
+#/System/Library/LaunchAgents/com.apple.mdworker.single.plist # Spotlight
+#/System/Library/LaunchAgents/com.apple.mdworker.sizing.plist # Spotlight
+/System/Library/LaunchAgents/com.apple.mediaanalysisd.plist # (i)Photo analysis
 #/System/Library/LaunchAgents/com.apple.mediaremoteagent.plist #iTunes related (hangs if unloaded)
 #/System/Library/LaunchAgents/com.apple.metadata.mdbulkimport.plist
 #/System/Library/LaunchAgents/com.apple.metadata.mdflagwriter.plist
 #/System/Library/LaunchAgents/com.apple.metadata.mdwrite.plist
 #/System/Library/LaunchAgents/com.apple.midiserver.plist
 /System/Library/LaunchAgents/com.apple.MobileAccessoryUpdater.fudHelperAgent.plist
-#/System/Library/LaunchAgents/com.apple.mobiledeviceupdater.plist
+/System/Library/LaunchAgents/com.apple.mobiledeviceupdater.plist
 /System/Library/LaunchAgents/com.apple.MRTa.plist # Apple Malware Removal Tool / YaraScanService
 /System/Library/LaunchAgents/com.apple.navd.plist
 #/System/Library/LaunchAgents/com.apple.neagent.plist # man neagent: is part of the Network Extension framework
@@ -220,12 +224,12 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.netauth.user.gui.plist
 #/System/Library/LaunchAgents/com.apple.networkserviceproxy-osx.plist
 /System/Library/LaunchAgents/com.apple.noticeboard.agent.plist
-/System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+# /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 /System/Library/LaunchAgents/com.apple.NowPlayingTouchUI.plist
 #/System/Library/LaunchAgents/com.apple.nsurlsessiond.plist
 #/System/Library/LaunchAgents/com.apple.nsurlstoraged.plist
-#/System/Library/LaunchAgents/com.apple.NVMeAgent.plist
-#/System/Library/LaunchAgents/com.apple.OSDUIHelper.plist
+#/System/Library/LaunchAgents/com.apple.NVMeAgent.plist #man NVMeAgent: allows the system to to present notifications related to NVMe devices.
+#/System/Library/LaunchAgents/com.apple.OSDUIHelper.plist #man OSDUIHelper: UI Helper inside OSDFramework responsible for drawing on screen graphics such as volume/brightness up/down
 #/System/Library/LaunchAgents/com.apple.PackageKit.InstallStatus.plist
 /System/Library/LaunchAgents/com.apple.parentalcontrols.check.plist
 /System/Library/LaunchAgents/com.apple.parsec-fbf.plist
@@ -705,7 +709,7 @@ load() {
 		# grep launchctl list output to check if service is really enabled
 		enabled=$(launchctl list | grep $(echo "${@}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
 		enabled=$enabled$(sudo launchctl list | grep $(echo "${@}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
-		if [[ -z $enabled ]]; then
+		if [[ ! -z $enabled ]]; then
 			echo "[OK] Service ${@} enabled"
 		fi
 	fi
@@ -745,17 +749,21 @@ clean() {
 		# grep launchctl if the service is already enabled
 		enabled=$(launchctl list | grep $(echo "${service}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
 		enabled=$enabled$(sudo launchctl list | grep $(echo "${service}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
+		blacklisted="not blacklisted"
+		if [[ " ${blacklist} " == *" $service "* ]]; then
+			blacklisted="${inv}blacklisted${clr}"
+		fi
 		#print status
 		if [[ ! -z "$enabled" ]]; then
-			echo loaded: $service
+			echo -e "loaded: $service : $blacklisted"
 		elif [[ -z "$enabled" ]]; then
-			echo disabled: $service
+			echo -e "unloaded: $service : $blacklisted"
 		fi
 		# unload service if found in $blacklist, not found in $Protected and $restore is unset
 		if [[ " ${blacklist} " == *" $service "* && " ${Protected[*]} " != *" $service "* && -z $restore ]]; then
 			unload $service
-		# load service if it's not found in $blacklist or $Protected, $disableonly is unset and it's not already enabled #
-		elif [[ " ${blacklist} " != *" $service "* && " ${Protected[*]} " != *" $service "* && -z $disableonly && -z $enabled ]]; then
+		# load service if it's not found in $blacklist or $Protected, $disableonly is unset and it's not already enabled | unless restore is enabled#
+		elif [[ " ${Protected[*]} " != *" $service "* && -z $disableonly && -z $enabled || ! -z $restore && -z $enabled ]]; then
 			load $service
 		fi
 done
