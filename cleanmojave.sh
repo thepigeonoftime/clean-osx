@@ -259,7 +259,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.quicklook.ui.helper.plist
 /System/Library/LaunchAgents/com.apple.rapportd-user.plist
 /System/Library/LaunchAgents/com.apple.RapportUIAgent.plist
-/System/Library/LaunchAgents/com.apple.rcd.plist # Remote Control Daemon
+# /System/Library/LaunchAgents/com.apple.rcd.plist # Remote Control Daemon (disabling breaks Media Keys)
 /System/Library/LaunchAgents/com.apple.recentsd.plist # https://www.manpagez.com/man/8/recentsd/
 /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist
 /System/Library/LaunchAgents/com.apple.ReportCrash.plist
