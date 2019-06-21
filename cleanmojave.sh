@@ -64,7 +64,7 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.AddressBook.SourceSync.plist
 /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist
 /System/Library/LaunchAgents/com.apple.AirPortBaseStationAgent.plist
-#/System/Library/LaunchAgents/com.apple.akd.plist # Auth Kit Framework (iCloud / AppleID related)
+/System/Library/LaunchAgents/com.apple.akd.plist # Auth Kit Framework (iCloud / AppleID related)
 #/System/Library/LaunchAgents/com.apple.alf.useragent.plist #application firewall
 /System/Library/LaunchAgents/com.apple.AOSHeartbeat.plist
 /System/Library/LaunchAgents/com.apple.AOSPushRelay.plist
@@ -107,7 +107,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.cmfsyncagent.plist
 #/System/Library/LaunchAgents/com.apple.colorsync.useragent.plist
 /System/Library/LaunchAgents/com.apple.CommCenter-osx.plist # IP Telephony
-/System/Library/LaunchAgents/com.apple.commerce.plist
+#/System/Library/LaunchAgents/com.apple.commerce.plist # app store related
 /System/Library/LaunchAgents/com.apple.contacts.donation-agent.plist
 /System/Library/LaunchAgents/com.apple.ContactsAgent.plist
 #/System/Library/LaunchAgents/com.apple.ContainerRepairAgent.plist
@@ -416,7 +416,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.colorsync.displayservices.plist
 #/System/Library/LaunchDaemons/com.apple.colorsyncd.plist
 /System/Library/LaunchDaemons/com.apple.CommCenterRootHelper.plist
-/System/Library/LaunchDaemons/com.apple.commerced.plist
+#/System/Library/LaunchDaemons/com.apple.commerced.plist # app store related
 /System/Library/LaunchDaemons/com.apple.comsat.plist #server process which receives reports of incoming mail and notifies users if they have requested this service.
 #/System/Library/LaunchDaemons/com.apple.configd.plist
 #/System/Library/LaunchDaemons/com.apple.configureLocalKDC.plist
@@ -516,7 +516,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.kextd.plist
 #/System/Library/LaunchDaemons/com.apple.kuncd.plist
 #/System/Library/LaunchDaemons/com.apple.locate.plist
-/System/Library/LaunchDaemons/com.apple.locationd.plist
+# /System/Library/LaunchDaemons/com.apple.locationd.plist
 #/System/Library/LaunchDaemons/com.apple.lockd.plist
 #/System/Library/LaunchDaemons/com.apple.logd.plist
 #/System/Library/LaunchDaemons/com.apple.logind.plist
@@ -594,31 +594,31 @@ LaunchDaemons=(
 /System/Library/LaunchDaemons/com.apple.RemoteDesktop.PrivilegeProxy.plist
 /System/Library/LaunchDaemons/com.apple.remotemanagementd.plist
 /System/Library/LaunchDaemons/com.apple.remotepairtool.plist
-# /System/Library/LaunchDaemons/com.apple.ReportCrash.Root.plist
-# /System/Library/LaunchDaemons/com.apple.ReportCrash.Root.Self.plist
+# /System/Library/LaunchDaemons/com.apple.ReportCrash.Root.plist # man ReportCrash: analyzes crashing processes and saves a crash report to disk.
+# /System/Library/LaunchDaemons/com.apple.ReportCrash.Root.Self.plist # https://www.unix.com/man-page/osx/8/ReportCrash/
 #/System/Library/LaunchDaemons/com.apple.ReportMemoryException.plist
 #/System/Library/LaunchDaemons/com.apple.ReportPanicService.plist
-#/System/Library/LaunchDaemons/com.apple.revisiond.plist
-#/System/Library/LaunchDaemons/com.apple.RFBEventHelper.plist
-#/System/Library/LaunchDaemons/com.apple.rootless.init.plist
-#/System/Library/LaunchDaemons/com.apple.rpcbind.plist
-#/System/Library/LaunchDaemons/com.apple.rtcreportingd.plist #pancake.apple.com
+#/System/Library/LaunchDaemons/com.apple.revisiond.plist # man revisiond: is the daemon that manages document revisions created by applications and system services.
+/System/Library/LaunchDaemons/com.apple.RFBEventHelper.plist # man RFBEventHelperd: is used by the Screen Sharing app.
+#/System/Library/LaunchDaemons/com.apple.rootless.init.plist # Sandbox related
+#/System/Library/LaunchDaemons/com.apple.rpcbind.plist # man Rpcbind: is a server that converts RPC program numbers into DARPA protocol port numbers.  It is a replacement for the older portmap program.
+/System/Library/LaunchDaemons/com.apple.rtcreportingd.plist # Connects to apple (pancake.apple.com), possibly related to iTunes music sharing and/or sending crash reports
 #/System/Library/LaunchDaemons/com.apple.SafeEjectGPUStartupDaemon.plist
-#/System/Library/LaunchDaemons/com.apple.sandboxd.plist
-#/System/Library/LaunchDaemons/com.apple.SCHelper.plist
-#/System/Library/LaunchDaemons/com.apple.screensharing.plist
-#/System/Library/LaunchDaemons/com.apple.scsid.plist
-#/System/Library/LaunchDaemons/com.apple.secinitd.plist
+#/System/Library/LaunchDaemons/com.apple.sandboxd.plist # man sandboxd: performs services on behalf of the Sandbox kernel extension.
+#/System/Library/LaunchDaemons/com.apple.SCHelper.plist # System configuration helper
+/System/Library/LaunchDaemons/com.apple.screensharing.plist
+#/System/Library/LaunchDaemons/com.apple.scsid.plist # man scsid: is the daemon responsible for the SCSI subsystem preferences.
+#/System/Library/LaunchDaemons/com.apple.secinitd.plist # man secinitd: is a system daemon that initializes the runtime security policies for processes.
 #/System/Library/LaunchDaemons/com.apple.security.agent.login.plist
 #/System/Library/LaunchDaemons/com.apple.security.authhost.plist
 #/System/Library/LaunchDaemons/com.apple.security.FDERecoveryAgent.plist
 #/System/Library/LaunchDaemons/com.apple.security.syspolicy.plist
 #/System/Library/LaunchDaemons/com.apple.securityd.plist
 #/System/Library/LaunchDaemons/com.apple.securityd_service.plist
-#/System/Library/LaunchDaemons/com.apple.seld.plist
+/System/Library/LaunchDaemons/com.apple.seld.plist # Apple Pay related | man seld: Manages the secure element and interfaces with the trusted service manager.
 #/System/Library/LaunchDaemons/com.apple.sessionlogoutd.plist
-# /System/Library/LaunchDaemons/com.apple.signpost.signpost_reporter.plist # perfomance analysis
-# /System/Library/LaunchDaemons/com.apple.smb.preferences.plist
+/System/Library/LaunchDaemons/com.apple.signpost.signpost_reporter.plist # perfomance analysis
+/System/Library/LaunchDaemons/com.apple.smb.preferences.plist
 /System/Library/LaunchDaemons/com.apple.smbd.plist
 #/System/Library/LaunchDaemons/com.apple.softwareupdate_download_service.plist
 #/System/Library/LaunchDaemons/com.apple.softwareupdate_firstrun_tasks.plist
