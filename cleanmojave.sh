@@ -62,8 +62,8 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.AddressBook.AssistantService.plist
 /System/Library/LaunchAgents/com.apple.AddressBook.ContactsAccountsService.plist
 /System/Library/LaunchAgents/com.apple.AddressBook.SourceSync.plist
-/System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist
-/System/Library/LaunchAgents/com.apple.AirPortBaseStationAgent.plist
+# /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist
+# /System/Library/LaunchAgents/com.apple.AirPortBaseStationAgent.plist
 /System/Library/LaunchAgents/com.apple.akd.plist # Auth Kit Framework (iCloud / AppleID related)
 #/System/Library/LaunchAgents/com.apple.alf.useragent.plist #application firewall
 /System/Library/LaunchAgents/com.apple.AOSHeartbeat.plist
@@ -77,7 +77,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.applespell.plist #Spelling correction
 #/System/Library/LaunchAgents/com.apple.appsleepd.plist
 #/System/Library/LaunchAgents/com.apple.appstoreagent.plist
-/System/Library/LaunchAgents/com.apple.appstoreupdateagent.plist
+# /System/Library/LaunchAgents/com.apple.appstoreupdateagent.plist
 #/System/Library/LaunchAgents/com.apple.askpermissiond.plist
 #/System/Library/LaunchAgents/com.apple.AskPermissionUI.plist
 #/System/Library/LaunchAgents/com.apple.assertiond.plist
@@ -92,8 +92,8 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.backgroundtaskmanagementuiagent.plist
 # /System/Library/LaunchAgents/com.apple.bird.plist # iCloud Drive | causes continuous error messages when unloaded
 /System/Library/LaunchAgents/com.apple.bluetooth.PacketLogger.plist
-#/System/Library/LaunchAgents/com.apple.bluetoothUIServer.plist
-#/System/Library/LaunchAgents/com.apple.btsa.plist # Bluetooth Setup Assistant
+/System/Library/LaunchAgents/com.apple.bluetoothUIServer.plist
+/System/Library/LaunchAgents/com.apple.btsa.plist # Bluetooth Setup Assistant
 #/System/Library/LaunchAgents/com.apple.cache_delete.plist
 #/System/Library/LaunchAgents/com.apple.CalendarAgent.plist
 /System/Library/LaunchAgents/com.apple.CallHistoryPluginHelper.plist
@@ -146,7 +146,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.DiskArbitrationAgent.plist #https://www.manpagez.com/man/8/diskarbitrationd/
 #/System/Library/LaunchAgents/com.apple.diskspaced.plist
 #/System/Library/LaunchAgents/com.apple.distnoted.xpc.agent.plist
-/System/Library/LaunchAgents/com.apple.dmd.agent.plist # Mobile related
+/System/Library/LaunchAgents/com.apple.dmd.agent.plist # Mobile / notifyd related
 #/System/Library/LaunchAgents/com.apple.Dock.plist
 #/System/Library/LaunchAgents/com.apple.dt.CommandLineTools.installondemand.plist
 #/System/Library/LaunchAgents/com.apple.DwellControl.plist #Universal Access related
@@ -202,7 +202,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.mbbackgrounduseragent.plist # man mbbackgrounduseragent:used by the Setup Assistant application and runs as the target user in order to configure that user from a background agents or non-Aqua session agents.
 #/System/Library/LaunchAgents/com.apple.mbfloagent.plist # man mbfloagent: is used by the Setup Assistant application and run First Login Optimization plug-ins as the target user.
 #/System/Library/LaunchAgents/com.apple.mbuseragent.plist #  man mbuseragent: is used by the Setup Assistant application and runs as the target user in order to configure that user.
-/System/Library/LaunchAgents/com.apple.mdmclient.agent.plist # man mdmclient: Used internally for communication with Mobile Device Management (Profile Manager) server. Receives configuration profiles and commands from the server after a user binds to the server by installing a binding profile. Part of Managed Client (MCX).
+# /System/Library/LaunchAgents/com.apple.mdmclient.agent.plist # man mdmclient: Used internally for communication with Mobile Device Management (Profile Manager) server. Receives configuration profiles and commands from the server after a user binds to the server by installing a binding profile. Part of Managed Client (MCX).
 #/System/Library/LaunchAgents/com.apple.mdworker.32bit.plist # Spotlight
 #/System/Library/LaunchAgents/com.apple.mdworker.bundles.plist # Spotlight
 #/System/Library/LaunchAgents/com.apple.mdworker.mail.plist # Spotlight
@@ -234,7 +234,7 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.parentalcontrols.check.plist
 /System/Library/LaunchAgents/com.apple.parsec-fbf.plist
 /System/Library/LaunchAgents/com.apple.parsecd.plist # man parsecd: manages access and data for Siri Suggestions.
-#/System/Library/LaunchAgents/com.apple.passd.plist
+/System/Library/LaunchAgents/com.apple.passd.plist
 #/System/Library/LaunchAgents/com.apple.pboard.plist # Pasteboard Server
 #/System/Library/LaunchAgents/com.apple.pbs.plist
 #/System/Library/LaunchAgents/com.apple.PCIESlotCheck.plist
@@ -246,7 +246,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.PIPAgent.plist
 #/System/Library/LaunchAgents/com.apple.pluginkit.pkd.plist
 #/System/Library/LaunchAgents/com.apple.pluginkit.pkreporter.plist
-#/System/Library/LaunchAgents/com.apple.powerchime.plist
+/System/Library/LaunchAgents/com.apple.powerchime.plist
 #/System/Library/LaunchAgents/com.apple.preference.displays.MirrorDisplays.plist
 #/System/Library/LaunchAgents/com.apple.printtool.agent.plist
 #/System/Library/LaunchAgents/com.apple.printuitool.agent.plist
@@ -293,11 +293,11 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.security.keychain-circle-notification.plist
 #/System/Library/LaunchAgents/com.apple.securityuploadd.plist
 #/System/Library/LaunchAgents/com.apple.ServicesUIAgent.plist
-/System/Library/LaunchAgents/com.apple.sharingd.plist # https://www.manpagez.com/man/8/sharingd/
+/System/Library/LaunchAgents/com.apple.sharingd.plist # Sharing Daemon that enables AirDrop, Handoff, Instant Hotspot, Shared Computers, and Remote Disc in the Finder. https://www.manpagez.com/man/8/sharingd/ 
 /System/Library/LaunchAgents/com.apple.sidecar-relay.plist # Remote Device / Display
 /System/Library/LaunchAgents/com.apple.Siri.agent.plist
 /System/Library/LaunchAgents/com.apple.siriknowledged.plist
-/System/Library/LaunchAgents/com.apple.soagent.plist
+/System/Library/LaunchAgents/com.apple.soagent.plist #social something something
 /System/Library/LaunchAgents/com.apple.SocialPushAgent.plist
 /System/Library/LaunchAgents/com.apple.softwareupdate_notify_agent.plist
 /System/Library/LaunchAgents/com.apple.SoftwareUpdateNotificationManager.plist
@@ -315,7 +315,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.storelegacy.plist
 #/System/Library/LaunchAgents/com.apple.storeuid.plist
 /System/Library/LaunchAgents/com.apple.suggestd.plist #Seems related to finding contacts in emails
-# /System/Library/LaunchAgents/com.apple.swcd.plist #Shared Web Credentials (Safari related)
+/System/Library/LaunchAgents/com.apple.swcd.plist #Shared Web Credentials (Safari related)
 #/System/Library/LaunchAgents/com.apple.syncdefaultsd.plist # man syncdefaultsd
 #/System/Library/LaunchAgents/com.apple.syncservices.SyncServer.plist
 #/System/Library/LaunchAgents/com.apple.syncservices.uihandler.plist
@@ -347,7 +347,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.UserNotificationCenterAgent.plist # Handles User Interactions incl. Permission Dialogs
 /System/Library/LaunchAgents/com.apple.videosubscriptionsd.plist
 #/System/Library/LaunchAgents/com.apple.voicememod.plist
-#/System/Library/LaunchAgents/com.apple.VoiceOver.plist
+/System/Library/LaunchAgents/com.apple.VoiceOver.plist
 #/System/Library/LaunchAgents/com.apple.warmd_agent.plist
 #/System/Library/LaunchAgents/com.apple.webinspectord.plist
 #/System/Library/LaunchAgents/com.apple.WebKit.PluginAgent.plist
@@ -364,7 +364,7 @@ LaunchDaemons=(
 /System/Library/LaunchDaemons/com.apple.adid.plist # iTunes related
 #/System/Library/LaunchDaemons/com.apple.afpfs_afpLoad.plist
 #/System/Library/LaunchDaemons/com.apple.afpfs_checkafp.plist
-/System/Library/LaunchDaemons/com.apple.AirPlayXPCHelper.plist
+# /System/Library/LaunchDaemons/com.apple.AirPlayXPCHelper.plist
 #/System/Library/LaunchDaemons/com.apple.airport.wps.plist
 #/System/Library/LaunchDaemons/com.apple.airportd.plist
 #/System/Library/LaunchDaemons/com.apple.akd.plist # Auth Kit Framework
@@ -375,7 +375,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.applefileutil.plist
 #/System/Library/LaunchDaemons/com.apple.AppleQEMUGuestAgent.plist
 /System/Library/LaunchDaemons/com.apple.appleseed.fbahelperd.plist # Feedback Assistant
-/System/Library/LaunchDaemons/com.apple.applessdstatistics.plist # man applessdstatistics: is a daemon which gathers statistics related to the internal storage device.
+# /System/Library/LaunchDaemons/com.apple.applessdstatistics.plist # man applessdstatistics: is a daemon which gathers statistics related to the internal storage device.
 /System/Library/LaunchDaemons/com.apple.apsd.plist #Apple Push Notification Service
 #/System/Library/LaunchDaemons/com.apple.aslmanager.plist #man aslmanager: manages rotated files and ASL data written by the syslogd server
 #/System/Library/LaunchDaemons/com.apple.AssetCache.builtin.plist
@@ -458,7 +458,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.dnsextd.plist
 #/System/Library/LaunchDaemons/com.apple.dpaudiothru.plist
 #/System/Library/LaunchDaemons/com.apple.dpd.plist # man dpd: is a daemon intended to listen for Command + F2 on the iMac to switch to external display input mode upon display port hot-plug
-#/System/Library/LaunchDaemons/com.apple.dprivacyd.plist
+/System/Library/LaunchDaemons/com.apple.dprivacyd.plist
 #/System/Library/LaunchDaemons/com.apple.driver.eficheck.plist
 #/System/Library/LaunchDaemons/com.apple.driver.ethcheck.plist
 #/System/Library/LaunchDaemons/com.apple.dspluginhelperd.plist
@@ -570,7 +570,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.nsurlstoraged.plist
 #/System/Library/LaunchDaemons/com.apple.ocspd.plist
 #/System/Library/LaunchDaemons/com.apple.odproxyd.plist # https://www.manpagez.com/man/8/odproxyd/
-# /System/Library/LaunchDaemons/com.apple.ODSAgent.plist # Remote Disc Sharing
+/System/Library/LaunchDaemons/com.apple.ODSAgent.plist # Remote Disc Sharing
 #/System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
 /System/Library/LaunchDaemons/com.apple.osanalytics.osanalyticshelper.plist
 #/System/Library/LaunchDaemons/com.apple.PasswordService.plist
