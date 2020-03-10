@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.osanalytics.osanalyticshelper</string>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.osanalytics.osanalyticshelper</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/osanalyticshelper</string>
+		<string>com.apple.osanalytics.osanalyticshelper</string>
+	</array>
+</dict>
+</plist>

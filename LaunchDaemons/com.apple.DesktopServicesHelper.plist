@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.DesktopServicesHelper</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.DesktopServicesHelper</key>
+		<dict/>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Resources/DesktopServicesHelper</string>
+	<key>MultipleInstances</key>
+	<true/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<!--Uncomment these keys to enable malloc debugging-->
+		<!--<key>MallocScribble</key>-->
+		<!--<string>1</string>-->
+		<!--<key>MallocStackLogging</key>-->
+		<!--<string>1</string>-->
+		<!--<key>MallocErrorAbort</key>-->
+		<!--<string>1</string>-->
+		<!--<key>MallocCheckHeapEach</key>-->
+		<!--<string>500</string>-->
+		<!--<key>MallocLogFile</key>-->
+		<!--<string>/var/log/cloudbackupd-malloc.log</string>-->
+		<!--<key>DYLD_INSERT_LIBRARIES</key>-->
+		<!--<string>/usr/lib/libgmalloc.dylib</string>-->
+	</dict>
+</dict>
+</plist>

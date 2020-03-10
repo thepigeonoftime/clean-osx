@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Disabled</key>
+	<false/>
+	<key>Label</key>
+	<string>com.apple.emond</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.emond.evtq</key>
+		<dict>
+			<key>HideUntilCheckIn</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>Program</key>
+	<string>/sbin/emond</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/sbin/emond</string>
+	</array>
+	<key>QueueDirectories</key>
+	<array>
+		<string>/private/var/db/emondClients</string>
+	</array>
+	<key>DrainMessagesOnFailedInit</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<false/>
+</dict>
+</plist>

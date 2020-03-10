@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BeginTransactionAtShutdown</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<false/>
+	<key>EnableTransactions</key>
+	<false/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>__CFPREFERENCES_AVOID_DAEMON</key>
+		<string>1</string>
+		<key>__CF_USER_TEXT_ENCODING</key>
+		<string>0x0:0:0</string>
+	</dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.logd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.logd</key>
+		<true/>
+		<key>com.apple.logd.admin</key>
+		<true/>
+		<key>com.apple.logd.cachedelete</key>
+		<true/>
+		<key>com.apple.logd.events</key>
+		<true/>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>Program</key>
+	<string>/usr/libexec/logd</string>
+	<key>RemoteServices</key>
+	<dict>
+		<key>com.apple.logd.remote-daemon</key>
+		<dict>
+			<key>RequireEntitlement</key>
+			<string>com.apple.logd.remote</string>
+			<key>ServiceProperties</key>
+			<dict/>
+		</dict>
+	</dict>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>ThrottleInterval</key>
+	<integer>1</integer>
+</dict>
+</plist>

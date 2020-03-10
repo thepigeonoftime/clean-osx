@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>Disabled</key>
+	<false/>
+	<key>Label</key>
+	<string>com.apple.netbiosd</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/sbin/netbiosd</string>
+	</array>
+	<key>TimeOut</key>
+	<integer>600</integer>
+        <key>UserName</key>
+        <string>_netbios</string>
+        <key>Nice</key>
+        <integer>20</integer>
+        <key>LowPriorityIO</key>
+        <true/>
+        <key>LaunchEvents</key>
+        <dict>
+            <key>com.apple.reachability</key>
+            <dict>
+               <key>default route keepalive</key>
+               <dict>
+                  <key>KeepAlive</key>
+                  <true/>
+                  <key>Target</key>
+                  <string>0.0.0.0</string>
+               </dict>
+            </dict>
+        </dict>
+        <key>Sockets</key>
+        <dict>
+            <key>NetbiosNameServices</key>
+            <dict>
+                <key>SockServiceName</key>
+                <string>netbios-ns</string>
+                <key>SockType</key>
+                <string>dgram</string>
+                <key>SockProtocol</key>
+                <string>UDP</string>
+                <key>SockPassive</key>
+                <true/>
+                <key>SockFamily</key>
+                <string>IPv4</string>
+                <key>SockNodeName</key>
+                <string>0.0.0.0</string>
+            </dict>
+            <key>NetbiosDatagramServices</key>
+            <dict>
+                <key>SockServiceName</key>
+                <string>netbios-dgm</string>
+                <key>SockType</key>
+                <string>dgram</string>
+                <key>SockProtocol</key>
+                <string>UDP</string>
+                <key>SockPassive</key>
+                <true/>
+                <key>SockFamily</key>
+                <string>IPv4</string>
+                <key>SockNodeName</key>
+                <string>0.0.0.0</string>
+            </dict>
+        </dict>
+        <!-- <key>ServiceIPC</key> -->
+        <!-- <true/> -->
+</dict>
+</plist>

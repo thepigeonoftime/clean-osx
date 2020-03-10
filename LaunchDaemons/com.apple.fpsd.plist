@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>GroupName</key>
+	<string>_fpsd</string>
+	<key>UserName</key>
+	<string>_fpsd</string>
+	<key>Label</key>
+	<string>com.apple.fpsd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.fpsd</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/CoreFP.framework/Versions/A/fpsd</string>
+	<key>KeepAlive</key>
+	<dict>
+		<key>Crashed</key>
+		<true/>
+	</dict>
+	<key>EnablePressuredExit</key>
+	<false/>
+	<key>EnableTransactions</key>
+	<false/>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+</dict>
+</plist>

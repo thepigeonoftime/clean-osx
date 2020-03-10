@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.corestorage.corestoragehelperd</string>
+	<key>Program</key>
+	<string>/usr/libexec/corestoragehelperd</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>corestoragehelperd</string>
+	</array>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.corestorage.corestoragehelperd</key>
+		<true/>
+	</dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.OpenDirectory.ODTrigger</key>
+		<dict>
+			<key>Record Modification</key>
+			<dict>
+				<key>TriggerType</key>
+				<string>RecordAttributes</string>
+				<key>Nodes</key>
+				<string>/Local/Default</string>
+				<key>RecordTypes</key>
+				<string>dsRecTypeStandard:Users</string>
+				<key>RecordAttributes</key>
+				<array>
+					<string>dsAttrTypeStandard:AuthenticationHint</string>
+					<string>dsAttrTypeStandard:RecordName</string>
+					<string>dsAttrTypeStandard:RealName</string>
+					<string>dsAttrTypeStandard:JPEGPhoto</string>
+					<string>dsAttrTypeStandard:Picture</string>
+					<string>dsAttrTypeNative:unlockOptions</string>
+				</array>
+				<key>RequiresFDE</key>
+				<true/>
+			</dict>
+			<key>Record Deletion</key>
+			<dict>
+				<key>TriggerType</key>
+				<string>Records</string>
+				<key>Events</key>
+				<string>Delete</string>
+				<key>Nodes</key>
+				<string>/Local/Default</string>
+				<key>RecordTypes</key>
+				<string>dsRecTypeStandard:Users</string>
+				<key>RequiresFDE</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>KeepAlive</key>
+	<dict>
+		<key>PathState</key>
+		<dict>
+			<key>/var/db/.forceODFDESynchronize</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

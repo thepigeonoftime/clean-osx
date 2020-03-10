@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Nice</key>
+	<integer>18</integer>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.remotemanagementd.http.configuration</key>
+		<true/>
+		<key>com.apple.remotemanagementd.personal.status</key>
+		<true/>
+		<key>com.apple.remotemanagementd.ask</key>
+		<true/>
+		<key>com.apple.remotemanagementd.http.apns-dev</key>
+		<true/>
+		<key>com.apple.remotemanagementd.http.apns-prod</key>
+		<true/>
+		<key>com.apple.remotemanagementd.tool</key>
+		<true/>
+		<key>com.apple.remotemanagementd.admin-persistence-xpc</key>
+		<true/>
+		<key>com.apple.remotemanagementd.http.status</key>
+		<true/>
+		<key>com.apple.remotemanagementd.management-state</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/PrivateFrameworks/RemoteManagement.framework/Daemons/remotemanagementd</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.nsurlsessiond-events</key>
+		<dict/>
+		<key>LaunchOnDemand</key>
+		<string>com.apple.remotemanagementd</string>
+	</dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.remotemanagementd</string>
+</dict>
+</plist>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.dpd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.dpd</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/dpd</string>
+	</array>
+  <key>ThrottleInterval</key>
+  <integer>1</integer>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.device-attach</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOACPIPlatformDevice</string>
+				<key>IONameMatch</key>
+				<string>smc-dppt</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>KeepAlive</key>
+	<dict>
+		<key>AfterInitialDemand</key>
+		<true/>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+</dict>
+</plist>

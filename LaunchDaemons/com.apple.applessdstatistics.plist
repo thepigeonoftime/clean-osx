@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>Label</key>
+	<string>com.apple.applessdstatistics</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/applessdstatistics</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.applessdbgrefresh.activity</key>
+			<dict>
+				<key>Repeating</key>
+				<true/>
+				<key>Interval</key>
+				<integer>259200</integer>
+				<key>Priority</key>
+				<string>Maintenance</string>
+				<key>RequireBatteryLevel</key>
+				<integer>70</integer>
+				<key>RequireScreenSleep</key>
+				<true/>
+				<key>GracePeriod</key>
+				<integer>86400</integer>
+				<key>AllowBattery</key>
+				<true/>
+			</dict>
+			<key>com.apple.applessdstatistics.activity</key>
+			<dict>
+				<key>Repeating</key>
+				<true/>
+				<key>Interval</key>
+				<integer>604800</integer>
+				<key>Priority</key>
+				<string>Maintenance</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

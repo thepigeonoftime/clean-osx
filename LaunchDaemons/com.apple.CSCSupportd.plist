@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RemoteServices</key>
+	<dict>
+		<key>com.apple.CSCSupportd</key>
+		<dict>
+			<key>RequireEntitlement</key>
+			<string>com.apple.private.CSCSupport.antenna-access</string>
+			<key>ServiceProperties</key>
+			<dict>
+				<key>UsesRemoteXPC</key>
+				<true/>
+				<key>ServiceVersion</key>
+				<integer>3</integer>
+			</dict>
+		</dict>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/CSCSupportd</string>
+	</array>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.CSCSupportd</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

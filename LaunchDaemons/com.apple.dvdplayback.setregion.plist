@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.dvdplayback.setregion</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.dvdplayback.setregion_service</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/setregion</string>
+	</array>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+</dict>
+</plist>

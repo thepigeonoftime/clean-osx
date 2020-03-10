@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.SubmitDiagInfo</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/SubmitDiagInfo</string>
+		<string>server-init</string>
+	</array>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>LowPriorityIO</key>
+	<true/>
+	<key>LowPriorityBackgroundIO</key>
+	<true/>
+	<key>MachServices</key>
+	<dict>
+        <key>com.apple.SubmitDiagInfo</key>
+        <true/>
+        <key>com.apple.OSASyncProxy.client</key>
+        <true/>
+	</dict>
+	<key>RemoteServices</key>
+	<dict>
+		<key>com.apple.osanalytics.logRelay</key>
+		<dict>
+			<key>ServiceProperties</key>
+			<dict>
+				<key>UsesRemoteXPC</key>
+				<true/>
+			</dict>
+			<key>RequireEntitlement</key>
+			<string>com.apple.SubmitDiagInfo.tower-access</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

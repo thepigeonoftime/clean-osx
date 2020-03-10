@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/AppleQEMUGuestAgent</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.driver.applevirtio.console.match</key>
+			<dict>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>IOMatchAll</key>
+				<true/>
+				<key>IOPropertyMatch</key>
+				<dict>
+					<key>AppleVirtIOConsoleDevice</key>
+					<true/>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>KeepAlive</key>
+	<dict>
+		<key>Crashed</key>
+		<true/>
+	</dict>
+	<key>ThrottleInterval</key>
+	<integer>1</integer>
+	<key>Label</key>
+	<string>com.apple.AppleQEMUGuestAgent</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+	<key>EnableTransactions</key>
+	<false/>
+</dict>
+</plist>

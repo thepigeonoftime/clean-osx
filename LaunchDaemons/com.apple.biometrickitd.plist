@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.biometrickitd</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/biometrickitd</string>
+		<string>--launchd</string>
+	</array>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.biometrickitd</key>
+		<true/>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+            <key>com.apple.AppleUSBNCMData</key>
+            <dict>
+                <key>IOProviderClass</key>
+                <string>AppleUSBNCMData</string>
+                <key>IOPropertyMatch</key>
+                <dict>
+                    <key>idProduct</key>
+                    <integer>34304</integer>
+                </dict>
+                <key>IOMatchLaunchStream</key>
+                <true/>
+            </dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

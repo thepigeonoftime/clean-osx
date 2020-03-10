@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.SafeEjectGPUStartupDaemon</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>SafeEjectGPUStartupDaemon</string>
+	</array>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/Menu Extras/SafeEjectGPUExtra.menu/Contents/MacOS/SafeEjectGPUStartupDaemon</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.system.loginwindow.desktopUp</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.system.loginwindow.desktopUp</string>
+			</dict>
+			<key>com.apple.SafeEjectGPUStartupDaemon.received</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.SafeEjectGPUStartupDaemon.received</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

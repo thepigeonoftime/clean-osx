@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.thermald</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/thermald</string>
+	</array>
+	<key>PosixSpawnType</key>
+	<string>Interactive</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.thermald</key>
+		<true/>
+	</dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.device-attach</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>X86PlatformPlugin</string>
+				<key>IOPropertyMatch</key>
+				<dict>
+					<key>ThermalLevelsSupported</key>
+					<true/>
+				</dict>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

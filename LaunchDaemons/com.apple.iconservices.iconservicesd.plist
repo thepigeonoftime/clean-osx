@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.iconservices.iconservicesd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.iconservices.store</key>
+		<true/>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/iconservicesd</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.iconservicesd.lowdiskspaceNotification</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.system.lowdiskspace.system</string>
+			</dict>
+			<key>com.apple.iconservicesd.verylowdiskspaceNotification</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.system.verylowdiskspace.system</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>UserName</key>
+	<string>_iconservices</string>
+</dict>
+</plist>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.bluetoothReporter</string>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.bluetoothReporter</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/IOBluetooth.framework/Versions/A/Resources/BluetoothReporter</string>
+		<string>--dumpPacketLog</string>
+		<string>/private/var/log/bluetooth.pklg</string>
+	</array>
+	<key>EnableTransactions</key>
+	<true/>
+</dict>
+</plist>

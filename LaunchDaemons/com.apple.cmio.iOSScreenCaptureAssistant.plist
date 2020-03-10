@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.cmio.iOSScreenCaptureAssistant</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.cmio.iOSScreenCaptureAssistant</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/CoreMediaIO.framework/Resources/iOSScreenCapture.plugin/Contents/Resources/iOSScreenCaptureAssistant</string>
+	</array>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+</dict>
+</plist>

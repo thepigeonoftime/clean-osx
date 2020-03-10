@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.metadata.mds</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds</string>
+	</array>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.metadata.mds</key>
+		<true/>
+		<key>com.apple.metadata.mds.legacy</key>
+		<true/>
+		<key>com.apple.metadata.mds.xpcs</key>
+		<true/>
+		<key>com.apple.metadata.mds.cachedelete</key>
+		<true/>
+	</dict>
+	<key>SoftResourceLimits</key>
+	<dict>
+		<key>NumberOfFiles</key>
+		<integer>2048</integer>
+	</dict>
+	<key>HardResourceLimits</key>
+	<dict>
+		<key>NumberOfFiles</key>
+		<integer>2048</integer>
+	</dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.Spotlight</string>
+	<key>LowPriorityBackgroundIO</key>
+	<false/>
+	<key>EnvironmentVariables</key>
+	<dict/>
+</dict>
+</plist>

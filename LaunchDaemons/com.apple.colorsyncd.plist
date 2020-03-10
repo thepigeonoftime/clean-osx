@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>RunLoopType</key>
+	<string>NSRunLoop</string>
+	<key>Label</key>
+	<string>com.apple.colorsyncd</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/colorsyncd</string>
+	</array>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.colorsyncd</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

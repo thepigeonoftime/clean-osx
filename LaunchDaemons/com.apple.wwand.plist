@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.wwand</string>
+	<key>Program</key>
+	<string>/System/Library/Extensions/IOSerialFamily.kext/Contents/PlugIns/AppleWWANSupport.kext/Contents/Resources/wwand</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.wwan.attach</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBHostDevice</string>
+				<key>IOPropertyMatch</key>
+				<dict>
+					<key>WWAN</key>
+					<true/>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>PosixSpawnType</key>
+	<string>Interactive</string>
+</dict>
+</plist>

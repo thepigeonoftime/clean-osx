@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Disabled</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.AEServer</string>
+	<key>UserName</key>
+	<string>_eppc</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/CoreServices.framework/Frameworks/AE.framework/Versions/A/Support/AEServer</string>
+		<string>--debug</string>
+	</array>
+	<key>inetdCompatibility</key>
+	<dict>
+		<key>Wait</key>
+		<false/>
+	</dict>
+	<key>Sockets</key>
+	<dict>
+		<key>Listeners</key>
+		<dict>
+			<key>SockServiceName</key>
+			<string>eppc</string>
+			<key>SockType</key>
+			<string>stream</string>
+			<key>Bonjour</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.coreservices.appleevents.aeserver</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

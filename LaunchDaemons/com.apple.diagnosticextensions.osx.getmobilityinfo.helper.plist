@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.diagnosticextensions.osx.getmobilityinfo.helper</string>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/DiagnosticExtensions.framework/PlugIns/osx-getmobilityinfo.appex/Contents/XPCServices/getmobilityinfohelper</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.diagnosticextensions.osx.getmobilityinfo.helper</key>
+		<true/>
+	</dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+</dict>
+</plist>

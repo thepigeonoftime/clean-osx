@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.mdmclient.daemon</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.mdmclient.daemon</key>
+		<true/>
+		<key>com.apple.mdmclient.daemon.unrestricted</key>
+		<true/>
+		<key>com.apple.mdmclient.daemon.push.production</key>
+		<true/>
+		<key>com.apple.mdmclient.daemon.push.development</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/mdmclient</string>
+		<string>daemon</string>
+	</array>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>EnvironmentVariables</key>
+	<dict/>
+</dict>
+</plist>

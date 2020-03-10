@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<false/>
+	<key>EnableTransactions</key>
+	<false/>
+	<key>Label</key>
+	<string>com.apple.touchbarserver</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.touchbarserver</key>
+		<true/>
+		<key>com.apple.touchbarserver.mig</key>
+		<true/>
+		<key>com.apple.touchbarserver.plugin</key>
+		<true/>
+		<key>com.apple.touchbarserver.render</key>
+		<dict>
+			<key>HideUntilCheckIn</key>
+			<true/>
+			<key>ResetAtClose</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+	<key>Program</key>
+	<string>/usr/libexec/TouchBarServer</string>
+	<key>ThrottleInterval</key>
+	<integer>1</integer>
+</dict>
+</plist>

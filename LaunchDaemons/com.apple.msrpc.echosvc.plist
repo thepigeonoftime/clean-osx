@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.msrpc.echosvc</string>
+	<key>Disabled</key>
+	<true/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/rpcsvchost</string>
+		<string>-launchd</string>
+		<string>echosvc.bundle</string>
+	</array>
+	<key>EnableTransactions</key>
+	<false/>
+	<key>Sockets</key>
+	<dict>
+		<key>ncalrpc</key>
+		<dict>
+			<key>Bonjour</key>
+			<false/>
+			<key>SockPathMode</key>
+			<integer>438</integer>
+			<key>SockPathName</key>
+			<string>/var/rpc/ncalrpc/echosvc</string>
+		</dict>
+		<key>ncacn_np</key>
+		<dict>
+			<key>Bonjour</key>
+			<false/>
+			<key>SockPathMode</key>
+			<integer>438</integer>
+			<key>SockPathName</key>
+			<string>/var/rpc/ncacn_np/echosvc</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

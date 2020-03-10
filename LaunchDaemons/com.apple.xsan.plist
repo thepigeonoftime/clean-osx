@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.xsan</string>
+	<key>Disabled</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>ExitTimeOut</key>
+	<integer>240</integer>
+	<key>Program</key>
+	<string>/System/Library/Filesystems/acfs.fs/Contents/bin/xsand</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>xsand</string>
+	</array>
+	<key>IgnoreProcessGroupAtShutdown</key>
+	<true/>
+	<key>LaunchOnlyOnce</key>
+	<true/>
+	<key>SoftResourceLimits</key>
+	<dict>
+		<!-- RLIM_INFINITY (0x7fffffffffffffff) -->
+		<key>Core</key>
+		<integer>9223372036854775807</integer>
+	</dict>
+	<key>HardResourceLimits</key>
+	<dict>
+		<!-- RLIM_INFINITY (0x7fffffffffffffff) -->
+		<key>Core</key>
+		<integer>9223372036854775807</integer>
+	</dict>
+</dict>
+</plist>

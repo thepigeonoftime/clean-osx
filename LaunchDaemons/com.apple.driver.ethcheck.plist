@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.driver.ethcheck</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/firmwarecheckers/ethcheck/ethcheck</string>
+		<string>--integrity-check-daemon</string>
+	</array>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.driver.device-attach</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>BCM5701Enet</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.configd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.SystemConfiguration.DNSConfiguration</key>
+		<true/>
+		<key>com.apple.SystemConfiguration.IPMonitorControl</key>
+		<true/>
+		<key>com.apple.SystemConfiguration.NetworkInformation</key>
+		<true/>
+		<key>com.apple.SystemConfiguration.PPPController</key>
+		<true/>
+		<key>com.apple.SystemConfiguration.PPPController-priv</key>
+		<true/>
+		<key>com.apple.SystemConfiguration.configd</key>
+		<true/>
+		<key>com.apple.network.EAPOLController</key>
+		<true/>
+		<key>com.apple.network.IPConfiguration</key>
+		<true/>
+		<key>com.apple.networking.captivenetworksupport</key>
+		<true/>
+	</dict>
+	<key>MinimalBootProfile</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/configd</string>
+	</array>
+	<key>Umask</key>
+	<integer>18</integer>
+</dict>
+</plist>

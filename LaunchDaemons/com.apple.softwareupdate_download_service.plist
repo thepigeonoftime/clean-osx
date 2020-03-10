@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.softwareupdate_download_service</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdate_download_service</string>
+	</array>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.softwareupdate_download_service</key>
+		<dict>
+			<key>ResetAtClose</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.nsurlsessiond-events</key>
+		<dict>
+			<key>LaunchOnDemand</key>
+			<dict>
+				<key>ClientIdentifier</key>
+				<string>softwareupdate_download_service</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>UserName</key>
+	<string>_softwareupdate</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Background</string>
+	<key>EnvironmentVariables</key>
+	<dict/>
+</dict>
+</plist>

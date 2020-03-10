@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.bnepd</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>PANConnectionPresent</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOBluetoothL2CAPChannel</string>
+				<key>PSM</key>
+				<integer>15</integer>
+			</dict>
+			<key>P2PConnectionPresent</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOBluetoothL2CAPChannel</string>
+				<key>PSM</key>
+				<integer>4111</integer>
+			</dict>
+		</dict>
+	</dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.bnepd</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/usr/sbin/bnepd</string>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+</dict>
+</plist>

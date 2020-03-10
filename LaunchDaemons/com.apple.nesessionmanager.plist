@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.networkextension.file-descriptor-maintainer</key>
+		<dict>
+			<key>new-handles</key>
+			<dict>
+				<key>handles-array</key>
+				<array/>
+			</dict>
+			<key>init</key>
+			<dict>
+				<key>nesm-pid</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.nesessionmanager</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.nesessionmanager.flow-divert-token</key>
+		<true/>
+		<key>com.apple.nesessionmanager</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/usr/libexec/nesessionmanager</string>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

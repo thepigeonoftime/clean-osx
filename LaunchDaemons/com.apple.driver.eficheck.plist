@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.driver.eficheck</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/firmwarecheckers/eficheck/eficheck</string>
+		<string>--integrity-check-daemon</string>
+	</array>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.driver.eficheck</key>
+			<dict>
+				<key>Interval</key>
+				<integer>604800</integer>
+				<key>Priority</key>
+				<string>Maintenance</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>JetsamProperties</key>
+	<dict>
+		<key>JetsamMemoryLimit</key>
+		<integer>4096</integer>
+		<key>JetsamPriority</key>
+		<integer>-49</integer>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.ManagedClient.cloudconfigurationd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.ManagedClient.cloudconfigurationd</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/cloudconfigurationd</string>
+	</array>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>RunAtLoad</key>
+	<false/>
+</dict>
+</plist>

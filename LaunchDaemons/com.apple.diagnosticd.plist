@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>__CFPREFERENCES_AVOID_DAEMON</key>
+		<string>1</string>
+		<key>__CF_USER_TEXT_ENCODING</key>
+		<string>0x0:0:0</string>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.diagnosticd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.diagnosticd</key>
+		<true/>
+		<key>com.apple.diagnosticd.cache-delete</key>
+		<true/>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>Program</key>
+	<string>/usr/libexec/diagnosticd</string>
+	<key>Sockets</key>
+	<dict>
+		<key>com.apple.diagnosticd.reflect-listener</key>
+		<dict>
+			<key>SockFamily</key>
+			<string>Unix</string>
+			<key>SockPathMode</key>
+			<integer>511</integer>
+			<key>SockPathName</key>
+			<string>/private/var/run/.sim_diagnosticd_socket</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

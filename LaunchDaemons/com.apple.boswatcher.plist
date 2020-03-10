@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.boswatcher</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/PrivateFrameworks/BridgeOSInstallReporting.framework/Resources/boswatcher</string>
+	</array>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>EnablePressuredExit</key>
+	<false/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>LaunchOnlyOnce</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.boswatcher.nvram-match</key>
+			<dict>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>IOPropertyExistsMatch</key>
+				<array>
+					<string>BOSUpdateStarted</string>
+				</array>
+				<key>IOProviderClass</key>
+				<string>AppleEFINVRAM</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

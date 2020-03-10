@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.uninstalld</string>
+	<key>KeepAlive</key>
+	<true/>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.uninstalld</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/PrivateFrameworks/Uninstall.framework/Resources/uninstalld</string>
+	</array>
+</dict>
+</plist>

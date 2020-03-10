@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.AirPlayXPCHelper</string>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/AirPlayXPCHelper</string>
+	</array>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.AirPlayXPCHelper</key>
+		<true/>
+		<key>com.apple.coremedia.endpointmanager.xpc</key>
+		<true/>
+		<key>com.apple.coremedia.endpoint.xpc</key>
+		<true/>
+		<key>com.apple.coremedia.endpointstream.xpc</key>
+		<true/>
+		<key>com.apple.coremedia.endpointplaybacksession.xpc</key>
+		<true/>
+		<key>com.apple.coremedia.endpointpicker.xpc</key>
+		<true/>
+		<key>com.apple.coremedia.endpointuiagent.xpc</key>
+		<true/>
+		<key>com.apple.coremedia.endpointgroup.xpc</key>
+		<true/>
+		<key>com.apple.coremedia.routediscoverer.xpc</key>
+		<true/>
+		<key>com.apple.coremedia.routingcontext.xpc</key>
+		<true/>
+		<key>com.apple.coremedia.volumecontroller.xpc</key>
+		<true/>
+		<key>com.apple.coremedia.endpointremotecontrolsession.xpc</key>
+		<true/>
+	</dict>
+	<key>KeepAlive</key>
+	<true/>
+</dict>
+</plist>

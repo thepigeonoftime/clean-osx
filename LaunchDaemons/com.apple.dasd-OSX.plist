@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>Label</key>
+	<string>com.apple.dasd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.DuetHeuristic-BM</key>
+		<true/>
+		<key>com.apple.duetactivityscheduler</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/usr/libexec/dasd</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+</dict>
+</plist>

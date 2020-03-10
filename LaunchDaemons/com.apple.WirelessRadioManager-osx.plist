@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>EnvironmentVariables</key>
+	<dict/>
+	<key>Label</key>
+	<string>com.apple.WirelessRadioManager</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.WirelessCoexManager</key>
+		<true/>
+		<key>com.apple.WirelessRadioManager</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/sbin/WirelessRadioManagerd</string>
+	</array>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+</dict>
+</plist>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.ionodecache</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/ionodecache</string>
+		<string>-r</string>
+		<string>-k</string>
+		<string>10</string>
+		<string>/var/db/ionodecache.json</string>
+	</array>
+	<key>LowPriorityIO</key>
+	<true/>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.ionodecache.device-attach</key>
+			<dict>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>IONotificationType</key>
+				<string>IOServiceFirstMatch</string>
+				<key>IOPropertyExistsMatch</key>
+				<array>
+					<string>IODeviceMemory</string>
+					<string>pcidebug</string>
+				</array>
+			</dict>
+			<key>com.apple.ionodecache.device-detach</key>
+			<dict>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>IONotificationType</key>
+				<string>IOServiceTerminate</string>
+				<key>IOPropertyExistsMatch</key>
+				<array>
+					<string>IODeviceMemory</string>
+					<string>pcidebug</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+	<key>ProcessType</key>
+	<string>Background</string>
+</dict>
+</plist>

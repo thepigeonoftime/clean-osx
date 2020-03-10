@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.CryptoTokenKit.AuthenticationHintsProvider.daemon.libxpc</key>
+		<dict/>
+		<key>com.apple.CryptoTokenKit.AuthenticationHintsProvider</key>
+		<dict/>
+	</dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp</string>
+		<string>-d</string>
+	</array>
+	<key>Label</key>
+	<string>com.apple.CryptoTokenKit.ahp</string>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+</dict>
+</plist>

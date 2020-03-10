@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.ManagedClient.startup</string>
+    <key>ProcessType</key>
+    <string>Interactive</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/ManagedClient.app/Contents/MacOS/ManagedClient</string>
+		<string>-i</string>
+	</array>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.ManagedClient.startup</key>
+		<true/>
+	</dict>
+	<key>LaunchOnlyOnce</key>
+	<true/>
+	<key>RunAtLoad</key>
+	<true/>
+</dict>
+</plist>

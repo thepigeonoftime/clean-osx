@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.bluetoothd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.blued</key>
+		<true/>
+		<key>com.apple.bluetoothd</key>
+		<true/>
+		<key>com.apple.server.bluetooth.le.pipe.xpc</key>
+		<true/>
+		<key>com.apple.BluetoothDOServer</key>
+		<dict>
+			<key>ResetAtClose</key>
+			<true/>
+		</dict>
+		<key>com.apple.bluetooth.nsxpc</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/usr/sbin/bluetoothd</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.bluetooth.hostController</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOBluetoothHCIController</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+</dict>
+</plist>

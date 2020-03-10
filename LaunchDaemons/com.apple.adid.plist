@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.adid</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>GroupName</key>
+	<string>_fpsd</string>
+	<key>Label</key>
+	<string>com.apple.adid</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.adid</key>
+		<true/>
+	</dict>
+    <key>KeepAlive</key>
+    <dict>
+        <key>Crashed</key>
+        <true/>
+    </dict>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/CoreADI.framework/adid</string>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>UserName</key>
+	<string>_fpsd</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

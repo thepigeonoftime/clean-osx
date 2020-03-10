@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.scsid</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/scsid</string>
+	</array>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.iokit.scsid</key>
+		<true/>
+	</dict>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

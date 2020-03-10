@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DisabledInSafeBoot</key>
+	<true/>
+	<key>RunOnlyOnce</key>
+	<true/>
+	<key>ProcessType</key>
+	<string>Standard</string>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.applefileutil</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/kextutil</string>
+		<string>-b</string>
+		<string>com.apple.fileutil</string>
+	</array>
+</dict>
+</plist>

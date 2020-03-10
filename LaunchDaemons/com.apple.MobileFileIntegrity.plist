@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.MobileFileIntegrity</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.MobileFileIntegrity</key>
+		<dict>
+			<key>HostSpecialPort</key>
+			<integer>18</integer>
+		</dict>
+	</dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.fsevents.matching</key>
+		<dict>
+			<key>com.apple.MobileFileIntegrity.CodeRequirementPrefsChanged</key>
+			<dict>
+				<key>Path</key>
+				<string>/Library/Preferences/com.apple.security.coderequirements.plist</string>
+			</dict>
+			<key>com.apple.MobileFileIntegrity.LibraryValidationPrefsChanged</key>
+			<dict>
+				<key>Path</key>
+				<string>/Library/Preferences/com.apple.security.libraryvalidation.plist</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/amfid</string>
+	</array>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

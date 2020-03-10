@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.usbd</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.usb.overCurrentActive</key>
+			<dict>
+				<key>IOPropertyMatch</key>
+				<dict>
+					<key>UsbHostPortOvercurrent</key>
+					<true/>
+				</dict>
+				<key>IOProviderClass</key>
+				<string>AppleUSBHostPort</string>
+				<key>IOMatchAll</key>
+				<true/>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+			<key>com.apple.usb.billboardAttach</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>AppleUSBHostBillboardDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+			<key>com.apple.usb.hostPortAttach</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>AppleUSBHostPort</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+			<key>com.apple.usb.deviceAttach</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>idProduct</key>
+				<string>*</string>
+				<key>idVendor</key>
+				<string>*</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.usbd</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/usr/libexec/usbd</string>
+</dict>
+</plist>

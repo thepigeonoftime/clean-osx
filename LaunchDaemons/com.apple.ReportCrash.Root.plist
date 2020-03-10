@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.ReportCrash.Root</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.ReportCrash.DirectoryService</key>
+		<dict>
+			<key>DrainMessagesOnCrash</key>
+			<string>All</string>
+			<key>ExceptionServer</key>
+			<dict/>
+		</dict>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/ReportCrash</string>
+		<string>daemon</string>
+	</array>
+	<key>MachExceptionHandler</key>
+	<string>com.apple.ReportCrash.Root.Self</string>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

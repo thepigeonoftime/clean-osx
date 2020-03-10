@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.dmd</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.dmd.budget.didChange</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.dmd.budget.didChange</string>
+			</dict>
+			<key>com.apple.dmd.iCloudAccount.didChange</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.dmd.iCloudAccount.didChange</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.dmd</key>
+		<true/>
+		<key>com.apple.dmd.policy</key>
+		<true/>
+	</dict>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>Program</key>
+	<string>/usr/libexec/dmd</string>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+</dict>
+</plist>

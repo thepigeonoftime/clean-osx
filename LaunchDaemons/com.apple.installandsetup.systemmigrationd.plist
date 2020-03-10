@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.installandsetup.systemmigrationd</string>
+	<key>QueueDirectories</key>
+	<array>
+		<string>/Library/SystemMigration/Queue</string>
+	</array>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/PrivateFrameworks/SystemMigration.framework/Resources/systemmigrationd</string>
+	</array>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.installandsetup.systemmigrationd.MigrateFrom</key>
+		<true/>
+		<key>com.apple.installandsetup.systemmigrationd.SelectSource</key>
+		<true/>
+		<key>com.apple.installandsetup.systemmigrationd.Customize</key>
+		<true/>
+		<key>com.apple.installandsetup.systemmigrationd.ODUtils</key>
+		<true/>
+		<key>com.apple.installandsetup.systemmigrationd.Progress</key>
+		<true/>
+		<key>com.apple.installandsetup.systemmigrationd.Debug</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

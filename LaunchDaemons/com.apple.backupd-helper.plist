@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.backupd-helper.status</key>
+		<dict>
+			<key>HideUntilCheckIn</key>
+			<true/>
+		</dict>
+		<key>com.apple.backupd-auto</key>
+		<true/>
+		<key>com.apple.TMCacheDelete</key>
+		<true/>
+	</dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.backup.launcher</string>
+	<key>Label</key>
+	<string>com.apple.backupd-helper</string>
+	<key>Disabled</key>
+	<false/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/backupd.bundle/Contents/Resources/backupd-helper</string>
+		<string>-launchd</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.backupd-auto</key>
+			<dict>
+				<key>Interval</key>
+				<integer>3600</integer>
+				<key>Delay</key>
+				<integer>3600</integer>
+				<key>GracePeriod</key>
+				<integer>1800</integer>
+				<key>Repeating</key>
+				<true/>
+				<key>AllowBattery</key>
+				<true/>
+				<key>PowerNap</key>
+				<true/>
+				<key>Priority</key>
+				<string>Utility</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Background</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

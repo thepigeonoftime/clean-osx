@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.cmio.VDCAssistant</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.cmio.VDCAssistant</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/CoreMediaIO.framework/Resources/VDC.plugin/Contents/Resources/VDCAssistant</string>
+	</array>
+	<key>ThrottleInterval</key>
+	<integer>0</integer>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.device-attach-1</key>
+			<dict>
+				<key>idProduct</key>
+				<integer>34049</integer>
+				<key>idVendor</key>
+				<integer>1452</integer>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+			<key>com.apple.device-attach-2</key>
+			<dict>
+				<key>bDeviceClass</key>
+				<integer>239</integer>
+				<key>bDeviceProtocol</key>
+				<integer>1</integer>
+				<key>bDeviceSubClass</key>
+				<integer>2</integer>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.cmio.VDCAssistant.attach-notification</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.cmio.VDCAssistant.attach-notification</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>UserName</key>
+	<string>_cmiodalassistants</string>
+	<key>GroupName</key>
+	<string>_cmiodalassistants</string>
+</dict>
+</plist>
