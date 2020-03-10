@@ -762,8 +762,8 @@ clean() {
 		# unload service if found in $blacklist, not found in $Protected and $restore is unset
 		if [[ " ${blacklist} " == *" $service "* && " ${Protected[*]} " != *" $service "* && -z $restore ]]; then
 			unload $service
-		# load service if it's not found in $blacklist or $Protected, $disableonly is unset and it's not already enabled | unless restore is enabled#
-		elif [[ " ${Protected[*]} " != *" $service "* && -z $disableonly && -z $enabled || ! -z $restore && -z $enabled ]]; then
+		# load service if it's not found in $blacklist or $Protected, $disableonly is unset and it's not already enabled OR restore is enabled
+		elif [[ " ${Protected[*]} " != *" $service "* && -z $disableonly && -z $enabled || ! -z $restore ]]; then
 			load $service
 		fi
 done
