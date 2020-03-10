@@ -64,7 +64,7 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.AddressBook.SourceSync.plist
 # /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist
 # /System/Library/LaunchAgents/com.apple.AirPortBaseStationAgent.plist
-/System/Library/LaunchAgents/com.apple.akd.plist # Auth Kit Framework (iCloud / AppleID related)
+# /System/Library/LaunchAgents/com.apple.akd.plist # Auth Kit Framework (iCloud / AppleID related)
 #/System/Library/LaunchAgents/com.apple.alf.useragent.plist #application firewall
 /System/Library/LaunchAgents/com.apple.AOSHeartbeat.plist
 /System/Library/LaunchAgents/com.apple.AOSPushRelay.plist
@@ -293,7 +293,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.security.keychain-circle-notification.plist
 #/System/Library/LaunchAgents/com.apple.securityuploadd.plist
 #/System/Library/LaunchAgents/com.apple.ServicesUIAgent.plist
-/System/Library/LaunchAgents/com.apple.sharingd.plist # Sharing Daemon that enables AirDrop, Handoff, Instant Hotspot, Shared Computers, and Remote Disc in the Finder. https://www.manpagez.com/man/8/sharingd/ 
+# /System/Library/LaunchAgents/com.apple.sharingd.plist # Sharing Daemon that enables AirDrop, Handoff, Instant Hotspot, Shared Computers, and Remote Disc in the Finder. https://www.manpagez.com/man/8/sharingd/ 
 /System/Library/LaunchAgents/com.apple.sidecar-relay.plist # Remote Device / Display
 /System/Library/LaunchAgents/com.apple.Siri.agent.plist
 /System/Library/LaunchAgents/com.apple.siriknowledged.plist
@@ -458,7 +458,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.dnsextd.plist
 #/System/Library/LaunchDaemons/com.apple.dpaudiothru.plist
 #/System/Library/LaunchDaemons/com.apple.dpd.plist # man dpd: is a daemon intended to listen for Command + F2 on the iMac to switch to external display input mode upon display port hot-plug
-/System/Library/LaunchDaemons/com.apple.dprivacyd.plist
+# /System/Library/LaunchDaemons/com.apple.dprivacyd.plist
 #/System/Library/LaunchDaemons/com.apple.driver.eficheck.plist
 #/System/Library/LaunchDaemons/com.apple.driver.ethcheck.plist
 #/System/Library/LaunchDaemons/com.apple.dspluginhelperd.plist
@@ -615,7 +615,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.security.syspolicy.plist
 #/System/Library/LaunchDaemons/com.apple.securityd.plist
 #/System/Library/LaunchDaemons/com.apple.securityd_service.plist
-/System/Library/LaunchDaemons/com.apple.seld.plist # Apple Pay related | man seld: Manages the secure element and interfaces with the trusted service manager.
+#/System/Library/LaunchDaemons/com.apple.seld.plist # Apple Pay related | man seld: Manages the secure element and interfaces with the trusted service manager.
 #/System/Library/LaunchDaemons/com.apple.sessionlogoutd.plist
 /System/Library/LaunchDaemons/com.apple.signpost.signpost_reporter.plist # perfomance analysis
 /System/Library/LaunchDaemons/com.apple.smb.preferences.plist
