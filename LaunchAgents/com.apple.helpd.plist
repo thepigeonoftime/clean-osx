@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WatchPaths</key>
+	<array>
+		<string>/Applications/</string>
+		<string>/Applications/Utilities/</string>
+	</array>
+	<key>Label</key>
+	<string>com.apple.helpd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.helpd</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/HelpData.framework/Versions/A/Resources/helpd</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>Aqua</string>
+		<string>LoginWindow</string>
+	</array>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>NSRunningFromLaunchd</key>
+		<string>1</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.FilesystemUI</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/KernelEventAgent.bundle/Contents/Resources/FileSystemUIAgent.app/Contents/MacOS/FileSystemUIAgent</string>
+	</array>
+	<key>Sockets</key>
+	<dict>
+		<key>Listener</key>
+		<dict>
+			<key>SockPathName</key>
+			<string>/var/tmp/filesystemui.socket</string>
+			<key>SockPathMode</key>
+			<integer>420</integer> <!-- 0644 -->
+		</dict>
+	</dict>
+</dict>
+</plist>

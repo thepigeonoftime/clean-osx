@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>Label</key>
+	<string>com.apple.syncdefaultsd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.syncdefaultsd</key>
+		<true/>
+		<key>com.apple.syncdefaultsd.push</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/PrivateFrameworks/SyncedDefaults.framework/Support/syncdefaultsd</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.syncdefaultsd</key>
+			<dict>
+				<key>Repeating</key>
+				<true/>
+				<key>Delay</key>
+				<integer>14400</integer>
+				<key>GracePeriod</key>
+				<real>1800</real>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

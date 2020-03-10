@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.swcd</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.distnoted.matching</key>
+		<dict>
+			<key>com.apple.LaunchServices.applicationRegistered</key>
+			<dict>
+				<key>Name</key>
+				<string>com.apple.LaunchServices.applicationRegistered</string>
+			</dict>
+			<key>com.apple.LaunchServices.applicationUnregistered</key>
+			<dict>
+				<key>Name</key>
+				<string>com.apple.LaunchServices.applicationUnregistered</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.SharedWebCredentials</key>
+		<true/>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/swcd</string>
+	</array>
+</dict>
+</plist>

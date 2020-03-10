@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.AOSHeartbeat</string>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/AOSKit.framework/Helpers/AOSHeartbeat.app/Contents/MacOS/AOSHeartbeat</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>NSRunningFromLaunchd</key>
+		<string>1</string>
+	</dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.AOSHeartbeat.daily</key>
+			<dict>
+				<key>Priority</key>
+				<string>Utility</string>
+				<key>Interval</key>
+				<integer>86400</integer>
+				<key>Repeating</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.security.secureobjectsync.circlechanged</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.security.secureobjectsync.circlechanged</string>
+			</dict>
+		</dict>	
+	</dict>
+</dict>
+</plist>

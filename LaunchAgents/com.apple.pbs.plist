@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>NSRunningFromLaunchd</key>
+		<string>1</string>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.pbs</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.pbs.fetch_services</key>
+		<true/>
+	</dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.pbs.LSChanged</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.LaunchServices.DatabaseChange</string>
+			</dict>
+		</dict>
+		<key>com.apple.distnoted.matching</key>
+		<dict>
+			<key>com.apple.pbs.LSSeeded</key>
+			<dict>
+				<key>Name</key>
+				<string>com.apple.LaunchServices.DatabaseSeedingComplete</string>
+			</dict>
+		</dict>
+		<key>com.apple.fsevents.matching</key>
+		<dict>
+			<key>com.apple.pbs.UserServicesModified</key>
+			<dict>
+				<key>Path</key>
+				<string>~/Library/Services/</string>
+			</dict>
+			<key>com.apple.pbs.GlobalServicesModified</key>
+			<dict>
+				<key>Path</key>
+				<string>/Library/Services/</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/pbs</string>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+</dict>
+</plist>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.AddressBook.ScheduledSync</key>
+			<dict>
+				<key>Priority</key>
+				<string>Utility</string>
+				<key>Interval</key>
+				<integer>3600</integer>
+			</dict>
+		</dict>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>Label</key>
+	<string>com.apple.AddressBook.SourceSync</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.AddressBook.ScheduledSync</key>
+		<true/>
+		<key>com.apple.AddressBook.SourceSync</key>
+		<true/>
+		<key>com.apple.AddressBook.PushNotification</key>
+		<true/>
+		<key>com.apple.AddressBook.PushSubscription</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/AddressBook.framework/Versions/A/Helpers/AddressBookSourceSync.app/Contents/MacOS/AddressBookSourceSync</string>
+	</array>
+</dict>
+</plist>

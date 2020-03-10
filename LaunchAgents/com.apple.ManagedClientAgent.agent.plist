@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.ManagedClientAgent.agent</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/ManagedClient.app/Contents/Resources/ManagedClientAgent</string>
+		<string>-a</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.distnoted.matching</key>
+		<dict>
+			<key>com.apple.ManagedClient.agentNotifications.screenlock</key>
+			<dict>
+				<key>Name</key>
+				<string>CPProfileScreenLockChangedNotification</string>
+			</dict>
+			<key>com.apple.ManagedClient.agentNotifications.KickUniversalAccessAgent</key>
+			<dict>
+				<key>Name</key>
+				<string>MCX_KickUniversalAccessAgentNotification</string>
+			</dict>
+			<key>com.apple.ManagedClient.agentNotifications.cloudconfigRecordSucceed</key>
+			<dict>
+				<key>Name</key>
+				<string>CPCloudConfigInfoDidSucceed</string>
+			</dict>
+            <key>com.apple.ManagedClient.agentNotifications.cloudconfigRecordFail</key>
+            <dict>
+                <key>Name</key>
+                <string>CPCloudConfigInfoDidFail</string>
+            </dict>
+            <key>com.apple.ManagedClient.agentNotifications.ManagedClientLoginAgentCheckin</key>
+            <dict>
+                <key>Name</key>
+                <string>CPManagedClientLoginAgentCheckinNotification</string>
+            </dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

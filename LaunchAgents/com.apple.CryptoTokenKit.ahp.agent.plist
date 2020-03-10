@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>Aqua</string>
+		<string>LoginWindow</string>
+	</array>
+	<key>Label</key>
+	<string>com.apple.CryptoTokenKit.ahp.agent</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.CryptoTokenKit.AuthenticationHintsProvider.agent.libxpc</key>
+		<dict/>
+		<key>com.apple.CryptoTokenKit.AuthenticationHintsProvider</key>
+		<dict/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp</string>
+	</array>
+</dict>
+</plist>

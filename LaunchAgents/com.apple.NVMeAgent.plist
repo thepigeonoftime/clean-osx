@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>Label</key>
+	<string>com.apple.NVMeAgent</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>com.apple.nvme.CriticalReliabilityWarning</key>
+			<dict>
+				<key>IOPropertyMatch</key>
+				<dict>
+					<key>Critical Reliability Warning</key>
+					<true/>
+				</dict>
+				<key>IOProviderClass</key>
+				<string>AppleNVMeController</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>IOMatchAll</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>Program</key>
+	<string>/usr/libexec/NVMeAgent</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

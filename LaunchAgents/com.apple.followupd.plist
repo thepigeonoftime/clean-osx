@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.apple.followupd</string>
+        <key>MachServices</key>
+        <dict>
+            <key>com.apple.corefollowup.agent</key>
+            <true/>
+        </dict>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/System/Library/PrivateFrameworks/CoreFollowUp.framework/Versions/A/Support/followupd</string>
+        </array>
+        <key>EnableTransactions</key>
+        <true/>
+        <key>POSIXSpawnType</key>
+        <string>Adaptive</string>
+        <key>EnablePressuredExit</key>
+        <true/>
+        <key>LimitLoadToSessionType</key>
+        <array>
+            <string>Aqua</string>
+        </array>
+        <key>LaunchEvents</key>
+        <dict>
+            <key>com.apple.xpc.activity</key>
+            <dict>
+                <key>com.apple.followup.notify</key>
+                <dict/>
+            </dict>
+            <key>com.apple.notifyd.matching</key>
+            <dict>
+                <key>com.apple.mobile.keybagd.lock_status</key>
+                <dict>
+                    <key>Notification</key>
+                    <string>com.apple.mobile.keybagd.lock_status</string>
+                </dict>
+            </dict>
+        </dict>
+    </dict>
+</plist>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>NSRunningFromLaunchd</key>
+		<string>1</string>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.talagent</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.window_proxies</key>
+		<true/>
+		<key>com.apple.window_proxies.startup</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/talagent</string>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>StartCalendarInterval</key>
+	<array>
+		<dict>
+			<key>Weekday</key>
+			<integer>1</integer>
+			<key>Hour</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>Weekday</key>
+			<integer>4</integer>
+			<key>Hour</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

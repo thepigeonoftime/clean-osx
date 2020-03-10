@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.screencaptureui.agent</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.screencaptureui</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/screencaptureui.app/Contents/MacOS/screencaptureui</string>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>ThrottleInterval</key>
+	<integer>1</integer>
+	<key>POSIXSpawnType</key>
+	<string>App</string>
+</dict>
+</plist>

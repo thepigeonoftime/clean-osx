@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.storeassetd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.storeassetd</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storeassetd</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>LoginWindow</string>
+		<string>Aqua</string>
+	</array>
+	<key>POSIXSpawnType</key>
+	<string>_AdaptiveUtility</string>
+	<key>ExitTimeOut</key>
+	<integer>1</integer>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.usernotificationcenter.matching</key>
+		<dict>
+			<key>storeassetd</key>
+			<dict>
+				<key>bundleid</key>
+				<string>com.apple.storeassetd</string>
+				<key>system</key>
+				<true/>
+				<key>events</key>
+				<array>
+					<string>didDismissAlert</string>
+					<string>didActivateNotification</string>
+					<string>didDeliverNotification</string>
+					<string>didSnoozeAlert</string>
+					<string>didRemoveDeliveredNotifications</string>
+					<string>didExpireNotifications</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

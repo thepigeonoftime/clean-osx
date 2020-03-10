@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LimitLoadToSessionType</key>
+	<string>Background</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.installandsetup.migrationhelper</key>
+		<true/>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.installandsetup.migrationhelper.user</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/PrivateFrameworks/SystemMigration.framework/Resources/migrationhelper</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.usernotificationcenter.matching</key>
+		<dict>
+			<key>console</key>
+			<dict>
+				<key>bundleid</key>
+				<string>com.apple.migrationhelper</string>
+				<key>system</key>
+				<true/>
+				<key>events</key>
+				<array>
+					<string>didDismissAlert</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.ScriptMenuApp</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/Script Menu.app/Contents/MacOS/Script Menu</string>
+		<string>launchd</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>Aqua</string>
+	</array>
+	<key>ProcessType</key>
+	<string>App</string>
+</dict>
+</plist>

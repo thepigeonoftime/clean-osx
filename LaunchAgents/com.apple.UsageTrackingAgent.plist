@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.UsageTrackingAgent</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.UsageTrackingAgent.registration.screen-time</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.UsageTrackingAgent.registration.screen-time</string>
+			</dict>
+			<key>com.apple.UsageTrackingAgent.registration.application</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.UsageTrackingAgent.registration.application</string>
+			</dict>
+			<key>com.apple.UsageTrackingAgent.registration.web-domain</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.UsageTrackingAgent.registration.web-domain</string>
+			</dict>
+		</dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.UsageTrackingAgent.activity.uncategorized-web-usage</key>
+			<dict>
+				<key>Interval</key>
+				<integer>86400</integer>
+				<key>Priority</key>
+				<string>Maintenance</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.UsageTrackingAgent</key>
+		<true/>
+	</dict>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTrackingAgent</string>
+</dict>
+</plist>

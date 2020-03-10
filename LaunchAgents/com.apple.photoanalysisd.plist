@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.photoanalysisd</string>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.photoanalysisd</key>
+		<true/>
+	</dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.photoanalysisd.backgroundanalysis</key>
+			<dict>
+				<key>AllowBattery</key>
+				<false/>
+				<key>PowerNap</key>
+				<true/>
+				<key>Delay</key>
+				<integer>0</integer>
+				<key>Interval</key>
+				<integer>7200</integer>
+				<key>Repeating</key>
+				<true/>
+				<key>Priority</key>
+				<string>Maintenance</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

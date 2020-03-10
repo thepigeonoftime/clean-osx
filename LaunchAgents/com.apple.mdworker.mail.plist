@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>ThrottleInterval</key>
+	<integer>1</integer>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>MultipleInstances</key>
+	<true/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>MallocCorruptionAbort</key>
+		<string>1</string>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.mdworker.mail</string>
+	<key>LimitLoadToSessionType</key>
+	<string>Background</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.mdworker.mail</key>
+		<dict>
+			<key>ResetAtClose</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared</string>
+		<string>-s</string>
+		<string>mdworker-mail</string>
+		<string>-c</string>
+		<string>MDSImporterWorker</string>
+		<string>-m</string>
+		<string>com.apple.mdworker.mail</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.Spotlight</string>
+	<key>LowPriorityBackgroundIO</key>
+	<false/>
+</dict>
+</plist>

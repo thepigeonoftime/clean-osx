@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.AirPortBaseStationAgent</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>LowPriorityIO</key>
+	<true/>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>POSIXSpawnType</key>
+	<string>Background</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.distnoted.matching</key>
+		<dict>
+			<key>com.apple.airport.agent.prefschanged</key>
+			<dict>
+				<key>Name</key>
+				<string>com.apple.airport.agent</string>
+			</dict>
+		</dict>
+		<key>com.apple.bonjour.events</key>
+		<dict>
+			<key>com.apple.airport.agent.add</key>
+			<dict>
+				<key>ServiceType</key>
+				<string>_airport._tcp</string>
+				<key>ServiceDomain</key>
+				<string>local</string>
+				<key>OnServiceAdd</key>
+				<true/>
+				<key>OnServiceRemove</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/AirPort Base Station Agent.app/Contents/MacOS/AirPort Base Station Agent</string>
+		<string>--launchd</string>
+	</array>
+</dict>
+</plist>

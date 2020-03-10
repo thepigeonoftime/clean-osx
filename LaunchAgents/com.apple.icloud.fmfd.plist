@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.icloud.fmfd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.icloud.fmfd</key>
+		<true/>
+		<key>com.apple.icloud.fmfd.aps</key>
+		<true/>
+		<key>com.apple.private.alloy.fmf-idswake</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/usr/libexec/fmfd</string>
+	<key>Umask</key>
+	<integer>23</integer>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.distnoted.matching</key>
+		<dict>
+			<key>com.apple.AOSAccounts.AOSAccountStatusLogoutNotification</key>
+			<dict>
+				<key>Name</key>
+				<string>com.apple.AOSAccounts.AOSAccountStatusLogoutNotification</string>
+			</dict>
+			<key>com.apple.AOSAccounts.AOSAccountStatusLoginNotification</key>
+			<dict>
+				<key>Name</key>
+				<string>com.apple.AOSAccounts.AOSAccountStatusLoginNotification</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

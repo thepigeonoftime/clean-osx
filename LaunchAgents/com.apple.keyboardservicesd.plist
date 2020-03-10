@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>Label</key>
+	<string>com.apple.keyboardservicesd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.KeyboardServices.TextReplacementService</key>
+		<true/>
+		<key>com.apple.keyboardServices.textReplacementServer.aps</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/usr/libexec/keyboardservicesd</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/keyboardservicesd</string>
+	</array>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>Aqua</string>
+	</array>
+</dict>
+</plist>

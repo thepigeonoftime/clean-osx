@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.softwareupdate_notify_agent</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdate_notify_agent</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>OSXAvailable</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.SoftwareUpdate.OSXAvailable</string>
+			</dict>
+			<key>NotifyLaterAgent-Restart</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.SoftwareUpdate.LaterAgent.initiateRestart</string>
+			</dict>
+			<key>UpdatesAvailable</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.SoftwareUpdate.updatesAvailable</string>
+			</dict>
+			<key>LoginDone</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.system.loginwindow.delayedLoginItemsInitiated</string>
+			</dict>
+			<key>BadgingCountChanged</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.SoftwareUpdate.BadgingCountChanged</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

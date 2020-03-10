@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.uikitsystemapp</string>
+	<key>MachServices</key>
+	<dict>
+		<key>PurpleSystemAppPort</key>
+		<dict>
+			<key>ResetAtClose</key>
+			<true/>
+		</dict>
+		<key>com.apple.frontboard.systemappservices</key>
+		<true/>
+		<key>com.apple.frontboard.workspace</key>
+		<true/>
+		<key>com.apple.uikitsystemapp.services</key>
+		<true/>
+        <key>com.apple.uikitsystemapp.daemon-services</key>
+        <true/>
+		<key>com.apple.UIKit.KeyboardManagement.hosted</key>
+		<true/>
+		<key>com.apple.UIKit.statusbarserver</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/UIKitSystem.app/Contents/MacOS/UIKitSystem</string>
+		<string>system_app_start</string>
+	</array>
+	<key>EnableTransactions</key>
+	<false/>
+	<key>EnablePressuredExit</key>
+	<false/>
+	<key>POSIXSpawnType</key>
+	<string>App</string>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+</dict>
+</plist>

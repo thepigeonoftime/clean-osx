@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.notificationcenterui.agent</string>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter</string>
+	<key>ThrottleInterval</key>
+	<integer>1</integer>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.notificationcetnerui.ping</key>
+		<true/>
+		<key>com.apple.notificationcenterui.alerts</key>
+		<dict>
+			<key>HideUntilCheckIn</key>
+			<true/>
+		</dict>
+		<key>com.apple.notificationcenterui.tcc</key>
+		<dict>
+			<key>HideUntilCheckIn</key>
+			<true/>
+		</dict>
+		<key>com.apple.notificationcenterui.preferences</key>
+		<true/>
+		<key>com.apple.notificationcenterui.extension-trampoline</key>
+		<dict>
+			<key>HideUntilCheckIn</key>
+			<true/>
+		</dict>
+		<key>com.apple.notificationcenterui.customalerts</key>
+		<dict>
+			<key>HideUntilCheckIn</key>
+			<false/>
+		</dict>
+		<key>com.apple.notificationcenterui.widgetcontent</key>
+		<true/>
+		<key>com.apple.notificationcenterui.menu</key>
+		<true/>
+		<key>com.apple.notificationcenterui.main</key>
+		<true/>
+		<key>com.apple.notificationcenterui.siri</key>
+		<true/>
+		<key>com.apple.notificationcenterui.snippet</key>
+		<true/>
+		<key>com.apple.notificationcenterui.pip</key>
+		<true/>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>App</string>
+</dict>
+</plist>

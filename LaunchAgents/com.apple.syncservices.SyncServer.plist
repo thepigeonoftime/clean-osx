@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.apple.syncservices.SyncServer</string>
+    <key>LimitLoadToSessionType</key>
+    <string>Aqua</string>
+    <key>Program</key>
+    <string>/System/Library/Frameworks/SyncServices.framework/Versions/Current/Resources/SyncServer.app/Contents/MacOS/SyncServer</string>
+    <key>MachServices</key>
+    <dict>
+        <key>com.apple.syncservices.SyncServer</key>
+        <dict>
+            <key>ResetAtClose</key>
+            <true/>
+        </dict>
+    </dict>
+</dict>
+</plist>

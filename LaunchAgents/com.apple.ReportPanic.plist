@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.ReportPanic</string>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/ReportPanic.app/Contents/MacOS/ReportPanic</string>
+	<key>QueueDirectories</key>
+	<array>
+		<string>/var/db/PanicReporter/</string>
+	</array>
+	<key>LaunchOnlyOnce</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/dev/null</string>
+</dict>
+</plist>

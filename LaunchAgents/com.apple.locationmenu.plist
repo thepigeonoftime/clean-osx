@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ProcessType</key>
+	<string>App</string>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.locationmenu</key>
+		<dict>
+			<key>something</key>
+			<dict/>
+		</dict>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.locationmenu</string>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/LocationMenu.app/Contents/MacOS/LocationMenu</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

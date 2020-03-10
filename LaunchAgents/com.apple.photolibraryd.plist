@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.photolibraryd</string>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Support/photolibraryd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.photolibraryd</key>
+		<true/>
+	</dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.photolibraryd.maintenance</key>
+			<dict>
+				<key>Interval</key>
+				<integer>86400</integer>
+				<key>Priority</key>
+				<string>Maintenance</string>
+				<key>AllowBattery</key>
+				<false/>
+				<key>Repeating</key>
+				<true/>
+				<key>PowerNap</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

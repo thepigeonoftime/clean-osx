@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.imautomatichistorydeletionagent</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.imautomatichistorydeletionagent.prefchange</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.imautomatichistorydeletionagent.prefchange</string>
+			</dict>
+		</dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.IMAutomaticHistoryDeletionAgent</key>
+			<dict>
+				<key>Interval</key>
+				<integer>86400</integer>
+				<key>GracePeriod</key>
+				<integer>7200</integer>
+				<key>AllowBattery</key>
+				<true/>
+				<key>Repeating</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/PrivateFrameworks/IMDPersistence.framework/IMAutomaticHistoryDeletionAgent.app/Contents/MacOS/IMAutomaticHistoryDeletionAgent</string>
+	</array>
+	<key>POSIXSpawnType</key>
+	<string>Background</string>
+</dict>
+</plist>

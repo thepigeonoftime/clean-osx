@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.eospreflightagent</string>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/EmbeddedOSInstall.framework/Versions/A/Resources/eospreflightagent</string>
+	<key>LimitLoadToHardware</key>
+	<dict>
+		<key>model</key>
+		<array>
+			<string>MacBookPro13,2</string>
+			<string>MacBookPro13,3</string>
+			<string>MacBookPro14,2</string>
+			<string>MacBookPro14,3</string>
+		</array>
+	</dict>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>Aqua</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.reachability</key>
+		<dict>
+			<key>gs.apple.com reachability changed</key>
+			<dict>
+				<key>Target</key>
+				<string>gs.apple.com</string>
+			</dict>
+		</dict>
+		<key>com.apple.distnoted.matching</key>
+		<dict>
+			<key>CCAPICacheCollectionChangedNotification</key>
+			<dict>
+				<key>Name</key>
+				<string>CCAPICacheCollectionChangedNotification</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>ThrottleInterval</key>
+	<integer>900</integer>
+</dict>
+</plist>

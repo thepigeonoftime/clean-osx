@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>NSRunningFromLaunchd</key>
+		<string>1</string>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.warmd_agent</string>
+	<key>Program</key>
+	<string>/usr/libexec/warmd_agent</string>
+	<key>EnableTransactions</key>
+	<false/>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.system.loginwindow.likelyUserSessionExit</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.system.loginwindow.likelyUserSessionExit</string>
+			</dict>
+			<key>com.apple.warmd_agent.logoutcancelled</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.system.loginwindow.logoutcancelled</string>
+			</dict>
+			<key>com.apple.warmd_agent.logoutNoReturn</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.loginwindow.logoutNoReturn</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

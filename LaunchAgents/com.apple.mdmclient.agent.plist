@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.mdmclient.agent</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.mdmclient.agent</key>
+		<true/>
+		<key>com.apple.mdmclient.agent.unrestricted</key>
+		<true/>
+		<key>com.apple.mdmclient.agent.push.production</key>
+		<true/>
+		<key>com.apple.mdmclient.agent.push.development</key>
+		<true/>
+	</dict>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/mdmclient</string>
+		<string>agent</string>
+	</array>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.usernotificationcenter.matching</key>
+		<dict>
+			<key>mdmclient</key>
+			<dict>
+				<key>bundleid</key>
+				<string>com.apple.mdmclient</string>
+				<key>system</key>
+				<true/>
+				<key>events</key>
+				<array>
+					<string>didActivateNotification</string>
+					<string>didDismissAlert</string>
+				</array>
+			</dict>
+		</dict>
+		<key>com.apple.distnoted.matching</key>
+		<dict>
+			<key>AgentLaunchOnDemand</key>
+			<dict>
+				<key>Name</key>
+				<string>com.apple.mdmclient.agent.private</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>EnvironmentVariables</key>
+	<dict/>
+</dict>
+</plist>

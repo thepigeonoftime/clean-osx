@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.cloudpaird</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.cloudpaird</key>
+		<true/>
+		<key>com.apple.BTServer.le</key>
+		<true/>
+		<key>com.apple.BTLEAudioController.xpc</key>
+		<true/>
+	</dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.usernotificationcenter.matching</key>
+		<dict>
+			<key>com.apple.cloudpaird</key>
+			<dict>
+				<key>bundleid</key>
+				<string>com.apple.cloudpaird</string>
+				<key>system</key>
+				<true/>
+				<key>events</key>
+				<array>
+					<string>didActivateNotification</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/cloudpaird</string>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+</dict>
+</plist>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.sharingd</string>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.sharing.classroom-transfer</key>
+		<true/>
+		<key>com.apple.AutoUnlock.AuthenticationHintsProvider</key>
+		<true/>
+		<key>com.apple.coreservices.appleid.aps</key>
+		<true/>
+		<key>com.apple.PairingManager</key>
+		<true/>
+		<key>com.apple.private.alloy.nearby-idswake</key>
+		<true/>
+		<key>com.apple.sharing.transfer-observer</key>
+		<true/>
+		<key>com.apple.sharing.handoff.advertising</key>
+		<true/>
+		<key>com.apple.sharing.handoff.scanning</key>
+		<true/>
+		<key>com.apple.sharingd</key>
+		<true/>
+		<key>com.apple.sharingd.aps</key>
+		<true/>
+		<key>com.apple.sharingd.nsxpc</key>
+		<true/>
+		<key>com.apple.SharingServices</key>
+		<true/>
+	</dict>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Program</key>
+	<string>/usr/libexec/sharingd</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<false/>
+</dict>
+</plist>

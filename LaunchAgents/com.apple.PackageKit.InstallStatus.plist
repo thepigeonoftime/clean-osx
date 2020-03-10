@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.PackageKit.InstallStatus</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/Install in Progress.app/Contents/MacOS/Install in Progress</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>RestartRequest</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.system.loginwindow.restartinitiated</string>
+			</dict>
+			<key>ShutdownRequest</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.system.loginwindow.shutdownInitiated</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+</dict>
+</plist>

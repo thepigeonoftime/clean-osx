@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.tccd</string>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/TCC.framework/Resources/tccd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.tccd</key>
+		<true/>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>WatchPaths</key>
+	<array>
+		<string>/System/Library/Sandbox/TCC_Compatibility.bundle/Contents/Resources/AllowApplicationsList.plist</string>
+		<string>/Library/Application Support/com.apple.TCC/MDMOverrides.plist</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.SocialPushAgent</string>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/SocialPushAgent.app/Contents/MacOS/SocialPushAgent</string>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.SocialPushAccountController</key>
+		<true/>
+		<key>com.apple.SocialPushAgent</key>
+		<true/>
+	</dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.usernotificationcenter.matching</key>
+		<dict>
+			<key>weibo</key>
+			<dict>
+				<key>delay registration</key>
+				<true/>
+				<key>socialcenter</key>
+				<true/>
+				<key>bundleid</key>
+				<string>com.apple.weibo.xpc</string>
+				<key>events</key>
+				<array>
+					<string>didDeliverNotification</string>
+					<string>didActivateNotification</string>
+				</array>
+			</dict>
+			<key>twitter</key>
+			<dict>
+				<key>delay registration</key>
+				<true/>
+				<key>socialcenter</key>
+				<true/>
+				<key>bundleid</key>
+				<string>com.apple.twitter.xpc</string>
+				<key>events</key>
+				<array>
+					<string>didActivateNotification</string>
+					<string>didDeliverNotification</string>
+				</array>
+			</dict>
+			<key>facebook</key>
+			<dict>
+				<key>delay registration</key>
+				<true/>
+				<key>socialcenter</key>
+				<true/>
+				<key>bundleid</key>
+				<string>com.apple.facebook.xpc</string>
+				<key>events</key>
+				<array>
+					<string>didActivateNotification</string>
+					<string>didDeliverNotification</string>
+				</array>
+			</dict>
+			<key>linkedin</key>
+			<dict>
+				<key>delay registration</key>
+				<true/>
+				<key>socialcenter</key>
+				<true/>
+				<key>bundleid</key>
+				<string>com.apple.linkedin.xpc</string>
+				<key>events</key>
+				<array>
+					<string>didDeliverNotification</string>
+					<string>didActivateNotification</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+	<key>KeepAlive</key>
+	<false/>
+	<key>WaitForDebugger</key>
+	<false/>
+</dict>
+</plist>

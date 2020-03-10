@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.touristd</string>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/Tourist.framework/Versions/A/Resources/touristd</string>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.tourist.notify</key>
+			<dict>
+				<key>Delay</key>
+				<string>0</string>
+				<key>Priority</key>
+				<string>Utility</string>
+				<key>Repeating</key>
+				<false/>
+				<key>GracePeriod</key>
+				<integer>900</integer>
+				<key>Interval</key>
+				<integer>3600</integer>
+				<key>PowerNap</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

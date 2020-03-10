@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.storelegacy</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.storeagent-xpc</key>
+		<true/>
+		<key>com.apple.storeagent.storekit.receiptrenewal</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storelegacy</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>LoginWindow</string>
+		<string>Aqua</string>
+	</array>
+	<key>POSIXSpawnType</key>
+	<string>_AdaptiveUtility</string>
+	<key>ExitTimeOut</key>
+	<integer>1</integer>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.storelegacy.installassistant.autoinstall.wakeup</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.storelegacy.installassistant.autoinstall.wakeup</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

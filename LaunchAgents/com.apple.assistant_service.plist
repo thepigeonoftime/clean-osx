@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.assistant_service</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/Support/assistant_service</string>
+	</array>
+	<key>Label</key>
+	<string>com.apple.assistant_service</string>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.assistant.speech-capture.finished</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.assistant.speech-capture.finished</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

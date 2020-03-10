@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.distnoted.matching</key>
+		<dict>
+			<key>com.apple.ColorSync.DeviceRegisteredNotification</key>
+			<dict>
+				<key>Name</key>
+				<string>com.apple.ColorSync.DeviceRegisteredNotification</string>
+			</dict>
+			<key>com.apple.ColorSync.DeviceUnregisteredNotification</key>
+			<dict>
+				<key>Name</key>
+				<string>com.apple.ColorSync.DeviceUnregisteredNotification</string>
+			</dict>
+			<key>com.apple.ColorSync.DeviceProfilesNotification</key>
+			<dict>
+				<key>Name</key>
+				<string>com.apple.ColorSync.DeviceProfilesNotification</string>
+			</dict>
+		</dict>
+		<key>com.apple.fsevents.matching</key>
+		<dict>
+			<key>com.apple.ColorSync.FileChanged</key>
+			<dict>
+				<key>Path</key>
+				<array>
+					<string>/System/Library/ColorSync/Profiles/</string>
+					<string>/Library/ColorSync/Profiles/</string>
+					<string>~/Library/ColorSync/Profiles/</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+	<key>RunLoopType</key>
+	<string>NSRunLoop</string>
+	<key>Label</key>
+	<string>com.apple.colorsync.useragent</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/ColorSync.framework/Support/colorsync.useragent</string>
+	</array>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>Disabled</key>
+	<false/>
+	<key>KeepAlive</key>
+	<false/>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.colorsync.useragent</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

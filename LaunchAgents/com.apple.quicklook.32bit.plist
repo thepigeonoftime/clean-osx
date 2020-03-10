@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>MallocCorruptionAbort</key>
+		<string>1</string>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.quicklook.32bit</string>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>Aqua</string>
+		<string>LoginWindow</string>
+	</array>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.quicklook.32bit</key>
+		<true/>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/QuickLook.framework/Resources/quicklookd32.app/Contents/MacOS/quicklookd32</string>
+	</array>
+	<key>ThrottleInterval</key>
+	<integer>1</integer>
+	<key>WorkingDirectory</key>
+	<string>/tmp</string>
+</dict>
+</plist>

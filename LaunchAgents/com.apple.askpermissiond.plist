@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.askpermissiond</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.askpermissiond</key>
+		<true/>
+		<key>com.apple.askpermission.familynotification</key>
+		<true/>
+		<key>com.apple.askpermission.aps</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/AskPermission.framework/Versions/A/Resources/askpermissiond</string>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>LoginWindow</string>
+		<string>Aqua</string>
+	</array>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>ExitTimeOut</key>
+	<integer>1</integer>
+    <key>KeepAlive</key>
+    <dict>
+        <key>PathState</key>
+        <dict>
+            <key>~/Library/Family/.askpermissiond_aps_registered</key>
+            <false/>
+        </dict>
+    </dict>
+</dict>
+</plist>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.AirPlayUIAgent</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/AirPlayUIAgent.app/Contents/MacOS/AirPlayUIAgent</string>
+		<string>--launchd</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.airplay.problemDetected</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.airplay.problemDetected</string>
+			</dict>
+			<key>com.apple.airplay.passwordRequired</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.airplay.passwordRequired</string>
+			</dict>
+			<key>com.apple.airplay.state</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.airplay.state</string>
+			</dict>
+		</dict>
+		<key>com.apple.distnoted.matching</key>
+		<dict>
+			<key>CPProfilePreferencesChanged</key>
+			<dict>
+				<key>Name</key>
+				<string>CPProfilePreferencesChangedNotification</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.AirPlayAgent.xpc</key>
+		<true/>
+		<key>com.apple.AirPlayUIAgent.xpc</key>
+		<true/>
+	</dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>POSIXSpawnType</key>
+	<string>App</string>
+</dict>
+</plist>

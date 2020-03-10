@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<false/>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>Label</key>
+	<string>com.apple.TMHelperAgent</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.TMHelperAgent.DeliverNotification</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/backupd.bundle/Contents/Resources/TMHelperAgent.app/Contents/MacOS/TMHelperAgent</string>
+	</array>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.distnoted.matching</key>
+		<dict>
+			<key>com.apple.TimeMachine.LaunchEvent.UICleanupNeeded</key>
+			<dict>
+				<key>Name</key>
+				<string>com.apple.TimeMachine.UICleanupNeeded</string>
+				<key>Object</key>
+				<string>com.apple.backupd</string>
+			</dict>
+		</dict>
+		<key>com.apple.usernotificationcenter.matching</key>
+		<dict>
+			<key>Time Machine</key>
+			<dict>
+				<key>bundleid</key>
+				<string>com.apple.TMHelperAgent</string>
+				<key>system</key>
+				<true/>
+				<key>events</key>
+				<array>
+					<string>didActivateNotification</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

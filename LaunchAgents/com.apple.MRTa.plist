@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.MRTa</string>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.mrt-agent-ready</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.mrt-agent-ready</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/MRT.app/Contents/MacOS/MRT</string>
+		<string>-a</string>
+	</array>
+	<key>ProcessType</key>
+	<string>Background</string>
+</dict>
+</plist>

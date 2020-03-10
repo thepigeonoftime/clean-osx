@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.speech.speechdatainstallerd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.speech.speechdatainstallerd</key>
+		<true/>
+	</dict>
+	<key>EnableTransactions</key>
+	<true/>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>14</integer>
+        <key>Minute</key>
+        <integer>41</integer>
+        <key>Weekday</key>
+        <integer>2</integer>
+    </dict>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/SpeechObjects.framework/Versions/A/SpeechDataInstallerd.app/Contents/MacOS/SpeechDataInstallerd</string>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+</dict>
+</plist>

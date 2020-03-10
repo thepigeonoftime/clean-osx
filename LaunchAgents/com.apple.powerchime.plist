@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.system.powersources.source</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.system.powersources.source</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>LoginWindow</string>
+		<string>Aqua</string>
+	</array>
+	<key>Label</key>
+	<string>com.apple.powerchime</string>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/PowerChime.app/Contents/MacOS/PowerChime</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+</dict>
+</plist>

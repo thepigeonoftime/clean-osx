@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.AppleGraphicsWarning</string>
+	<key>LimitLoadToSessionType</key>
+	<string>LoginWindow</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/CoreServices/AppleGraphicsWarning.app/Contents/MacOS/AppleGraphicsWarning</string>
+	</array>
+	<key>LaunchOnlyOnce</key>
+	<true/>
+	<key>ExitTimeOut</key>
+	<integer>0</integer>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>GraphicsWarning</key>
+			<dict>
+				<key>IOPropertyMatch</key>
+				<dict>
+					<key>AAPL,aux-power-connected</key>
+					<data>AAAAAA==</data>
+				</dict>
+				<key>IOProviderClass</key>
+				<string>IOPCIDevice</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+</dict>
+</plist>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.neagent</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.neagent</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/usr/libexec/neagent</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+	<key>MultipleInstances</key>
+	<true/>
+	<key>EnablePressuredExit</key>
+	<false/>
+</dict>
+</plist>

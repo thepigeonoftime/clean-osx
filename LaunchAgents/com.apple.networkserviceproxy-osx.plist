@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.networkserviceproxy</key>
+		<true/>
+	</dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.networkserviceproxy</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.networkserviceproxy.file-descriptor-maintainer</key>
+		<dict>
+			<key>new-handles</key>
+			<dict>
+				<key>handles-array</key>
+				<array/>
+			</dict>
+		</dict>
+		<key>com.apple.networkserviceproxy</key>
+		<dict>
+			<key>SendMessage</key>
+			<dict>
+				<key>MessageID</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.networkserviceproxy.reset</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.networkserviceproxy.reset</string>
+			</dict>
+			<key>com.apple.networkextension.app-paths-changed</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.networkextension.app-paths-changed</string>
+			</dict>
+		</dict>
+		<key>com.apple.xpc.activity</key>
+		<dict>
+			<key>com.apple.networkserviceproxy.metadata-refresh</key>
+			<dict>
+				<key>Interval</key>
+				<real>61200</real>
+				<key>Priority</key>
+				<string>Utility</string>
+				<key>AllowBattery</key>
+				<false/>
+				<key>PowerNap</key>
+				<true/>
+				<key>RequireInexpensiveNetworkConnectivity</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>Program</key>
+	<string>/usr/libexec/networkserviceproxy</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+</dict>
+</plist>

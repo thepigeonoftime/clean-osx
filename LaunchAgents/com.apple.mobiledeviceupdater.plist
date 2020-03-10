@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.DeviceSupportUpdater</key>
+		<true/>
+	</dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.iokit.matching</key>
+		<dict>
+			<key>Muxed TV was attached</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>idVendor</key>
+				<integer>1452</integer>
+				<key>idProduct</key>
+				<integer>4775</integer>
+			</dict>
+			<key>Muxed iPhone was attached</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>idVendor</key>
+				<integer>1452</integer>
+				<key>idProduct</key>
+				<integer>4776</integer>
+			</dict>
+			<key>Muxed iPad was attached</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>idVendor</key>
+				<integer>1452</integer>
+				<key>idProduct</key>
+				<integer>4779</integer>
+			</dict>
+			<key>Muxed Watch was attached</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>idVendor</key>
+				<integer>1452</integer>
+				<key>idProduct</key>
+				<integer>4783</integer>
+			</dict>
+			<key>Muxed HomePod was attached</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>idVendor</key>
+				<integer>1452</integer>
+				<key>idProduct</key>
+				<integer>4784</integer>
+			</dict>
+			<key>Recovery Device v1 was attached</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>idVendor</key>
+				<integer>1452</integer>
+				<key>idProduct</key>
+				<integer>4736</integer>
+			</dict>
+			<key>Recovery Device v2 was attached</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>idVendor</key>
+				<integer>1452</integer>
+				<key>idProduct</key>
+				<integer>4737</integer>
+			</dict>
+			<key>DFU Device v1 was attached</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>idVendor</key>
+				<integer>1452</integer>
+				<key>idProduct</key>
+				<integer>4642</integer>
+			</dict>
+			<key>DFU Device v2 was attached</key>
+			<dict>
+				<key>IOProviderClass</key>
+				<string>IOUSBDevice</string>
+				<key>IOMatchLaunchStream</key>
+				<true/>
+				<key>idVendor</key>
+				<integer>1452</integer>
+				<key>idProduct</key>
+				<integer>4647</integer>
+			</dict>
+		</dict>
+	</dict>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/PrivateFrameworks/MobileDevice.framework/Resources/MobileDeviceUpdater.app/Contents/MacOS/MobileDeviceUpdater</string>
+	</array>
+	<key>Label</key>
+	<string>com.apple.mobiledeviceupdater</string>
+</dict>
+</plist>

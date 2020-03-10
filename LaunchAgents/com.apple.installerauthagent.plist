@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.installerauthagent</string>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/IASUtilities.framework/Versions/A/Resources/installerauthagent</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.installerauthagent</key>
+		<true/>
+	</dict>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>Aqua</string>
+	</array>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.displaysmenu.tvAvailability</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.displaysmenu.tvAvailability</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>LimitLoadToSessionType</key>
+	<array>
+		<string>LoginWindow</string>
+		<string>Aqua</string>
+	</array>
+	<key>Label</key>
+	<string>com.apple.preference.displays.MirrorDisplays</string>
+	<key>Program</key>
+	<string>/System/Library/PreferencePanes/Displays.prefPane/Contents/Resources/MirrorDisplays.app/Contents/MacOS/MirrorDisplays</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+</dict>
+</plist>

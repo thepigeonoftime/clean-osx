@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>POSIXSpawnType</key>
+	<string>Interactive</string>
+	<key>ThrottleInterval</key>
+	<integer>1</integer>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>MultipleInstances</key>
+	<true/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>MallocCorruptionAbort</key>
+		<string>1</string>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.metadata.mdbulkimport</string>
+	<key>LimitLoadToSessionType</key>
+	<string>Background</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.metadata.mdbulkimport</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdbulkimport</string>
+		<string>-s</string>
+		<string>mdbulkimport</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.Spotlight</string>
+	<key>LowPriorityBackgroundIO</key>
+	<false/>
+</dict>
+</plist>

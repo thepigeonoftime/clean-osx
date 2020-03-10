@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.studentd</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.studentd</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/libexec/studentd</string>
+	</array>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.studentd.configuration.didchange</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.studentd.configuration.didchange</string>
+			</dict>
+			<key>com.apple.classroomkit.settings-app-launched</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.classroomkit.settings-app-launched</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>KeepAlive</key>
+	<dict>
+		<key>PathState</key>
+		<dict>
+			<key>~/Library/studentd/isConnected</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

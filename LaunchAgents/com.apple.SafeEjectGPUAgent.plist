@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>Label</key>
+	<string>com.apple.SafeEjectGPUAgent</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>SafeEjectGPUAgent</string>
+	</array>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.gpuwrangler.egpu.hwadded</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.gpuwrangler.egpu.hwadded</string>
+			</dict>
+			<key>com.apple.gpuwrangler.egpu.removed.unsafe</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.gpuwrangler.egpu.removed.unsafe</string>
+			</dict>
+			<key>com.apple.SafeEjectGPUStartupDaemon</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.SafeEjectGPUStartupDaemon</string>
+			</dict>
+			<key>com.apple.gpuwrangler.egpu.added</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.gpuwrangler.egpu.added</string>
+			</dict>
+			<key>com.apple.gpuwrangler.egpu.removed</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.gpuwrangler.egpu.removed</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/Menu Extras/SafeEjectGPUExtra.menu/Contents/MacOS/SafeEjectGPUAgent</string>
+	<key>ProcessType</key>
+	<string>App</string>
+</dict>
+</plist>

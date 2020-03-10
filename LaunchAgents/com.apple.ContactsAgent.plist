@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.ContactsAgent</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>NSRunningFromLaunchd</key>
+		<string>1</string>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/ContactsAgent.framework/Executables/ContactsAgent</string>
+	<key>POSIXSpawnType</key>
+	<string>Adaptive</string>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.notifyd.matching</key>
+		<dict>
+			<key>com.apple.contacts.CNContactStoreDidChangeNotification</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.contacts.CNContactStoreDidChangeNotification</string>
+			</dict>
+			<key>com.apple.contacts.CNContactStoreMeContactDidChangeNotification</key>
+			<dict>
+				<key>Notification</key>
+				<string>com.apple.contacts.CNContactStoreMeContactDidChangeNotification</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.ContactsAgent.addressbook</key>
+		<true/>
+		<key>com.apple.ContactsAgent.general</key>
+		<true/>
+	</dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>Program</key>
+	<string>/AppleInternal/DevTools/Hardware/PacketLogger.app/Contents/MacOS/PacketLogger</string>
+	<key>ProcessType</key>
+	<string>Standard</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.bluetooth.PacketLogger</key>
+		<true/>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.bluetooth.PacketLogger</string>
+</dict>
+</plist>

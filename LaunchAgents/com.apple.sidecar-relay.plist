@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnablePressuredExit</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.rapport.matching</key>
+		<dict>
+			<key>com.apple.sidecar-relay.discovery</key>
+			<dict>
+				<key>type</key>
+				<string>discovery</string>
+				<key>serviceType</key>
+				<string>_rdlink._tcp</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>Label</key>
+	<string>com.apple.sidecar-relay</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.sidecar-relay</key>
+		<true/>
+	</dict>
+	<key>ProcessType</key>
+	<string>Adaptive</string>
+	<key>Program</key>
+	<string>/usr/libexec/SidecarRelay</string>
+</dict>
+</plist>

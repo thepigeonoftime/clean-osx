@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.AOSPushRelay</string>
+	<key>Program</key>
+	<string>/System/Library/PrivateFrameworks/AOSKit.framework/Helpers/AOSPushRelay.app/Contents/MacOS/AOSPushRelay</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>NSRunningFromLaunchd</key>
+		<string>1</string>
+	</dict>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.AOSPushRelay</key>
+		<true/>
+		<key>com.apple.AOSPushRelay.push</key>
+		<true/>
+		<key>com.apple.AOSPushRelay.push.dev</key>
+		<true/>
+		<key>com.apple.AOSPushRelay.push.demo</key>
+		<true/>
+		<key>com.apple.AOSPushRelay.notifier</key>
+		<true/>
+	</dict>
+	<key>EnableTransactions</key>
+	<true/>
+</dict>
+</plist>

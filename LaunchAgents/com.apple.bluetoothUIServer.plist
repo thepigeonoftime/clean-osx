@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.bluetoothUIServer</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.bluetoothUIServer</key>
+		<true/>
+	</dict>
+	<key>LaunchEvents</key>
+	<dict>
+		<key>com.apple.usernotificationcenter.matching</key>
+		<dict>
+			<key>com.apple.bluetoothUIServer</key>
+			<dict>
+				<key>bundleid</key>
+				<string>com.apple.BluetoothUIServer</string>
+				<key>system</key>
+				<true/>
+				<key>events</key>
+				<array>
+					<string>didActivateNotification</string>
+					<string>didDismissAlert</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+	<key>Program</key>
+	<string>/System/Library/CoreServices/BluetoothUIServer.app/Contents/MacOS/BluetoothUIServer</string>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+</dict>
+</plist>

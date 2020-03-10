@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.apple.speech.synthesisserver</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.speech.synthesis.SpeakingHotKeyPort</key>
+		<true/>
+		<key>com.apple.speech.synthesis.ScreenReaderPort</key>
+		<true/>
+		<key>com.apple.speech.synthesis.TimeAnnouncementsPort</key>
+		<true/>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesisServer.app/Contents/MacOS/SpeechSynthesisServer</string>
+		<string>launchd</string>
+	</array>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+</dict>
+</plist>
