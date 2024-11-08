@@ -91,8 +91,8 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.avconferenced.plist #Manages communication for FaceTime Calls
 #/System/Library/LaunchAgents/com.apple.backgroundtaskmanagementuiagent.plist
 # /System/Library/LaunchAgents/com.apple.bird.plist # iCloud Drive | causes continuous error messages when unloaded
-/System/Library/LaunchAgents/com.apple.bluetooth.PacketLogger.plist
-/System/Library/LaunchAgents/com.apple.bluetoothUIServer.plist
+# /System/Library/LaunchAgents/com.apple.bluetooth.PacketLogger.plist
+# /System/Library/LaunchAgents/com.apple.bluetoothUIServer.plist
 /System/Library/LaunchAgents/com.apple.btsa.plist # Bluetooth Setup Assistant
 #/System/Library/LaunchAgents/com.apple.cache_delete.plist
 #/System/Library/LaunchAgents/com.apple.CalendarAgent.plist
@@ -114,7 +114,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.controlstrip.plist
 #/System/Library/LaunchAgents/com.apple.CoreAuthentication.agent.plist
 #/System/Library/LaunchAgents/com.apple.CoreLocationAgent.plist
-/System/Library/LaunchAgents/com.apple.coreparsec.silhouette.plist
+/System/Library/LaunchAgents/com.apple.coreparsec.silhouette.plist # Siri related
 #/System/Library/LaunchAgents/com.apple.CoreRAIDAgent.plist
 #/System/Library/LaunchAgents/com.apple.coreservices.lsactivity.plist
 #/System/Library/LaunchAgents/com.apple.coreservices.sharedfilelistd.plist
@@ -146,7 +146,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.DiskArbitrationAgent.plist #https://www.manpagez.com/man/8/diskarbitrationd/
 #/System/Library/LaunchAgents/com.apple.diskspaced.plist
 #/System/Library/LaunchAgents/com.apple.distnoted.xpc.agent.plist
-/System/Library/LaunchAgents/com.apple.dmd.agent.plist # Mobile / notifyd related
+# /System/Library/LaunchAgents/com.apple.dmd.agent.plist # Mobile / notifyd related
 #/System/Library/LaunchAgents/com.apple.Dock.plist
 #/System/Library/LaunchAgents/com.apple.dt.CommandLineTools.installondemand.plist
 #/System/Library/LaunchAgents/com.apple.DwellControl.plist #Universal Access related
@@ -176,7 +176,7 @@ LaunchAgents=(
 /System/Library/LaunchAgents/com.apple.iCloudUserNotifications.plist
 #/System/Library/LaunchAgents/com.apple.iconservices.iconservicesagent.plist
 /System/Library/LaunchAgents/com.apple.identityservicesd.plist # Handles logins for iCloud / iMessage
-/System/Library/LaunchAgents/com.apple.idsremoteurlconnectionagent.plist # ios remote connection related
+#  /System/Library/LaunchAgents/com.apple.idsremoteurlconnectionagent.plist # ios remote connection related
 /System/Library/LaunchAgents/com.apple.imagent.plist # Face Time Invitation Listener
 #/System/Library/LaunchAgents/com.apple.imautomatichistorydeletionagent.plist
 #/System/Library/LaunchAgents/com.apple.imklaunchagent.plist
@@ -215,10 +215,10 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.metadata.mdflagwriter.plist
 #/System/Library/LaunchAgents/com.apple.metadata.mdwrite.plist
 #/System/Library/LaunchAgents/com.apple.midiserver.plist
-/System/Library/LaunchAgents/com.apple.MobileAccessoryUpdater.fudHelperAgent.plist
-/System/Library/LaunchAgents/com.apple.mobiledeviceupdater.plist
-/System/Library/LaunchAgents/com.apple.MRTa.plist # Apple Malware Removal Tool / YaraScanService
-/System/Library/LaunchAgents/com.apple.navd.plist
+#  /System/Library/LaunchAgents/com.apple.MobileAccessoryUpdater.fudHelperAgent.plist
+#  /System/Library/LaunchAgents/com.apple.mobiledeviceupdater.plist
+#  /System/Library/LaunchAgents/com.apple.MRTa.plist # Apple Malware Removal Tool / YaraScanService
+#  /System/Library/LaunchAgents/com.apple.navd.plist
 #/System/Library/LaunchAgents/com.apple.neagent.plist # man neagent: is part of the Network Extension framework
 #/System/Library/LaunchAgents/com.apple.netauth.user.auth.plist
 #/System/Library/LaunchAgents/com.apple.netauth.user.gui.plist
@@ -293,7 +293,7 @@ LaunchAgents=(
 #/System/Library/LaunchAgents/com.apple.security.keychain-circle-notification.plist
 #/System/Library/LaunchAgents/com.apple.securityuploadd.plist
 #/System/Library/LaunchAgents/com.apple.ServicesUIAgent.plist
-# /System/Library/LaunchAgents/com.apple.sharingd.plist # Sharing Daemon that enables AirDrop, Handoff, Instant Hotspot, Shared Computers, and Remote Disc in the Finder. https://www.manpagez.com/man/8/sharingd/ 
+/System/Library/LaunchAgents/com.apple.sharingd.plist # Sharing Daemon that enables AirDrop, Handoff, Instant Hotspot, Shared Computers, and Remote Disc in the Finder. https://www.manpagez.com/man/8/sharingd/ 
 /System/Library/LaunchAgents/com.apple.sidecar-relay.plist # Remote Device / Display
 /System/Library/LaunchAgents/com.apple.Siri.agent.plist
 /System/Library/LaunchAgents/com.apple.siriknowledged.plist
@@ -369,7 +369,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.airportd.plist
 #/System/Library/LaunchDaemons/com.apple.akd.plist # Auth Kit Framework
 #/System/Library/LaunchDaemons/com.apple.alf.agent.plist # Firewall
-/System/Library/LaunchDaemons/com.apple.analyticsd.plist
+/System/Library/LaunchDaemons/com.apple.analyticsd.plist # is a system daemon that collects diagnostics and usage data locally for users that have opted in.
 #/System/Library/LaunchDaemons/com.apple.apfsd.plist
 #/System/Library/LaunchDaemons/com.apple.AppleFileServer.plist
 #/System/Library/LaunchDaemons/com.apple.applefileutil.plist
@@ -396,9 +396,9 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.backupd.plist
 /System/Library/LaunchDaemons/com.apple.biokitaggdd.plist
 /System/Library/LaunchDaemons/com.apple.biometrickitd.plist
-/System/Library/LaunchDaemons/com.apple.bluetoothaudiod.plist
-/System/Library/LaunchDaemons/com.apple.bluetoothd.plist
-/System/Library/LaunchDaemons/com.apple.bluetoothReporter.plist
+# /System/Library/LaunchDaemons/com.apple.bluetoothaudiod.plist
+# /System/Library/LaunchDaemons/com.apple.bluetoothd.plist
+# /System/Library/LaunchDaemons/com.apple.bluetoothReporter.plist
 /System/Library/LaunchDaemons/com.apple.bnepd.plist # man bnepd: The Bluetooth network daemon handles all BNEP connections on the system.
 #/System/Library/LaunchDaemons/com.apple.bootinstalld.plist
 #/System/Library/LaunchDaemons/com.apple.bosreporter.plist
@@ -415,7 +415,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.cmio.VDCAssistant.plist # man: The process allows multiple applications to simultaneously capture from the same camera.
 #/System/Library/LaunchDaemons/com.apple.colorsync.displayservices.plist
 #/System/Library/LaunchDaemons/com.apple.colorsyncd.plist
-/System/Library/LaunchDaemons/com.apple.CommCenterRootHelper.plist
+# /System/Library/LaunchDaemons/com.apple.CommCenterRootHelper.plist
 #/System/Library/LaunchDaemons/com.apple.commerced.plist # app store related
 /System/Library/LaunchDaemons/com.apple.comsat.plist #server process which receives reports of incoming mail and notifies users if they have requested this service.
 #/System/Library/LaunchDaemons/com.apple.configd.plist
@@ -538,12 +538,12 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 #/System/Library/LaunchDaemons/com.apple.metadata.mds.scan.plist
 #/System/Library/LaunchDaemons/com.apple.metadata.mds.spindump.plist
-/System/Library/LaunchDaemons/com.apple.mobile.keybagd.plist # iOS related
+#  /System/Library/LaunchDaemons/com.apple.mobile.keybagd.plist # iOS related
 #/System/Library/LaunchDaemons/com.apple.MobileAccessoryUpdater.plist
 #/System/Library/LaunchDaemons/com.apple.mobileactivationd.plist
 #/System/Library/LaunchDaemons/com.apple.mobileassetd.plist
 #/System/Library/LaunchDaemons/com.apple.MobileFileIntegrity.plist
-/System/Library/LaunchDaemons/com.apple.MRTd.plist # Apple Malware Removal Tool / YaraScanService
+# /System/Library/LaunchDaemons/com.apple.MRTd.plist # Apple Malware Removal Tool / YaraScanService
 #/System/Library/LaunchDaemons/com.apple.msrpc.echosvc.plist
 #/System/Library/LaunchDaemons/com.apple.msrpc.lsarpc.plist
 #/System/Library/LaunchDaemons/com.apple.msrpc.mdssvc.plist
@@ -571,8 +571,8 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.ocspd.plist
 #/System/Library/LaunchDaemons/com.apple.odproxyd.plist # https://www.manpagez.com/man/8/odproxyd/
 /System/Library/LaunchDaemons/com.apple.ODSAgent.plist # Remote Disc Sharing
-#/System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
-/System/Library/LaunchDaemons/com.apple.osanalytics.osanalyticshelper.plist
+# /System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
+/System/Library/LaunchDaemons/com.apple.osanalytics.osanalyticshelper.plist # reads JetsamEvent information from the system and writes it into a JetsamEvent report on disk. -> SubmitDiagInfo
 #/System/Library/LaunchDaemons/com.apple.PasswordService.plist
 #/System/Library/LaunchDaemons/com.apple.PCIELaneConfigTool.plist
 #/System/Library/LaunchDaemons/com.apple.PerfPowerServices.plist
@@ -590,7 +590,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.printtool.daemon.plist
 #/System/Library/LaunchDaemons/com.apple.ProcessPanicReport.plist
 #/System/Library/LaunchDaemons/com.apple.racoon.plist #VPN related
-/System/Library/LaunchDaemons/com.apple.rapportd.plist # man rapportd: Daemon that enables Phone Call Handoff and other communication features between Apple devices.
+# /System/Library/LaunchDaemons/com.apple.rapportd.plist # man rapportd: Daemon that enables Phone Call Handoff and other communication features between Apple devices.
 /System/Library/LaunchDaemons/com.apple.RemoteDesktop.PrivilegeProxy.plist
 /System/Library/LaunchDaemons/com.apple.remotemanagementd.plist
 /System/Library/LaunchDaemons/com.apple.remotepairtool.plist
@@ -617,7 +617,7 @@ LaunchDaemons=(
 #/System/Library/LaunchDaemons/com.apple.securityd_service.plist
 #/System/Library/LaunchDaemons/com.apple.seld.plist # Apple Pay related | man seld: Manages the secure element and interfaces with the trusted service manager.
 #/System/Library/LaunchDaemons/com.apple.sessionlogoutd.plist
-/System/Library/LaunchDaemons/com.apple.signpost.signpost_reporter.plist # perfomance analysis
+/System/Library/LaunchDaemons/com.apple.signpost.signpost_reporter.plist # perfomance analysis telemetry
 /System/Library/LaunchDaemons/com.apple.smb.preferences.plist
 /System/Library/LaunchDaemons/com.apple.smbd.plist
 #/System/Library/LaunchDaemons/com.apple.softwareupdate_download_service.plist
