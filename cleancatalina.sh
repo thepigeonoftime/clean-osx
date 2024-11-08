@@ -710,10 +710,10 @@ load() {
 	echo "loading ${@}"
 	if [[ ! -z $testrun ]]; then
 		# echo rename 's/\.bak$//' ${@}
-		echo launchctl load -w ${@}
+		#echo launchctl load -w ${@}
 		echo sudo launchctl load -w ${@}
 	else
-		launchctl load -w ${@} &> /dev/null;
+		#launchctl load -w ${@} &> /dev/null;
 		sudo launchctl load -w ${@} &> /dev/null;
 		# grep launchctl list output to check if service is really enabled
 		enabled=$(launchctl list | grep $(echo "${@}" | /usr/bin/sed -E 's/.*\/(.*).plist/\1/'))
@@ -727,13 +727,13 @@ load() {
 unload() {
 	echo "unloading ${@}"
 	if [[ ! -z $testrun ]]; then
-		echo launchctl unload -w ${@}
+		#echo launchctl unload -w ${@}
 		echo sudo launchctl unload -w ${@}
 		if [[ -z $dontmove  ]]; then
 			echo sudo mv ${@} ${@}.bak
 		fi
 	else
-		launchctl unload -w ${@} &> /dev/null;
+		#launchctl unload -w ${@} &> /dev/null;
 		sudo launchctl unload -w ${@} &> /dev/null;
 		if [[ -z $dontmove ]]; then
 			sudo mv $service $service.bak;
